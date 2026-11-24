@@ -3,6 +3,14 @@
 Site do [CicloRota BH](https://ciclorotabh.com): contagens de ciclistas, artigos e as lutas por uma Belo Horizonte
 melhor para quem pedala. Projeto independente de Cristiano Scarpelli.
 
+## Endereços
+
+- Site: https://ciclorotabh.com (até o domínio ser apontado: https://ciclorotabh.pages.dev)
+- Painel: `/admin/` · Lista de assinaturas: `/admin/assinaturas.html`
+- Hospedagem: Cloudflare Pages, projeto `ciclorotabh`, na conta do Cristiano. Banco D1 `ciclorotabh-assinaturas`.
+- Login do painel: OAuth App "Painel CicloRota BH" na organização `ciclorotabh` do GitHub. A URL de callback
+  precisa ser `https://<domínio do site>/api/callback`; trocar quando o domínio mudar.
+
 ## Como publicar
 
 Pelo painel em `https://ciclorotabh.com/admin/`, com o login do GitHub. Cada publicação vira um commit neste
