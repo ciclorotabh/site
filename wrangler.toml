@@ -1,0 +1,15 @@
+# Configuração das Pages Functions (Cloudflare Pages, conta do Cristiano).
+# Segredos ficam fora daqui: IP_SALT, GITHUB_CLIENT_SECRET e TURNSTILE_SECRET (wrangler pages secret put).
+name = "ciclorotabh"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-11-01"
+
+[vars]
+GITHUB_ORG = "ciclorotabh"
+GITHUB_CLIENT_ID = ""
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ciclorotabh-assinaturas"
+database_id = "5c052800-c2a2-46fd-af35-4d15fe0db3a4"
+migrations_dir = "migrations"
