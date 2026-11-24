@@ -11,6 +11,12 @@ export const SITE = {
   substack: '',
   // Chave pública do Cloudflare Turnstile (anti-robô das campanhas). Vazia = formulário sem a verificação.
   turnstileSiteKey: '',
+  // Planilha de contagens (Google Planilhas do Cristiano, compartilhada por link como Leitor).
+  // gid = número da aba (aparece no endereço como #gid=...). Três abas: preencher horas e locais.
+  planilha: {
+    id: '1htdqUzUmyvhuZDPoeGkxxA4BPKtKpVSpXAdg12GVy7s',
+    abas: { historico: 0 } as { historico: number; horas?: number; locais?: number },
+  },
 };
 
 export const NAV = [

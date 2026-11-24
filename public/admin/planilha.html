@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Conferir planilha | CicloRota BH</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #10201F; line-height: 1.5; }
+    button { font: inherit; min-height: 44px; padding: 0 18px; background: #006B73; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+    .ok { background: #E1F3F3; color: #00585F; padding: 12px 16px; border-radius: 8px; font-weight: 600; }
+    .erro { background: #FDECEA; color: #8A1C12; padding: 12px 16px; border-radius: 8px; font-weight: 600; }
+    .aviso { background: #FFF1D2; color: #7A4F00; padding: 10px 14px; border-radius: 8px; margin: 6px 0; }
+    dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; }
+    dt { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Conferir a planilha de contagens</h1>
+  <p>Lê a planilha agora, sem esperar o cache de 5 minutos, e mostra se o site conseguiu usar os dados. Entre antes no <a href="/admin/">painel</a>.</p>
+  <button id="b" type="button">Conferir agora</button>
+  <div id="r" role="status" aria-live="polite"></div>
+  <script>
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    document.getElementById('b').addEventListener('click', async function () {
+      var r = document.getElementById('r');
+      var user = null;
+      try { user = JSON.parse(localStorage.getItem('decap-cms-user') || 'null'); } catch (e) {}
+      if (!user || !user.token) { r.innerHTML = '<p class="erro">Entre primeiro no painel (/admin/) e volte aqui.</p>'; return; }
+      r.textContent = 'Lendo a planilha…';
+      try {
+        var resp = await fetch('/api/contagens?fresco=1', { headers: { Authorization: 'Bearer ' + user.token } });
+        var j = await resp.json();
+        var d = j.dados || {};
+        var html = '';
+        if (j.fonte === 'planilha') {
+          html += '<p class="ok">A planilha está certa e o site já está usando estes dados.</p>';
+        } else {
+          html += '<p class="erro">O site NÃO conseguiu usar a planilha e continua mostrando os dados antigos.<br>Motivo: ' + esc(j.erro || 'desconhecido') + '</p>';
+          if (/linha \d+/.test(j.erro || '')) html += '<p>Corrija a linha indicada na planilha e clique em "Conferir agora" de novo.</p>';
+          if (/compartilhada por link|401|403/.test(j.erro || '')) html += '<p>Confira se a planilha está em Compartilhar &gt; Acesso geral &gt; "Qualquer pessoa com o link" &gt; Leitor.</p>';
+        }
+        html += '<dl><dt>Contagens</dt><dd>' + esc(d.totalContagens) + '</dd><dt>Locais</dt><dd>' + esc((d.locais || []).length) + '</dd><dt>Dias hora a hora</dt><dd>' + esc((d.perfis || []).length) + '</dd><dt>Período</dt><dd>' + esc((d.primeiraData || '').split('-').reverse().join('/')) + ' a ' + esc((d.ultimaData || '').split('-').reverse().join('/')) + '</dd></dl>';
+        var av = d.avisos || [];
+        if (av.length) { html += '<h2>Avisos (' + av.length + ')</h2><p>O site funciona, mas vale conferir:</p>' + av.map(function (a) { return '<p class="aviso">' + esc(a) + '</p>'; }).join(''); }
+        r.innerHTML = html;
+      } catch (e) {
+        r.innerHTML = '<p class="erro">Não consegui falar com o site. Tente de novo.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

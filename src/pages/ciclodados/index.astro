@@ -1,73 +1,35 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { artigos } from '../../lib/conteudo';
-import { dataCurta, numeroBR } from '../../lib/site';
-import dados from '../../data/contagens.json';
+import { numeroBR } from '../../lib/site';
+import { carregarContagens } from '../../lib/dados';
 
+const { dados } = await carregarContagens();
 const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-const d = (iso: string) => new Date(iso + 'T12:00:00Z');
-const mesAno = (iso: string) => `${meses[d(iso).getUTCMonth()]}/${d(iso).getUTCFullYear()}`;
+const mesAno = (iso: string | null) => (iso ? `${meses[Number(iso.slice(5, 7)) - 1]}/${iso.slice(0, 4)}` : '');
 
-const anos = [...new Set(dados.locais.flatMap((l) => Object.keys(l.mediaHoraPorAno)))].sort();
-// Par padrão da comparação: os dois anos com mais locais em comum
-let par: [string, string] = [anos[0], anos[1] ?? anos[0]];
-let melhor = -1;
-for (let i = 0; i < anos.length; i++)
-  for (let j = i + 1; j < anos.length; j++) {
-    const n = dados.locais.filter((l) => anos[i] in l.mediaHoraPorAno && anos[j] in l.mediaHoraPorAno).length;
-    if (n > melhor) { melhor = n; par = [anos[i], anos[j]]; }
-  }
-
-// Artigos ligados a cada local (campo "locais" do artigo)
-const lista = await artigos();
-const artigosPorLocal: Record<string, { titulo: string; url: string }[]> = {};
-for (const a of lista)
-  for (const nome of a.data.locais) {
-    const loc = dados.locais.find((l) => l.nome === nome);
-    if (loc) (artigosPorLocal[loc.id] ??= []).push({ titulo: a.data.title, url: `/artigo/${a.id}/` });
-  }
-
-const locaisCliente = dados.locais.map((l) => ({
-  id: l.id, nome: l.nome, lat: l.lat, lon: l.lon, media: l.mediaHoraPorAno, contagens: l.contagens,
-  max24h: l.max24h, ultima: l.ultimaContagem, horaAHora: l.horaAHora, artigos: artigosPorLocal[l.id] ?? [],
-}));
-
-// Curva do dia: média de cada hora nos dias com contagem hora a hora, por local
-const perfisPorLocal = new Map<string, typeof dados.perfis>();
-for (const p of dados.perfis) perfisPorLocal.set(p.local, [...(perfisPorLocal.get(p.local) ?? []), p]);
-const curvas = [...perfisPorLocal.entries()].map(([id, dias]) => {
-  const media = Array.from({ length: 24 }, (_, h) => {
-    const v = dias.map((x) => x.horas[h]).filter((x): x is number => x !== null);
-    return v.length ? v.reduce((s, x) => s + x, 0) / v.length : 0;
-  });
-  const pico = media.indexOf(Math.max(...media));
-  const totais = dias.map((x) => ({ data: x.data, total: x.horas.reduce<number>((s, v) => s + (v ?? 0), 0) }));
-  return { local: dados.locais.find((l) => l.id === id)!, dias, media, pico, totais, max: Math.max(...media) };
-});
-
-const recentes = [...dados.contagens].reverse().slice(0, 20);
-const nomePorId = Object.fromEntries(dados.locais.map((l) => [l.id, l.nome]));
-const W = 720, H = 240, P = { l: 36, r: 8, t: 16, b: 28 };
+// Artigos ligados a cada local (campo "locais" do artigo), pelo nome do local na planilha
+const artigosPorNome: Record<string, { titulo: string; url: string }[]> = {};
+for (const a of await artigos())
+  for (const nome of a.data.locais) (artigosPorNome[nome] ??= []).push({ titulo: a.data.title, url: `/artigo/${a.id}/` });
 ---
 <Base title="CicloDados" description={`Mapa das contagens de ciclistas em Belo Horizonte: ${dados.totalContagens} contagens em ${dados.locais.length} locais.`}>
   <section class="wrap head">
     <p class="eyebrow">CicloDados</p>
     <h1>Quantos ciclistas passam em cada ponto de BH</h1>
-    <p class="lede">{numeroBR(dados.totalContagens)} contagens em {dados.locais.length} locais, de {mesAno(dados.primeiraData!)} a {mesAno(dados.ultimaData!)}. Contagens presenciais e por vídeo, de 1, 2, 12 e 24 horas. Toque num ponto para ver os números.</p>
+    <p class="lede" id="cd-lede">{numeroBR(dados.totalContagens)} contagens em {dados.locais.length} locais, de {mesAno(dados.primeiraData)} a {mesAno(dados.ultimaData)}. Contagens presenciais e por vídeo, de 1, 2, 12 e 24 horas. Toque num ponto para ver os números.</p>
+    <p class="status muted" id="cd-status" role="status">Dados da planilha no momento da última publicação do site.</p>
   </section>
 
   <section class="wrap">
     <div class="controls">
       <label for="f-ano">Ano</label>
-      <select id="f-ano">
-        <option value="recente">Mais recente de cada local</option>
-        {[...anos].reverse().map((a) => <option value={a}>{a}</option>)}
-      </select>
+      <select id="f-ano"><option value="recente">Mais recente de cada local</option></select>
       <span class="muted small">Tamanho do ponto: média de ciclistas por hora nas contagens de 1 hora.</span>
     </div>
     <div class="map-row">
       <div id="mapa" class="map" role="region" aria-label="Mapa das contagens"></div>
-      <aside class="panel" aria-live="polite" id="painel">
+      <aside class="panel" aria-live="polite">
         <p class="panel-eyebrow">Local selecionado</p>
         <p class="panel-name" id="p-nome">Escolha um ponto no mapa</p>
         <p class="panel-num tabular" id="p-num"></p>
@@ -76,59 +38,30 @@ const W = 720, H = 240, P = { l: 36, r: 8, t: 16, b: 28 };
         <div id="p-artigos"></div>
       </aside>
     </div>
-    <noscript><p class="muted">O mapa precisa de JavaScript. A tabela completa está mais abaixo e no CSV.</p></noscript>
+    <noscript><p class="muted">O mapa precisa de JavaScript. Todas as contagens estão no <a href="/ciclodados/contagens.csv">CSV</a>.</p></noscript>
   </section>
 
   <section class="band">
     <div class="wrap block">
       <div class="block-head">
         <div>
-          <h2 id="cmp-titulo">De {par[0]} para {par[1]}: ciclistas por hora</h2>
+          <h2 id="cmp-titulo">Comparação entre anos: ciclistas por hora</h2>
           <p class="muted">Média das contagens de 1 hora nos locais contados nos dois anos.</p>
         </div>
         <div class="cmp-controls">
-          <label>De <select id="cmp-a">{anos.map((a) => <option value={a} selected={a === par[0]}>{a}</option>)}</select></label>
-          <label>para <select id="cmp-b">{anos.map((a) => <option value={a} selected={a === par[1]}>{a}</option>)}</select></label>
+          <label>De <select id="cmp-a"></select></label>
+          <label>para <select id="cmp-b"></select></label>
         </div>
       </div>
       <div class="cmp-box">
-        <div class="legend"><span><i class="c-a"></i><b id="lg-a">{par[0]}</b></span><span><i class="c-b"></i><b id="lg-b">{par[1]}</b></span></div>
+        <div class="legend"><span><i class="c-a"></i><b id="lg-a"></b></span><span><i class="c-b"></i><b id="lg-b"></b></span></div>
         <div id="cmp-linhas"></div>
       </div>
       <p class="muted small">Contagens feitas em dias e horários diferentes. Leia a tendência, não o número exato.</p>
     </div>
   </section>
 
-  {curvas.map((c) => (
-    <section class="wrap block">
-      <div class="block-head">
-        <div>
-          <p class="eyebrow">Hora a hora</p>
-          <h2>A curva do dia na {c.local.nome}</h2>
-          <p class="muted">Média de cada hora em {c.dias.length} dias de contagem de 24 horas ({c.totais.map((t) => dataCurta(d(t.data))).join(', ')}). O pico é das {c.pico}h às {c.pico + 1}h.</p>
-        </div>
-      </div>
-      <figure class="chart">
-        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Ciclistas por hora ao longo do dia na ${c.local.nome}. Pico das ${c.pico}h às ${c.pico + 1}h com média de ${numeroBR(c.max, 1)}.`}>
-          {[0, 0.25, 0.5, 0.75, 1].map((f) => {
-            const y = P.t + (H - P.t - P.b) * (1 - f);
-            return (<g><line x1={P.l} x2={W - P.r} y1={y} y2={y} class="grid" /><text x={P.l - 6} y={y + 4} class="axis" text-anchor="end">{Math.round(c.max * f)}</text></g>);
-          })}
-          {c.media.map((v, h) => {
-            const bw = (W - P.l - P.r) / 24;
-            const bh = (H - P.t - P.b) * (v / c.max);
-            return (
-              <g>
-                <rect x={P.l + h * bw + 2} y={H - P.b - bh} width={bw - 4} height={bh} rx="2" class={h === c.pico ? 'bar peak' : 'bar'}><title>{h}h às {h + 1}h: {numeroBR(v, 1)} ciclistas (média)</title></rect>
-                {h % 3 === 0 && <text x={P.l + h * bw + bw / 2} y={H - 8} class="axis" text-anchor="middle">{h}h</text>}
-              </g>
-            );
-          })}
-        </svg>
-        <figcaption class="muted small">Totais de 24 horas: {c.totais.map((t) => `${dataCurta(d(t.data))}: ${numeroBR(t.total)}`).join(' · ')}. As janelas de 1, 2 e 12 horas do mapa saem destas horas: 18h às 19h, 17h às 19h e 7h às 19h.</figcaption>
-      </figure>
-    </section>
-  ))}
+  <div id="cd-curvas"></div>
 
   <section class="wrap block" id="dados-abertos">
     <div class="block-head">
@@ -138,39 +71,35 @@ const W = 720, H = 240, P = { l: 36, r: 8, t: 16, b: 28 };
     <div class="table-wrap">
       <table>
         <thead><tr><th scope="col">Data</th><th scope="col">Período</th><th scope="col" class="num">Ciclistas</th><th scope="col">Local</th><th scope="col">Tipo</th><th scope="col">Fonte</th></tr></thead>
-        <tbody>
-          {recentes.map((r) => (
-            <tr><td class="tabular">{dataCurta(d(r.data))}</td><td>{r.periodo} {r.periodo === 1 ? 'hora' : 'horas'}</td><td class="num tabular">{numeroBR(r.ciclistas)}</td><td>{nomePorId[r.local]}</td><td>{r.tipo}</td><td class="muted">{r.fonte.join(', ')}</td></tr>
-          ))}
-        </tbody>
+        <tbody id="cd-tabela"></tbody>
       </table>
     </div>
-    <p class="muted small">Dados abertos: use à vontade citando o CicloRota BH. Atualizado em {dataCurta(new Date(dados.geradoEm))}.</p>
+    <p class="muted small">Dados abertos: use à vontade citando o CicloRota BH. O CSV completo é gerado a cada publicação do site.</p>
   </section>
 
-  <script type="application/json" id="dados-locais" set:html={JSON.stringify(locaisCliente)} />
+  <script type="application/json" id="cd-dados" set:html={JSON.stringify({ dados, artigosPorNome })} />
 </Base>
 
 <script>
   import L from 'leaflet';
   import 'leaflet/dist/leaflet.css';
+  import type { Dados, Local } from '../../../functions/_lib/contagens';
 
-  type Local = { id: string; nome: string; lat: number; lon: number; media: Record<string, number>; contagens: number;
-    max24h: { ciclistas: number; data: string } | null; ultima: string; horaAHora: boolean; artigos: { titulo: string; url: string }[] };
+  type Artigo = { titulo: string; url: string };
+  const inicial = JSON.parse(document.getElementById('cd-dados')!.textContent || '{}') as { dados: Dados; artigosPorNome: Record<string, Artigo[]> };
+  const artigosPorNome = inicial.artigosPorNome;
+  let dados: Dados = inicial.dados;
 
-  const locais: Local[] = JSON.parse(document.getElementById('dados-locais')!.textContent || '[]');
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
   const fmt = (n: number, c = 1) => n.toLocaleString('pt-BR', { minimumFractionDigits: c, maximumFractionDigits: c });
+  const int = (n: number) => n.toLocaleString('pt-BR');
   const dataBR = (iso: string) => iso.split('-').reverse().join('/');
-  const valor = (l: Local, ano: string): [number, string] | null => {
-    if (ano === 'recente') {
-      const anos = Object.keys(l.media).sort();
-      return anos.length ? [l.media[anos[anos.length - 1]], anos[anos.length - 1]] : null;
-    }
-    return ano in l.media ? [l.media[ano], ano] : null;
-  };
-  const maxGeral = Math.max(...locais.flatMap((l) => Object.values(l.media)), 1);
-  const raio = (v: number) => 5 + 22 * Math.sqrt(v / maxGeral);
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+  const mesAno = (iso: string | null) => (iso ? `${meses[Number(iso.slice(5, 7)) - 1]}/${iso.slice(0, 4)}` : '');
+  const anosDe = (d: Dados) => [...new Set(d.locais.flatMap((l) => Object.keys(l.mediaHoraPorAno)))].sort();
 
+  // ---------- mapa ----------
   const mapa = L.map('mapa', { scrollWheelZoom: false }).setView([-19.905, -43.95], 12);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
@@ -178,97 +107,196 @@ const W = 720, H = 240, P = { l: 36, r: 8, t: 16, b: 28 };
   }).addTo(mapa);
   const camada = L.layerGroup().addTo(mapa);
   let selecionado: string | null = null;
+  const selAno = $<HTMLSelectElement>('f-ano');
 
-  function mostra(l: Local, ano: string) {
+  const valor = (l: Local, ano: string): [number, string] | null => {
+    const anos = Object.keys(l.mediaHoraPorAno).sort();
+    if (ano === 'recente') return anos.length ? [l.mediaHoraPorAno[anos.at(-1)!], anos.at(-1)!] : null;
+    return ano in l.mediaHoraPorAno ? [l.mediaHoraPorAno[ano], ano] : null;
+  };
+
+  function mostra(l: Local) {
     selecionado = l.id;
-    const v = valor(l, ano);
-    document.getElementById('p-nome')!.textContent = l.nome;
-    document.getElementById('p-num')!.textContent = v ? fmt(v[0]) : '—';
-    document.getElementById('p-unid')!.textContent = v ? `ciclistas por hora, média de ${v[1]}` : 'sem contagem de 1 hora neste ano';
-    const ul = document.getElementById('p-lista')!;
+    const v = valor(l, selAno.value);
+    $('p-nome').textContent = l.nome;
+    $('p-num').textContent = v ? fmt(v[0]) : '—';
+    $('p-unid').textContent = v ? `ciclistas por hora, média de ${v[1]}` : 'sem contagem de 1 hora neste ano';
+    const ul = $('p-lista');
     ul.replaceChildren();
     const item = (t: string) => { const li = document.createElement('li'); li.textContent = t; ul.appendChild(li); };
-    item(`${l.contagens} contagens, a última em ${dataBR(l.ultima)}`);
-    if (l.max24h) item(`Máximo em 24 h: ${l.max24h.ciclistas.toLocaleString('pt-BR')} ciclistas (${dataBR(l.max24h.data)})`);
-    Object.keys(l.media).sort().forEach((a) => item(`${a}: ${fmt(l.media[a])} por hora`));
+    item(`${l.contagens} contagens, a última em ${dataBR(l.ultimaContagem)}`);
+    if (l.max24h) item(`Máximo em 24 h: ${int(l.max24h.ciclistas)} ciclistas (${dataBR(l.max24h.data)})`);
+    Object.keys(l.mediaHoraPorAno).sort().forEach((a) => item(`${a}: ${fmt(l.mediaHoraPorAno[a])} por hora`));
     if (l.horaAHora) item('Tem contagem hora a hora (veja a curva do dia abaixo)');
-    const arts = document.getElementById('p-artigos')!;
+    const arts = $('p-artigos');
     arts.replaceChildren();
-    l.artigos.forEach((a) => { const el = document.createElement('a'); el.href = a.url; el.textContent = a.titulo; arts.appendChild(el); });
-    desenha();
+    (artigosPorNome[l.nome] ?? []).forEach((a) => { const el = document.createElement('a'); el.href = a.url; el.textContent = a.titulo; arts.appendChild(el); });
+    desenhaMapa();
   }
 
-  function desenha() {
-    const ano = (document.getElementById('f-ano') as HTMLSelectElement).value;
+  function desenhaMapa() {
+    const maxGeral = Math.max(...dados.locais.flatMap((l) => Object.values(l.mediaHoraPorAno)), 1);
+    const raio = (v: number) => 5 + 22 * Math.sqrt(v / maxGeral);
     camada.clearLayers();
-    locais
-      .map((l) => ({ l, v: valor(l, ano) }))
-      .filter((x) => x.v)
-      .sort((a, b) => b.v![0] - a.v![0])
+    dados.locais
+      .map((l) => ({ l, v: valor(l, selAno.value) }))
+      .filter((x): x is { l: Local; v: [number, string] } => !!x.v)
+      .sort((a, b) => b.v[0] - a.v[0])
       .forEach(({ l, v }) => {
         const m = L.circleMarker([l.lat, l.lon], {
-          radius: raio(v![0]), weight: 2, color: '#FFFFFF', fillOpacity: 0.85,
+          radius: raio(v[0]), weight: 2, color: '#FFFFFF', fillOpacity: 0.85,
           fillColor: l.id === selecionado ? '#C47F00' : '#008C99',
         });
-        m.bindTooltip(`${l.nome}: ${fmt(v![0])} por hora (${v![1]})`);
-        m.on('click', () => mostra(l, ano));
+        m.bindTooltip(`${l.nome}: ${fmt(v[0])} por hora (${v[1]})`);
+        m.on('click', () => mostra(l));
         m.addTo(camada);
       });
   }
-  document.getElementById('f-ano')!.addEventListener('change', () => {
-    const l = locais.find((x) => x.id === selecionado);
-    if (l) mostra(l, (document.getElementById('f-ano') as HTMLSelectElement).value); else desenha();
+  selAno.addEventListener('change', () => {
+    const l = dados.locais.find((x) => x.id === selecionado);
+    if (l) mostra(l); else desenhaMapa();
   });
-  const inicial = [...locais].sort((a, b) => (b.max24h?.ciclistas ?? 0) - (a.max24h?.ciclistas ?? 0))[0];
-  if (inicial) mostra(inicial, 'recente'); else desenha();
 
-  // Comparação entre anos
-  const selA = document.getElementById('cmp-a') as HTMLSelectElement;
-  const selB = document.getElementById('cmp-b') as HTMLSelectElement;
+  // ---------- comparação entre anos ----------
+  const selA = $<HTMLSelectElement>('cmp-a');
+  const selB = $<HTMLSelectElement>('cmp-b');
+  function parPadrao(anos: string[]): [string, string] {
+    let par: [string, string] = [anos[0], anos[1] ?? anos[0]], melhor = -1;
+    for (let i = 0; i < anos.length; i++)
+      for (let j = i + 1; j < anos.length; j++) {
+        const n = dados.locais.filter((l) => anos[i] in l.mediaHoraPorAno && anos[j] in l.mediaHoraPorAno).length;
+        if (n > melhor) { melhor = n; par = [anos[i], anos[j]]; }
+      }
+    return par;
+  }
+  function opcoes(sel: HTMLSelectElement, anos: string[], valorPadrao: string) {
+    const atual = sel.value;
+    sel.replaceChildren(...anos.map((a) => new Option(a, a)));
+    sel.value = anos.includes(atual) ? atual : valorPadrao;
+  }
   function compara() {
     const a = selA.value, b = selB.value;
-    document.getElementById('cmp-titulo')!.textContent = `De ${a} para ${b}: ciclistas por hora`;
-    document.getElementById('lg-a')!.textContent = a;
-    document.getElementById('lg-b')!.textContent = b;
-    const linhas = locais.filter((l) => a in l.media && b in l.media).sort((x, y) => (y.media[b] - y.media[a]) - (x.media[b] - x.media[a]));
-    const caixa = document.getElementById('cmp-linhas')!;
+    $('cmp-titulo').textContent = `De ${a} para ${b}: ciclistas por hora`;
+    $('lg-a').textContent = a;
+    $('lg-b').textContent = b;
+    const linhas = dados.locais.filter((l) => a in l.mediaHoraPorAno && b in l.mediaHoraPorAno)
+      .sort((x, y) => (y.mediaHoraPorAno[b] - y.mediaHoraPorAno[a]) - (x.mediaHoraPorAno[b] - x.mediaHoraPorAno[a]));
+    const caixa = $('cmp-linhas');
     caixa.replaceChildren();
     if (!linhas.length || a === b) {
       const p = document.createElement('p'); p.className = 'muted';
       p.textContent = a === b ? 'Escolha dois anos diferentes.' : 'Nenhum local tem contagem de 1 hora nos dois anos.';
       caixa.appendChild(p); return;
     }
-    const esc = Math.max(...linhas.flatMap((l) => [l.media[a], l.media[b]])) * 1.04;
-    const pct = (v: number) => (v / esc) * 100;
+    const escala = Math.max(...linhas.flatMap((l) => [l.mediaHoraPorAno[a], l.mediaHoraPorAno[b]])) * 1.04;
+    const pct = (v: number) => (v / escala) * 100;
     for (const l of linhas) {
-      const va = l.media[a], vb = l.media[b];
+      const va = l.mediaHoraPorAno[a], vb = l.mediaHoraPorAno[b], dl = vb - va;
       const row = document.createElement('div'); row.className = 'cmp-row';
-      const nome = document.createElement('span'); nome.className = 'cmp-nome';
-      const nm = document.createElement('b'); nm.textContent = l.nome;
-      const vv = document.createElement('span'); vv.className = 'cmp-vals tabular';
-      const delta = vb - va;
-      vv.textContent = `${fmt(va)} → ${fmt(vb)} (${delta >= 0 ? '+' : ''}${fmt(delta)})`;
-      nome.append(nm, vv);
-      const trilho = document.createElement('div'); trilho.className = 'cmp-track';
-      trilho.setAttribute('role', 'img');
-      trilho.setAttribute('aria-label', `${l.nome}: ${fmt(va)} em ${a} e ${fmt(vb)} em ${b}`);
-      const seg = document.createElement('div'); seg.className = 'cmp-seg';
-      seg.style.left = pct(Math.min(va, vb)) + '%'; seg.style.width = Math.abs(pct(vb) - pct(va)) + '%';
-      const da = document.createElement('div'); da.className = 'cmp-dot c-a'; da.style.left = pct(va) + '%';
-      const db = document.createElement('div'); db.className = 'cmp-dot c-b'; db.style.left = pct(vb) + '%';
-      trilho.append(seg, da, db);
-      row.append(nome, trilho);
+      row.innerHTML = `<span class="cmp-nome"><b>${esc(l.nome)}</b><span class="cmp-vals tabular">${fmt(va)} → ${fmt(vb)} (${dl >= 0 ? '+' : ''}${fmt(dl)})</span></span>
+        <div class="cmp-track" role="img" aria-label="${esc(l.nome)}: ${fmt(va)} em ${a} e ${fmt(vb)} em ${b}">
+          <div class="cmp-seg" style="left:${pct(Math.min(va, vb))}%;width:${Math.abs(pct(vb) - pct(va))}%"></div>
+          <div class="cmp-dot c-a" style="left:${pct(va)}%"></div><div class="cmp-dot c-b" style="left:${pct(vb)}%"></div>
+        </div>`;
       caixa.appendChild(row);
     }
   }
   selA.addEventListener('change', compara);
   selB.addEventListener('change', compara);
-  compara();
+
+  // ---------- curva do dia (hora a hora) ----------
+  function curvas() {
+    const porLocal = new Map<string, Dados['perfis']>();
+    for (const p of dados.perfis) porLocal.set(p.local, [...(porLocal.get(p.local) ?? []), p]);
+    const W = 720, H = 240, P = { l: 36, r: 8, t: 16, b: 28 };
+    let html = '';
+    for (const [id, dias] of porLocal) {
+      const local = dados.locais.find((l) => l.id === id);
+      if (!local) continue;
+      const media = Array.from({ length: 24 }, (_, h) => {
+        const v = dias.map((x) => x.horas[h]).filter((x): x is number => x !== null);
+        return v.length ? v.reduce((s, x) => s + x, 0) / v.length : 0;
+      });
+      const max = Math.max(...media, 1), pico = media.indexOf(Math.max(...media));
+      const totais = dias.map((x) => `${dataBR(x.data)}: ${int(x.horas.reduce<number>((s, v) => s + (v ?? 0), 0))}`).join(' · ');
+      const bw = (W - P.l - P.r) / 24;
+      let svg = '';
+      for (const f of [0, 0.25, 0.5, 0.75, 1]) {
+        const y = P.t + (H - P.t - P.b) * (1 - f);
+        svg += `<line x1="${P.l}" x2="${W - P.r}" y1="${y}" y2="${y}" class="grid"/><text x="${P.l - 6}" y="${y + 4}" class="axis" text-anchor="end">${Math.round(max * f)}</text>`;
+      }
+      media.forEach((v, h) => {
+        const bh = (H - P.t - P.b) * (v / max);
+        svg += `<rect x="${P.l + h * bw + 2}" y="${H - P.b - bh}" width="${bw - 4}" height="${bh}" rx="2" class="${h === pico ? 'bar peak' : 'bar'}"><title>${h}h às ${h + 1}h: ${fmt(v)} ciclistas (média)</title></rect>`;
+        if (h % 3 === 0) svg += `<text x="${P.l + h * bw + bw / 2}" y="${H - 8}" class="axis" text-anchor="middle">${h}h</text>`;
+      });
+      html += `<section class="wrap block">
+        <div class="block-head"><div>
+          <p class="eyebrow">Hora a hora</p>
+          <h2>A curva do dia na ${esc(local.nome)}</h2>
+          <p class="muted">Média de cada hora em ${dias.length} ${dias.length === 1 ? 'dia' : 'dias'} de contagem de 24 horas. O pico é das ${pico}h às ${pico + 1}h.</p>
+        </div></div>
+        <figure class="chart">
+          <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Ciclistas por hora ao longo do dia na ${esc(local.nome)}. Pico das ${pico}h às ${pico + 1}h.">${svg}</svg>
+          <figcaption class="muted small">Totais de 24 horas: ${totais}. As janelas de 1, 2 e 12 horas do mapa saem destas horas: 18h às 19h, 17h às 19h e 7h às 19h.</figcaption>
+        </figure>
+      </section>`;
+    }
+    $('cd-curvas').innerHTML = html;
+  }
+
+  // ---------- tabela ----------
+  function tabela() {
+    const nome = Object.fromEntries(dados.locais.map((l) => [l.id, l.nome]));
+    const recentes = [...dados.contagens].sort((a, b) => b.data.localeCompare(a.data)).slice(0, 20);
+    $('cd-tabela').innerHTML = recentes.map((r) =>
+      `<tr><td class="tabular">${dataBR(r.data)}</td><td>${r.periodo} ${r.periodo === 1 ? 'hora' : 'horas'}</td><td class="num tabular">${int(r.ciclistas)}</td><td>${esc(nome[r.local] ?? '')}</td><td>${esc(r.tipo)}</td><td class="muted">${esc(r.fonte.join(', '))}</td></tr>`,
+    ).join('');
+  }
+
+  function desenhaTudo() {
+    $('cd-lede').textContent = `${int(dados.totalContagens)} contagens em ${dados.locais.length} locais, de ${mesAno(dados.primeiraData)} a ${mesAno(dados.ultimaData)}. Contagens presenciais e por vídeo, de 1, 2, 12 e 24 horas. Toque num ponto para ver os números.`;
+    const anos = anosDe(dados);
+    const atualAno = selAno.value;
+    selAno.replaceChildren(new Option('Mais recente de cada local', 'recente'), ...[...anos].reverse().map((a) => new Option(a, a)));
+    selAno.value = anos.includes(atualAno) ? atualAno : 'recente';
+    const [pa, pb] = parPadrao(anos);
+    opcoes(selA, anos, pa);
+    opcoes(selB, anos, pb);
+    compara();
+    curvas();
+    tabela();
+    const l = dados.locais.find((x) => x.id === selecionado)
+      ?? [...dados.locais].sort((a, b) => (b.max24h?.ciclistas ?? 0) - (a.max24h?.ciclistas ?? 0))[0];
+    if (l) mostra(l); else desenhaMapa();
+  }
+  desenhaTudo();
+
+  // ---------- leitura ao vivo ----------
+  (async () => {
+    const status = $('cd-status');
+    try {
+      const r = await fetch('/api/contagens');
+      if (!r.ok) throw new Error(String(r.status));
+      const j = (await r.json()) as { fonte: 'planilha' | 'reserva'; lidoEm: string; dados: Dados };
+      if (j.fonte === 'planilha') {
+        dados = j.dados;
+        desenhaTudo();
+        const h = new Date(j.lidoEm);
+        status.textContent = `Atualizado com a planilha às ${String(h.getHours()).padStart(2, '0')}h${String(h.getMinutes()).padStart(2, '0')}.`;
+      } else {
+        status.textContent = 'A planilha não respondeu agora. Mostrando os dados da última publicação do site.';
+      }
+    } catch {
+      status.textContent = 'Sem conexão com a planilha. Mostrando os dados da última publicação do site.';
+    }
+  })();
 </script>
 
 <style>
   .head { padding-block: 56px 24px; display: flex; flex-direction: column; gap: 14px; }
   .head h1 { font-size: clamp(40px, 7vw, 64px); }
+  .status { font-size: 15px; }
   .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; background: var(--band); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px; }
   .controls label { font-weight: 600; }
   select { min-height: 44px; border: 1px solid #8fa3a2; border-radius: 6px; padding: 0 12px; font: 400 17px var(--font-body); background: #fff; color: var(--ink); }
@@ -282,33 +310,34 @@ const W = 720, H = 240, P = { l: 36, r: 8, t: 16, b: 28 };
   .panel-list { margin: 6px 0 0; padding-left: 18px; color: #c9d6d5; font-size: 16px; display: flex; flex-direction: column; gap: 4px; }
   #p-artigos { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
   #p-artigos :global(a) { color: var(--mint); font-weight: 600; font-size: 16px; }
-  .block { padding-block: 56px; display: flex; flex-direction: column; gap: 22px; }
-  .block-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; }
-  .block-head h2 { font-size: clamp(30px, 5vw, 40px); }
-  .block-head p { margin-top: 6px; }
+  .block, :global(#cd-curvas .block) { padding-block: 56px; display: flex; flex-direction: column; gap: 22px; }
+  .block-head, :global(#cd-curvas .block-head) { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; }
+  .block-head h2, :global(#cd-curvas h2) { font-size: clamp(30px, 5vw, 40px); }
+  .block-head p, :global(#cd-curvas .block-head p) { margin-top: 6px; }
   .cmp-controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-weight: 600; }
   .cmp-controls label { display: flex; gap: 8px; align-items: center; }
   .cmp-box { background: #fff; border-radius: 10px; padding: 24px 28px; display: flex; flex-direction: column; gap: 6px; }
   .legend { display: flex; gap: 20px; font-size: 15px; color: var(--ink-2); margin-bottom: 6px; }
   .legend span { display: flex; align-items: center; gap: 8px; }
   .legend i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-  .c-a { background: var(--y2023); }
-  .c-b { background: var(--y2024); }
+  .c-a, :global(.cmp-dot.c-a) { background: var(--y2023); }
+  .c-b, :global(.cmp-dot.c-b) { background: var(--y2024); }
   :global(.cmp-row) { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; padding: 10px 0; border-top: 1px solid var(--line); }
   :global(.cmp-nome) { flex: 0 1 260px; min-width: 0; display: flex; flex-direction: column; font-size: 17px; }
   :global(.cmp-vals) { font-size: 14px; color: var(--ink-2); }
   :global(.cmp-track) { flex: 1 1 380px; min-width: 0; position: relative; height: 34px; }
   :global(.cmp-seg) { position: absolute; top: 16px; height: 2px; background: #8fa3a2; }
   :global(.cmp-dot) { position: absolute; top: 10px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; box-shadow: 0 0 0 2px #fff; }
-  .chart { margin: 0; display: flex; flex-direction: column; gap: 10px; overflow-x: auto; }
-  .chart svg { width: 100%; min-width: 560px; height: auto; }
-  .chart .grid { stroke: var(--line); stroke-width: 1; }
-  .chart .axis { font: 500 12px var(--font-body); fill: var(--ink-3); }
-  .chart .bar { fill: #008C99; }
-  .chart .bar.peak { fill: #C47F00; }
+  :global(#cd-curvas .chart) { margin: 0; display: flex; flex-direction: column; gap: 10px; overflow-x: auto; }
+  :global(#cd-curvas .chart svg) { width: 100%; min-width: 560px; height: auto; }
+  :global(#cd-curvas .grid) { stroke: var(--line); stroke-width: 1; }
+  :global(#cd-curvas .axis) { font: 500 12px var(--font-body); fill: var(--ink-3); }
+  :global(#cd-curvas .bar) { fill: #008C99; }
+  :global(#cd-curvas .bar.peak) { fill: #C47F00; }
+  :global(#cd-curvas .eyebrow) { text-transform: uppercase; letter-spacing: 0.1em; font-size: 14px; font-weight: 600; color: var(--ink-2); }
   .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
   table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 16px; }
   th { background: var(--ink); color: #fff; text-align: left; padding: 12px 14px; font-weight: 600; }
-  td { padding: 11px 14px; border-top: 1px solid var(--line); }
-  .num { text-align: right; }
+  :global(#cd-tabela td) { padding: 11px 14px; border-top: 1px solid var(--line); }
+  :global(#cd-tabela .num), .num { text-align: right; }
 </style>

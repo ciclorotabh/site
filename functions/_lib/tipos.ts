@@ -32,4 +32,11 @@ export interface Contexto<P extends string = string> {
   request: Request;
   env: Env;
   params: Record<P, string>;
+  waitUntil?: (p: Promise<unknown>) => void;
+}
+
+/** Cache da borda da Cloudflare (caches.default). Pode não existir fora dela. */
+export interface CacheBorda {
+  match(r: Request): Promise<Response | undefined>;
+  put(r: Request, res: Response): Promise<void>;
 }

@@ -19,15 +19,21 @@ política de privacidade são editáveis pelo painel.
 
 ## As contagens (CicloDados)
 
-A planilha do Google é a fonte. A Action `atualizar-contagens` lê a planilha publicada como CSV uma vez por dia,
-converte para `src/data/contagens.json` e faz o commit se algo mudou. Se a planilha tiver erro (coordenada fora de
-BH, número negativo, data inválida), a Action falha e o JSON antigo continua valendo.
+A planilha do Google do Cristiano é a fonte, compartilhada por link como Leitor (sem credencial). O endereço dela
+está em `src/lib/site.ts` (`planilha`). O mesmo código (`functions/_lib/contagens.ts`) é usado em dois lugares:
 
-Formato aceito: uma aba (`Ano, Data, Horário, Período, Latitude, Longitude, Ciclistas, Fonte, Local, Tipo`) ou três
-abas (`Locais`, `Hora a hora`, `Histórico`). Linhas com horário são contagens de 1 hora; o script soma as janelas de
+- no build, para a página já sair com os números (se o Google falhar, usa o retrato `src/data/contagens.json`);
+- na função `/api/contagens`, que a página consulta ao abrir. Ela lê a planilha ao vivo, guarda por 5 minutos e,
+  se a planilha falhar ou tiver erro, devolve o retrato do último build.
+
+Um erro na planilha (data inválida, hora que não é número, coordenada fora de BH) faz o site ignorar a planilha
+inteira e manter os dados anteriores. A página `/admin/planilha.html` mostra o erro com o número da linha.
+
+Formato: uma aba (`Data, Horário, Período, Latitude, Longitude, Ciclistas, Fonte, Local, Tipo`) ou três abas
+(`Locais`, `Hora a hora`, `Histórico`). Linhas com horário são contagens de 1 hora; o código soma as janelas de
 1 h (18h às 19h), 2 h (17h às 19h), 12 h (7h às 19h) e 24 h e confere com as linhas agregadas do mesmo dia.
 
-Rodar à mão: `python3 scripts/atualizar_contagens.py --xlsx planilha.xlsx` ou `--csv-historico URL`.
+Atualizar o retrato: `npm run retrato`.
 
 ## Campanhas (abaixo-assinados)
 
@@ -42,7 +48,6 @@ nvm use            # Node 24
 npm install
 npm run dev        # site em http://localhost:4321
 npm test           # testes das funções (vitest)
-python3 -m unittest discover -s scripts/tests   # testes do gerador de contagens
 npm run build      # checagem de tipos e build
 ```
 

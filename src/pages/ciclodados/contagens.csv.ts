@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import dados from '../../data/contagens.json';
+import { carregarContagens } from '../../lib/dados';
 
 // Dados abertos: todas as contagens, uma por linha, já com as janelas derivadas da contagem hora a hora.
 const esc = (v: string | number | boolean) => {
@@ -7,7 +7,8 @@ const esc = (v: string | number | boolean) => {
   return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 };
 
-export const GET: APIRoute = () => {
+export const GET: APIRoute = async () => {
+  const { dados } = await carregarContagens();
   const locais = Object.fromEntries(dados.locais.map((l) => [l.id, l]));
   const linhas = [['data', 'periodo_horas', 'ciclistas', 'local', 'latitude', 'longitude', 'tipo', 'fonte', 'derivada_hora_a_hora'].join(',')];
   for (const c of dados.contagens) {

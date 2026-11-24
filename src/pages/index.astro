@@ -4,7 +4,8 @@ import Newsletter from '../components/Newsletter.astro';
 import StatusPill from '../components/StatusPill.astro';
 import { artigos, noticias, ultimasConquistas } from '../lib/conteudo';
 import { dataCurta, minutosLeitura, numeroBR } from '../lib/site';
-import dados from '../data/contagens.json';
+import { carregarContagens } from '../lib/dados';
+const { dados } = await carregarContagens();
 
 const listaArtigos = (await artigos()).slice(0, 7);
 const listaNoticias = (await noticias()).slice(0, 3);
