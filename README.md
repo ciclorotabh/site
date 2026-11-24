@@ -6,7 +6,7 @@ melhor para quem pedala. Projeto independente de Cristiano Scarpelli.
 ## Endereços
 
 - Site: https://ciclorotabh.com (até o domínio ser apontado: https://ciclorotabh.pages.dev)
-- Painel: `/admin/` · Lista de assinaturas: `/admin/assinaturas.html`
+- Painel: `/admin/` · Lista de assinaturas: `/admin/assinaturas`
 - Hospedagem: Cloudflare Pages, projeto `ciclorotabh`, na conta do Cristiano. Banco D1 `ciclorotabh-assinaturas`.
 - Login do painel: OAuth App "Painel CicloRota BH" na organização `ciclorotabh` do GitHub. A URL de callback
   precisa ser `https://<domínio do site>/api/callback`; trocar quando o domínio mudar.
@@ -27,7 +27,7 @@ está em `src/lib/site.ts` (`planilha`). O mesmo código (`functions/_lib/contag
   se a planilha falhar ou tiver erro, devolve o retrato do último build.
 
 Um erro na planilha (data inválida, hora que não é número, coordenada fora de BH) faz o site ignorar a planilha
-inteira e manter os dados anteriores. A página `/admin/planilha.html` mostra o erro com o número da linha.
+inteira e manter os dados anteriores. A página `/admin/planilha` mostra o erro com o número da linha.
 
 Formato: uma aba (`Data, Horário, Período, Latitude, Longitude, Ciclistas, Fonte, Local, Tipo`) ou três abas
 (`Locais`, `Hora a hora`, `Histórico`). Linhas com horário são contagens de 1 hora; o código soma as janelas de
@@ -39,7 +39,7 @@ Atualizar o retrato: `npm run retrato`.
 
 Pages Functions em `functions/api/` com banco D1 (`migrations/`). Uma assinatura por e-mail em cada campanha
 (garantido pelo banco), Cloudflare Turnstile contra robô e no máximo 5 assinaturas por conexão por hora. O IP não
-é gravado, só um hash com sal. A lista para entrega sai em `/admin/assinaturas.html`, só para membros da organização.
+é gravado, só um hash com sal. A lista para entrega sai em `/admin/assinaturas`, só para membros da organização.
 
 ## Desenvolvimento
 
