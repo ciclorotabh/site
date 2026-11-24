@@ -3,7 +3,7 @@ backend:
   name: github
   repo: ciclorotabh/site
   branch: main
-  base_url: https://ciclorotabh.com     # trocado pelo endereço de teste até o domínio ser apontado
+  # base_url vem do endereço onde o painel está aberto (ver admin/index.html)
   auth_endpoint: api/auth
   commit_messages:
     create: 'Novo em {{collection}}: {{slug}}'

@@ -9,14 +9,22 @@
   <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
 </head>
 <body>
+  <script>window.CMS_MANUAL_INIT = true;</script>
   <script src="https://unpkg.com/decap-cms@3.17.3/dist/decap-cms.js" integrity="sha384-RWRzuHfiZSWCt3nEvG7B0v3cMgM1C2UuJmgBSL92GQh4uXmNSkbcthql/mNBqvjr" crossorigin="anonymous"></script>
   <script>
-    // Prévia com a cara do site
-    window.addEventListener('load', function () {
-      if (window.CMS) {
-        CMS.registerPreviewStyle('/admin/previa.css');
-      }
+    // O login usa o endereço onde o painel está aberto (endereço de teste ou ciclorotabh.com).
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'ciclorotabh/site',
+          branch: 'main',
+          base_url: window.location.origin,
+          auth_endpoint: 'api/auth',
+        },
+      },
     });
+    CMS.registerPreviewStyle('/admin/previa.css');
   </script>
 </body>
 </html>
