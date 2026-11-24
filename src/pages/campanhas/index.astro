@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { dataCurta } from '../../lib/site';
+const lista = (await getCollection('campanhas', ({ data }) => import.meta.env.DEV || data.status !== 'rascunho')).sort(
+  (a, b) => b.data.opensAt.valueOf() - a.data.opensAt.valueOf(),
+);
+const abertas = lista.filter((c) => c.data.status === 'aberta');
+const encerradas = lista.filter((c) => c.data.status !== 'aberta');
+---
+<Base title="Campanhas" description="Abaixo-assinados do CicloRota BH.">
+  <section class="wrap head">
+    <p class="eyebrow">Campanhas</p>
+    <h1>Abaixo-assinados do CicloRota</h1>
+    <p class="lede">Assinaturas entregues aos órgãos públicos, com nome e bairro. Sem cadastro e sem repassar seu e-mail.</p>
+  </section>
+  <section class="wrap list">
+    {abertas.length === 0 && <p class="muted">Nenhuma campanha aberta agora. Para saber da próxima, <a href="/#newsletter">receba por e-mail</a>.</p>}
+    {abertas.map((c) => (
+      <a class="item aberta" href={`/campanhas/${c.id}/`}><span class="pill" style="background:var(--sun)">Aberta</span><h2>{c.data.title}</h2><p class="muted">{c.data.description}</p></a>
+    ))}
+    {encerradas.length > 0 && <h2 class="sub">Encerradas</h2>}
+    {encerradas.map((c) => (
+      <a class="item" href={`/campanhas/${c.id}/`}><span class="muted tabular">{dataCurta(c.data.opensAt)}</span><h2>{c.data.title}</h2></a>
+    ))}
+  </section>
+</Base>
+<style>
+  .head { padding-block: 56px 24px; display: flex; flex-direction: column; gap: 14px; }
+  .head h1 { font-size: clamp(40px, 7vw, 64px); }
+  .list { padding-block: 16px 72px; display: flex; flex-direction: column; gap: 14px; max-width: 860px; }
+  .item { display: flex; flex-direction: column; gap: 8px; padding: 22px; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--ink); }
+  .item.aberta { border: 2px solid var(--ink); }
+  .item h2 { font-family: var(--font-body); font-size: 24px; font-weight: 600; }
+  .item .pill { align-self: flex-start; }
+  .sub { font-size: 32px; margin-top: 24px; }
+</style>

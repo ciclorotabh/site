@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Baixar assinaturas | CicloRota BH</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; color: #10201F; line-height: 1.5; }
+    input, button { font: inherit; min-height: 44px; padding: 0 12px; }
+    button { background: #006B73; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+    #msg { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Baixar a lista de assinaturas</h1>
+  <p>Entre antes no <a href="/admin/">painel</a> com o GitHub. A lista sai com número, nome, bairro e data (sem e-mail), pronta para entregar.</p>
+  <form id="f">
+    <label for="c">Endereço da campanha (a parte depois de /campanhas/)</label><br />
+    <input id="c" required pattern="[a-z0-9-]+" placeholder="ex.: patinetes" />
+    <button type="submit">Baixar CSV</button>
+  </form>
+  <p id="msg" role="status"></p>
+  <script>
+    document.getElementById('f').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var msg = document.getElementById('msg');
+      var user = null;
+      try { user = JSON.parse(localStorage.getItem('decap-cms-user') || 'null'); } catch (err) {}
+      if (!user || !user.token) { msg.textContent = 'Entre primeiro no painel (/admin/) e volte aqui.'; return; }
+      var c = document.getElementById('c').value;
+      msg.textContent = 'Gerando…';
+      var r = await fetch('/api/exportar/' + encodeURIComponent(c), { headers: { Authorization: 'Bearer ' + user.token } });
+      if (!r.ok) { msg.textContent = r.status === 403 ? 'Seu usuário do GitHub não é membro da organização ciclorotabh.' : 'Não deu certo (' + r.status + ').'; return; }
+      var blob = await r.blob();
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'assinaturas-' + c + '.csv';
+      a.click();
+      msg.textContent = 'Pronto.';
+    });
+  </script>
+</body>
+</html>

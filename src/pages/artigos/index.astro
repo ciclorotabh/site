@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { artigos } from '../../lib/conteudo';
+import { dataCurta, minutosLeitura } from '../../lib/site';
+
+const lista = await artigos();
+const porAno = new Map<number, typeof lista>();
+for (const a of lista) {
+  const ano = a.data.date.getUTCFullYear();
+  porAno.set(ano, [...(porAno.get(ano) ?? []), a]);
+}
+const destaque = lista[0];
+---
+<Base title="Artigos" description="Análises com dado e fonte sobre ciclovias, trânsito e espaço público em Belo Horizonte.">
+  <section class="wrap head">
+    <p class="eyebrow">Artigos</p>
+    <h1>Análises com dado e fonte</h1>
+    <p class="lede">Ciclovias, trânsito e espaço público em Belo Horizonte. {lista.length} artigos desde {lista.at(-1)?.data.date.getUTCFullYear()}.</p>
+  </section>
+
+  {destaque && (
+    <section class="wrap">
+      <a class="featured" href={`/artigo/${destaque.id}/`}>
+        {destaque.data.cover && <Image src={destaque.data.cover} alt={destaque.data.coverAlt ?? ''} widths={[480, 800]} sizes="(max-width: 760px) 100vw, 480px" class="f-img" />}
+        <div class="f-text">
+          <span class="muted tabular">{dataCurta(destaque.data.date)} · {minutosLeitura(destaque.body)} min de leitura</span>
+          <h2>{destaque.data.title}</h2>
+          <p class="muted">{destaque.data.description}</p>
+        </div>
+      </a>
+    </section>
+  )}
+
+  <section class="wrap years">
+    {[...porAno.entries()].map(([ano, itens]) => (
+      <div class="year">
+        <h2 class="year-label tabular">{ano}</h2>
+        <ol>
+          {itens.filter((a) => a !== destaque).map((a) => (
+            <li>
+              <a href={`/artigo/${a.id}/`}>{a.data.title}</a>
+              <p class="muted">{a.data.description}</p>
+              <span class="muted tabular small">{dataCurta(a.data.date)} · {minutosLeitura(a.body)} min</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
+  </section>
+</Base>
+
+<style>
+  .head { padding-block: 56px 32px; display: flex; flex-direction: column; gap: 14px; }
+  .head h1 { font-size: clamp(42px, 7vw, 64px); }
+  .featured { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; text-decoration: none; color: var(--ink); background: var(--band); border-radius: 12px; padding: 24px; }
+  .featured:hover h2 { color: var(--accent); }
+  .f-img { flex: 1 1 320px; width: 100%; max-width: 480px; height: auto; border-radius: 8px; }
+  .f-text { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+  .f-text h2 { font-size: clamp(30px, 4vw, 40px); }
+  .years { padding-block: 40px 72px; display: flex; flex-direction: column; gap: 40px; }
+  .year { display: flex; flex-wrap: wrap; gap: 12px 48px; }
+  .year-label { flex: 0 0 120px; font-size: 40px; color: var(--accent); }
+  .year ol { flex: 1 1 520px; min-width: 0; list-style: none; margin: 0; padding: 0; }
+  .year li { border-top: 1px solid var(--line); padding: 18px 0; display: flex; flex-direction: column; gap: 6px; }
+  .year li > a { color: var(--ink); text-decoration: none; font-size: 21px; font-weight: 600; line-height: 1.3; }
+  .year li > a:hover { color: var(--accent); }
+  .year li p { font-size: 16px; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .small { font-size: 14px; }
+</style>

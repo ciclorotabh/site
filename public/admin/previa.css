@@ -1,0 +1,6 @@
+body { font-family: Barlow, system-ui, sans-serif; font-size: 18px; line-height: 1.55; color: #10201F; max-width: 46em; margin: 24px auto; padding: 0 20px; }
+h1, h2, h3 { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; line-height: 1.05; }
+h1 { font-size: 48px; } h2 { font-size: 32px; }
+img { max-width: 100%; height: auto; border-radius: 6px; }
+a { color: #006B73; }
+table { border-collapse: collapse; } td, th { border: 1px solid #DCE3E2; padding: 6px 10px; }

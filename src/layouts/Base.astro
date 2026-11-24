@@ -1,0 +1,126 @@
+---
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
+import Logo from '../components/Logo.astro';
+import { SITE, NAV } from '../lib/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string; // URL absoluta ou caminho de imagem já otimizada
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+const { title, description = SITE.description, image, type = 'website', noindex = false } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE.name}` : `${SITE.name}: dados de rua para defender quem pedala`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = image ? new URL(image, Astro.site).href : new URL('/og-padrao.png', Astro.site).href;
+
+const abertas = (await getCollection('campanhas', ({ data }) => data.status === 'aberta')).sort(
+  (a, b) => b.data.opensAt.valueOf() - a.data.opensAt.valueOf(),
+);
+const campanha = abertas[0];
+const path = Astro.url.pathname;
+const atual = (href: string) => path === href || path.startsWith(href);
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE.name}: artigos`} href="/rss.xml" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title ?? SITE.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    {campanha && (
+      <a class="campaign-bar" href={`/campanhas/${campanha.id}/`}>
+        <span class="campaign-tag">Campanha aberta</span>
+        <span>{campanha.data.bannerText}</span>
+        <span class="campaign-cta">Assine agora</span>
+      </a>
+    )}
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a href="/" class="brand" aria-label={`${SITE.name}, página inicial`}>
+          <Logo />
+          <span class="brand-name">CicloRota <span>BH</span></span>
+        </a>
+        <nav aria-label="Principal" class="nav">
+          {NAV.map((item) => (
+            <a href={item.href} aria-current={atual(item.href) ? 'page' : undefined}>{item.label}</a>
+          ))}
+          {campanha && <a href="/campanhas/" aria-current={atual('/campanhas/') ? 'page' : undefined}>Campanhas</a>}
+          <a href="/#newsletter" class="nav-cta">Receber por e-mail</a>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <div class="footer-brand">
+          <span class="footer-name">CicloRota BH</span>
+          <span>Projeto independente de {SITE.owner}.</span>
+        </div>
+        <nav aria-label="Rodapé" class="footer-nav">
+          <a href="/privacidade/">Política de privacidade</a>
+          <a href="/ciclodados/#dados-abertos">Dados abertos</a>
+          <a href="/rss.xml">RSS</a>
+          <a href={SITE.instagram} rel="me noopener">Instagram</a>
+          <a href={SITE.youtube} rel="me noopener">YouTube</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .skip { position: absolute; left: -9999px; top: 8px; background: var(--sun); color: var(--ink); padding: 8px 14px; z-index: 20; }
+  .skip:focus { left: 12px; }
+  .campaign-bar {
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 16px;
+    padding: 12px max(20px, env(safe-area-inset-left, 0px)); background: var(--sun); color: var(--ink);
+    text-decoration: none; font-weight: 600; font-size: 16px; text-align: center;
+  }
+  .campaign-bar:hover { color: var(--ink); }
+  .campaign-tag { text-transform: uppercase; letter-spacing: 0.08em; font-size: 13px; }
+  .campaign-cta { text-decoration: underline; }
+  .site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+  .header-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+  .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 30px; letter-spacing: 0.01em; }
+  .brand-name span { color: var(--accent); }
+  .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-weight: 500; font-size: 17px; }
+  .nav a { color: var(--ink); text-decoration: none; padding: 10px 0; }
+  .nav a[aria-current='page'] { color: var(--accent); text-decoration: underline; text-underline-offset: 6px; font-weight: 600; }
+  .nav .nav-cta { background: var(--accent); color: #fff; padding: 10px 18px; border-radius: 6px; font-weight: 600; }
+  .nav .nav-cta:hover { background: var(--accent-hover); color: #fff; }
+  @media (max-width: 760px) {
+    .header-row { padding-block: 12px 0; }
+    .nav { width: 100%; flex-wrap: nowrap; overflow-x: auto; gap: 18px; padding-bottom: 6px; scrollbar-width: none; }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a { white-space: nowrap; }
+    .nav .nav-cta { padding: 8px 14px; }
+  }
+  .site-footer { border-top: 1px solid var(--line); margin-top: 0; }
+  .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; padding-block: 40px 56px; font-size: 16px; color: var(--ink-2); }
+  .footer-brand { display: flex; flex-direction: column; gap: 6px; }
+  .footer-name { font-family: var(--font-display); font-weight: 700; font-size: 24px; color: var(--ink); }
+  .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; }
+</style>

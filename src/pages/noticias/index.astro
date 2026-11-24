@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { noticias } from '../../lib/conteudo';
+import { dataCurta } from '../../lib/site';
+const lista = await noticias();
+---
+<Base title="Notícias e eventos" description="Ações, eventos, contagens e vídeos do CicloRota BH.">
+  <section class="wrap head">
+    <p class="eyebrow">Notícias</p>
+    <h1>Notícias e eventos</h1>
+    <p class="lede">Ações nos órgãos públicos, eventos, contagens novas e vídeos da semana.</p>
+  </section>
+  <section class="wrap list">
+    {lista.length === 0 && <p class="muted">Nenhuma notícia publicada ainda.</p>}
+    {lista.map((n) => (
+      <article class="item">
+        <div class="meta"><span class="pill tag">{n.data.tipo}</span><span class="muted tabular">{dataCurta(n.data.date)}</span>{n.data.place && <span class="muted">{n.data.place}</span>}</div>
+        <h2><a href={`/noticias/${n.id}/`}>{n.data.title}</a></h2>
+        <p class="muted">{n.data.description}</p>
+      </article>
+    ))}
+  </section>
+</Base>
+<style>
+  .head { padding-block: 56px 24px; display: flex; flex-direction: column; gap: 14px; }
+  .head h1 { font-size: clamp(42px, 7vw, 64px); }
+  .list { padding-block: 16px 72px; display: flex; flex-direction: column; max-width: 860px; }
+  .item { border-top: 1px solid var(--line); padding: 22px 0; display: flex; flex-direction: column; gap: 8px; }
+  .item h2 { font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.25; }
+  .item h2 a { color: var(--ink); text-decoration: none; }
+  .item h2 a:hover { color: var(--accent); }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 14px; }
+  .tag { background: var(--ink); color: #fff; }
+</style>

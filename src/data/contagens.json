@@ -1,0 +1,4290 @@
+{
+ "geradoEm": "2026-11-24T00:26:12+00:00",
+ "janelas": {
+  "1": [
+   18,
+   19
+  ],
+  "2": [
+   17,
+   19
+  ],
+  "12": [
+   7,
+   19
+  ],
+  "24": [
+   0,
+   24
+  ]
+ },
+ "totalContagens": 303,
+ "primeiraData": "2023-04-27",
+ "ultimaData": "2026-09-29",
+ "locais": [
+  {
+   "id": "av-afonso-pena-1420",
+   "nome": "Av. Afonso Pena 1420",
+   "lat": -19.924972,
+   "lon": -43.935167,
+   "contagens": 9,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 18.0
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 18.0,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-09-19"
+  },
+  {
+   "id": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "nome": "Av. Afonso Pena 1537 (somente um lado da pista)",
+   "lat": -19.926,
+   "lon": -43.934167,
+   "contagens": 12,
+   "anos": [
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2024": 15.7
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 15.7,
+   "max24h": {
+    "ciclistas": 212,
+    "data": "2024-04-10"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-04-10"
+  },
+  {
+   "id": "av-afonso-pena-1991",
+   "nome": "Av. Afonso Pena 1991",
+   "lat": -19.929083,
+   "lon": -43.932028,
+   "contagens": 7,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 11.3
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 11.3,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-07-13"
+  },
+  {
+   "id": "av-afonso-pena-4040",
+   "nome": "Av. Afonso Pena 4040",
+   "lat": -19.945667,
+   "lon": -43.922167,
+   "contagens": 8,
+   "anos": [
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2024": 7.0
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 7.0,
+   "max24h": {
+    "ciclistas": 134,
+    "data": "2024-02-27"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-02-28"
+  },
+  {
+   "id": "av-augusto-de-lima-1075",
+   "nome": "Av. Augusto de Lima 1075",
+   "lat": -19.9225,
+   "lon": -43.946556,
+   "contagens": 36,
+   "anos": [
+    2023,
+    2024,
+    2025
+   ],
+   "mediaHoraPorAno": {
+    "2023": 17.4,
+    "2024": 34.2,
+    "2025": 32.0
+   },
+   "ultimoAno": "2025",
+   "mediaHora": 32.0,
+   "max24h": null,
+   "periodos": [
+    1,
+    2
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2025-10-15"
+  },
+  {
+   "id": "av-augusto-de-lima-1674",
+   "nome": "Av. Augusto de Lima 1674",
+   "lat": -19.921083,
+   "lon": -43.951667,
+   "contagens": 24,
+   "anos": [
+    2023,
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2023": 18.0,
+    "2024": 39.7
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 39.7,
+   "max24h": {
+    "ciclistas": 369,
+    "data": "2024-09-11"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-09-16"
+  },
+  {
+   "id": "av-brasil-1357",
+   "nome": "Av. Brasil 1357",
+   "lat": -19.929639,
+   "lon": -43.93125,
+   "contagens": 3,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 11.3
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 11.3,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-07-13"
+  },
+  {
+   "id": "av-contorno-6282",
+   "nome": "Av. Contorno 6282",
+   "lat": -19.940111,
+   "lon": -43.937806,
+   "contagens": 3,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 9.7
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 9.7,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-10-16"
+  },
+  {
+   "id": "av-joao-pinheiro-100",
+   "nome": "Av. João Pinheiro 100",
+   "lat": -19.926136,
+   "lon": -43.936511,
+   "contagens": 13,
+   "anos": [
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2024": 10.0
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 10.0,
+   "max24h": {
+    "ciclistas": 105,
+    "data": "2024-04-25"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-04-25"
+  },
+  {
+   "id": "av-joao-pinheiro-617",
+   "nome": "Av. João Pinheiro 617",
+   "lat": -19.930722,
+   "lon": -43.937472,
+   "contagens": 3,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 5.3
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 5.3,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-06-27"
+  },
+  {
+   "id": "av-otacilio-negrao-de-lima-14370",
+   "nome": "Av. Otácilio Negrão de Lima 14370",
+   "lat": -19.846083,
+   "lon": -43.987444,
+   "contagens": 8,
+   "anos": [
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2024": 97.5
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 97.5,
+   "max24h": {
+    "ciclistas": 1344,
+    "data": "2024-08-12"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-08-13"
+  },
+  {
+   "id": "avenida-dos-andradas",
+   "nome": "Avenida dos Andradas",
+   "lat": -19.901206,
+   "lon": -43.90635,
+   "contagens": 12,
+   "anos": [
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2024": 94.7
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 94.7,
+   "max24h": {
+    "ciclistas": 966,
+    "data": "2024-10-01"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-10-02"
+  },
+  {
+   "id": "ciclovia-augusto-de-lima",
+   "nome": "Ciclovia Augusto de Lima",
+   "lat": -19.921083,
+   "lon": -43.952389,
+   "contagens": 41,
+   "anos": [
+    2023,
+    2024,
+    2026
+   ],
+   "mediaHoraPorAno": {
+    "2023": 8.0,
+    "2024": 32.4,
+    "2026": 46.0
+   },
+   "ultimoAno": "2026",
+   "mediaHora": 46.0,
+   "max24h": {
+    "ciclistas": 380,
+    "data": "2026-09-24"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": true,
+   "ultimaContagem": "2026-09-29"
+  },
+  {
+   "id": "ciclovia-alto-da-afonso-pena",
+   "nome": "Ciclovia alto da Afonso Pena",
+   "lat": -19.944989,
+   "lon": -43.922319,
+   "contagens": 28,
+   "anos": [
+    2024,
+    2025
+   ],
+   "mediaHoraPorAno": {
+    "2024": 5.0,
+    "2025": 5.3
+   },
+   "ultimoAno": "2025",
+   "mediaHora": 5.3,
+   "max24h": {
+    "ciclistas": 82,
+    "data": "2025-02-11"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2025-06-04"
+  },
+  {
+   "id": "fernandes-tourinho-471",
+   "nome": "Fernandes Tourinho 471",
+   "lat": -19.938472,
+   "lon": -43.93925,
+   "contagens": 4,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 13.2
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 13.2,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-06-22"
+  },
+  {
+   "id": "getulio-vargas-1300",
+   "nome": "Getúlio Vargas 1300",
+   "lat": -19.937778,
+   "lon": -43.935111,
+   "contagens": 2,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 13.0
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 13.0,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-08-08"
+  },
+  {
+   "id": "goncalves-dias-928",
+   "nome": "Gonçalves Dias 928",
+   "lat": -19.932111,
+   "lon": -43.933583,
+   "contagens": 3,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 3.3
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 3.3,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-08-22"
+  },
+  {
+   "id": "pernambuco-554",
+   "nome": "Pernambuco 554",
+   "lat": -19.932222,
+   "lon": -43.933944,
+   "contagens": 3,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 6.3
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 6.3,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-08-22"
+  },
+  {
+   "id": "rua-alagoas-750",
+   "nome": "Rua Alagoas 750",
+   "lat": -19.933639,
+   "lon": -43.93575,
+   "contagens": 19,
+   "anos": [
+    2023,
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2023": 6.2,
+    "2024": 7.0
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 7.0,
+   "max24h": {
+    "ciclistas": 88,
+    "data": "2023-11-07"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-03-27"
+  },
+  {
+   "id": "rua-conceiao-do-para-930",
+   "nome": "Rua Conceião do Pará 930",
+   "lat": -19.8875,
+   "lon": -43.911861,
+   "contagens": 8,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 20.5
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 20.5,
+   "max24h": {
+    "ciclistas": 194,
+    "data": "2023-09-20"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-09-21"
+  },
+  {
+   "id": "rua-conceicao-do-para-930",
+   "nome": "Rua Conceição do Pará 930",
+   "lat": -19.8875,
+   "lon": -43.911861,
+   "contagens": 8,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 22.5
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 22.5,
+   "max24h": {
+    "ciclistas": 173,
+    "data": "2023-09-13"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-09-14"
+  },
+  {
+   "id": "rua-espirito-santo-1682",
+   "nome": "Rua Espírito Santo 1682",
+   "lat": -19.929417,
+   "lon": -43.940111,
+   "contagens": 2,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 0.0
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 0.0,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-10-04"
+  },
+  {
+   "id": "rua-pernambuco-453",
+   "nome": "Rua Pernambuco 453",
+   "lat": -19.931175,
+   "lon": -43.933572,
+   "contagens": 8,
+   "anos": [
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2024": 5.5
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 5.5,
+   "max24h": {
+    "ciclistas": 47,
+    "data": "2024-08-21"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-08-21"
+  },
+  {
+   "id": "rua-rio-de-janeiro-2195",
+   "nome": "Rua Rio de Janeiro 2195",
+   "lat": -19.933611,
+   "lon": -43.942611,
+   "contagens": 3,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 7.0
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 7.0,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-10-17"
+  },
+  {
+   "id": "rua-sergipe-837",
+   "nome": "Rua Sergipe 837",
+   "lat": -19.933222,
+   "lon": -43.936972,
+   "contagens": 29,
+   "anos": [
+    2023,
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2023": 1.4,
+    "2024": 1.7
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 1.7,
+   "max24h": {
+    "ciclistas": 44,
+    "data": "2024-03-14"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-04-09"
+  },
+  {
+   "id": "rua-da-bahia-1816",
+   "nome": "Rua da Bahia 1816",
+   "lat": -19.931028,
+   "lon": -43.939167,
+   "contagens": 3,
+   "anos": [
+    2023
+   ],
+   "mediaHoraPorAno": {
+    "2023": 2.3
+   },
+   "ultimoAno": "2023",
+   "mediaHora": 2.3,
+   "max24h": null,
+   "periodos": [
+    1
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2023-11-08"
+  },
+  {
+   "id": "rua-dos-guajajaras-201",
+   "nome": "Rua dos Guajajaras 201",
+   "lat": -19.926444,
+   "lon": -43.936,
+   "contagens": 4,
+   "anos": [
+    2024
+   ],
+   "mediaHoraPorAno": {
+    "2024": 3.0
+   },
+   "ultimoAno": "2024",
+   "mediaHora": 3.0,
+   "max24h": {
+    "ciclistas": 40,
+    "data": "2024-04-24"
+   },
+   "periodos": [
+    1,
+    2,
+    12,
+    24
+   ],
+   "horaAHora": false,
+   "ultimaContagem": "2024-04-24"
+  }
+ ],
+ "contagens": [
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 14,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-04-27",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 20,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-04-27",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1991",
+   "ciclistas": 18,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-05-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-brasil-1357",
+   "ciclistas": 13,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-05-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 23,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-05-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 17,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-05-18",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1991",
+   "ciclistas": 14,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-05-22",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1991",
+   "ciclistas": 11,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-05-30",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "fernandes-tourinho-471",
+   "ciclistas": 11,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-05-31",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "fernandes-tourinho-471",
+   "ciclistas": 16,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-01",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 16,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-05",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "fernandes-tourinho-471",
+   "ciclistas": 17,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Vandré Guardieiro"
+   ],
+   "data": "2023-06-06",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1991",
+   "ciclistas": 7,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-12",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1991",
+   "ciclistas": 12,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-brasil-1357",
+   "ciclistas": 10,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 17,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-14",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-joao-pinheiro-617",
+   "ciclistas": 6,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-15",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-joao-pinheiro-617",
+   "ciclistas": 4,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-19",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 15,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-20",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "fernandes-tourinho-471",
+   "ciclistas": 9,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-22",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-joao-pinheiro-617",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-27",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-contorno-6282",
+   "ciclistas": 7,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-06-28",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "goncalves-dias-928",
+   "ciclistas": 5,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-07-04",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "pernambuco-554",
+   "ciclistas": 6,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-07-04",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1991",
+   "ciclistas": 11,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-07-06",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 22,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-07-10",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 20,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-07-11",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1991",
+   "ciclistas": 6,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-07-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-brasil-1357",
+   "ciclistas": 11,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-07-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 20,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-01",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 16,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-02",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 0,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-02",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "goncalves-dias-928",
+   "ciclistas": 2,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-03",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "pernambuco-554",
+   "ciclistas": 9,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-03",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 2,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-03",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "getulio-vargas-1300",
+   "ciclistas": 12,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-07",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 2,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-07",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-contorno-6282",
+   "ciclistas": 4,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "getulio-vargas-1300",
+   "ciclistas": 14,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-08",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-sergipe-837",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 11,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-09",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 1,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-09",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 11,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-10",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 2,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-10",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 1,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-rio-de-janeiro-2195",
+   "ciclistas": 5,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Gil Sotero",
+    "Wilson"
+   ],
+   "data": "2023-08-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 0,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-17",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-sergipe-837",
+   "ciclistas": 2,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-17",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-sergipe-837",
+   "ciclistas": 32,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-17",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-sergipe-837",
+   "ciclistas": 42,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 14,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-21",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "goncalves-dias-928",
+   "ciclistas": 3,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-22",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "pernambuco-554",
+   "ciclistas": 4,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-22",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 1,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-22",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-espirito-santo-1682",
+   "ciclistas": 0,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-23",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 0,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-23",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-da-bahia-1816",
+   "ciclistas": 1,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-23",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 18,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-24",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-24",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 16,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-25",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 1,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-08-30",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 2,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-04",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-sergipe-837",
+   "ciclistas": 7,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-04",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-sergipe-837",
+   "ciclistas": 29,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-04",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-sergipe-837",
+   "ciclistas": 38,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-04",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 14,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-05",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 26,
+   "tipo": "Presencial",
+   "fonte": [
+    "Túlio Jansen"
+   ],
+   "data": "2023-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 13,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 24,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-13",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 42,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-13",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 112,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-13",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 173,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 19,
+   "tipo": "Presencial",
+   "fonte": [
+    "Túlio Jansen"
+   ],
+   "data": "2023-09-14",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 21,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-14",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 49,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-14",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 112,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-14",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-conceicao-do-para-930",
+   "ciclistas": 168,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-14",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 18,
+   "tipo": "Presencial",
+   "fonte": [
+    "Túlio Jansen"
+   ],
+   "data": "2023-09-18",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1420",
+   "ciclistas": 15,
+   "tipo": "Presencial",
+   "fonte": [
+    "Túlio Jansen"
+   ],
+   "data": "2023-09-19",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 23,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-20",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 40,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-20",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 109,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-20",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 194,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-20",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 18,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-21",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 36,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-21",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 99,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-21",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-conceiao-do-para-930",
+   "ciclistas": 161,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Júlia Pedrosa"
+   ],
+   "data": "2023-09-21",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 25,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo",
+    "Júlio Lana"
+   ],
+   "data": "2023-09-25",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-alagoas-750",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-28",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-rio-de-janeiro-2195",
+   "ciclistas": 5,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-09-28",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-alagoas-750",
+   "ciclistas": 5,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-10-02",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-alagoas-750",
+   "ciclistas": 8,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-10-03",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-espirito-santo-1682",
+   "ciclistas": 0,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-10-04",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-da-bahia-1816",
+   "ciclistas": 2,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-10-04",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 26,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Hélio Filho"
+   ],
+   "data": "2023-10-05",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 21,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 32,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 128,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 299,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-contorno-6282",
+   "ciclistas": 18,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 9,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 17,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 77,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 105,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 17,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 30,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 111,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 249,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 8,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 16,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 62,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 98,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-rio-de-janeiro-2195",
+   "ciclistas": 11,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-10-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 16,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 30,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 121,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 235,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 7,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 14,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 62,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 74,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-alagoas-750",
+   "ciclistas": 62,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-10-19",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-alagoas-750",
+   "ciclistas": 9,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-06",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-alagoas-750",
+   "ciclistas": 16,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-06",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-alagoas-750",
+   "ciclistas": 44,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-06",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-alagoas-750",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-07",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-alagoas-750",
+   "ciclistas": 13,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-07",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-alagoas-750",
+   "ciclistas": 71,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-07",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-alagoas-750",
+   "ciclistas": 88,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-07",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-alagoas-750",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-08",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-alagoas-750",
+   "ciclistas": 13,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-08",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-alagoas-750",
+   "ciclistas": 50,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-08",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-alagoas-750",
+   "ciclistas": 66,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-da-bahia-1816",
+   "ciclistas": 4,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2023-11-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-05",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-27",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 11,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-27",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 45,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-27",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 134,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-27",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 8,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-28",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 15,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-28",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 50,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-28",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-afonso-pena-4040",
+   "ciclistas": 127,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-02-28",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 19,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-14",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 2,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-14",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-sergipe-837",
+   "ciclistas": 9,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-14",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-sergipe-837",
+   "ciclistas": 31,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-14",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-sergipe-837",
+   "ciclistas": 44,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-14",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-alagoas-750",
+   "ciclistas": 7,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-27",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-alagoas-750",
+   "ciclistas": 12,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-27",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-alagoas-750",
+   "ciclistas": 43,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-27",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-alagoas-750",
+   "ciclistas": 61,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-03-27",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 22,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-03",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 37,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-03",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 123,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-03",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 186,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-03",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 11,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-08",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 33,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-08",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 127,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-08",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 193,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 28,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo"
+   ],
+   "data": "2024-04-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-sergipe-837",
+   "ciclistas": 0,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-09",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-sergipe-837",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-09",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-sergipe-837",
+   "ciclistas": 23,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-09",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-sergipe-837",
+   "ciclistas": 32,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-09",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 14,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-10",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 33,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-10",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 147,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-10",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
+   "ciclistas": 212,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Adelina"
+   ],
+   "data": "2024-04-10",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 21,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-11",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 23,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo",
+    "Alexandre"
+   ],
+   "data": "2024-04-22",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 9,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-22",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 10,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-23",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 18,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-23",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 52,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-23",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 85,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-23",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 14,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 26,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 73,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 102,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-dos-guajajaras-201",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-dos-guajajaras-201",
+   "ciclistas": 9,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-dos-guajajaras-201",
+   "ciclistas": 29,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-dos-guajajaras-201",
+   "ciclistas": 40,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-04-24",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 7,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-25",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 15,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-25",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 65,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-25",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-joao-pinheiro-100",
+   "ciclistas": 105,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Sinjus"
+   ],
+   "data": "2024-04-25",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 25,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo",
+    "Alexandre"
+   ],
+   "data": "2024-05-06",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 35,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo",
+    "Alexandre"
+   ],
+   "data": "2024-06-03",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 5,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-06-10",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 9,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-06-10",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 45,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-06-10",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 72,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-06-10",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 34,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo"
+   ],
+   "data": "2024-06-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 31,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo",
+    "Alexandre"
+   ],
+   "data": "2024-07-01",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 30,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Alexandre"
+   ],
+   "data": "2024-08-05",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 34,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-08-08",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 108,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-12",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 203,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-12",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 703,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-12",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 1344,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-12",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 87,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-13",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 183,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-13",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 730,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-13",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-otacilio-negrao-de-lima-14370",
+   "ciclistas": 1304,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Bike Mania"
+   ],
+   "data": "2024-08-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-20",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-20",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 22,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-20",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 37,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-20",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 8,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-21",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 12,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-21",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 25,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-21",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "rua-pernambuco-453",
+   "ciclistas": 47,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Mateus Proença"
+   ],
+   "data": "2024-08-21",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 47,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo"
+   ],
+   "data": "2024-09-02",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 40,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-09-04",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 43,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo"
+   ],
+   "data": "2024-09-10",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 34,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-10",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 43,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 70,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 268,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 369,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 31,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 52,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 178,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 268,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-11",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 33,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 55,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 227,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 314,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 27,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 43,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 187,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 248,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-12",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 48,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-09-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 48,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 43,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 62,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 246,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "av-augusto-de-lima-1674",
+   "ciclistas": 315,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 33,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 48,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 185,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 246,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-16",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 37,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-17",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 51,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-17",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 162,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-17",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 290,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "data": "2024-09-17",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 34,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Túlio Macedo"
+   ],
+   "data": "2024-09-23",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 39,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-09-25",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 95,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-09-30",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 181,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-09-30",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 553,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-09-30",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 853,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-09-30",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 104,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-01",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 205,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-01",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 603,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-01",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 966,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-01",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 85,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-02",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 149,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-02",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 559,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-02",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "avenida-dos-andradas",
+   "ciclistas": 828,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Patty Nogueira"
+   ],
+   "data": "2024-10-02",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 36,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2024-11-27",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-06",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 8,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-06",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 36,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-06",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 52,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-06",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-11",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 8,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-11",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 44,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-11",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 82,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-11",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-12",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 13,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-12",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 42,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-12",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 78,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-12",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 7,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-13",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 11,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-13",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 45,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-13",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 79,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-02-13",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 27,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-04-07",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 3,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-02",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 9,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-02",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 25,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-02",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 34,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-02",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 4,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-04",
+   "derivada": false
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 6,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-04",
+   "derivada": false
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 30,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-04",
+   "derivada": false
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-alto-da-afonso-pena",
+   "ciclistas": 45,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-06-04",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 31,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-08-18",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 38,
+   "tipo": "Presencial",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "data": "2025-10-15",
+   "derivada": false
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 49,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-24"
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 81,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-24"
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 265,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-24"
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 380,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-24"
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 45,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-28"
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 65,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-28"
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 216,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-28"
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 337,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-28"
+  },
+  {
+   "periodo": 1,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 44,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-29"
+  },
+  {
+   "periodo": 2,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 78,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-29"
+  },
+  {
+   "periodo": 12,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 263,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-29"
+  },
+  {
+   "periodo": 24,
+   "local": "ciclovia-augusto-de-lima",
+   "ciclistas": 380,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ],
+   "derivada": true,
+   "data": "2026-09-29"
+  }
+ ],
+ "perfis": [
+  {
+   "local": "ciclovia-augusto-de-lima",
+   "data": "2026-09-24",
+   "horas": [
+    6,
+    1,
+    2,
+    0,
+    1,
+    3,
+    7,
+    22,
+    32,
+    14,
+    17,
+    19,
+    10,
+    19,
+    22,
+    11,
+    18,
+    32,
+    49,
+    40,
+    20,
+    17,
+    10,
+    8
+   ],
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ]
+  },
+  {
+   "local": "ciclovia-augusto-de-lima",
+   "data": "2026-09-28",
+   "horas": [
+    4,
+    2,
+    2,
+    0,
+    1,
+    4,
+    11,
+    20,
+    28,
+    18,
+    13,
+    11,
+    18,
+    9,
+    8,
+    10,
+    16,
+    20,
+    45,
+    30,
+    34,
+    20,
+    10,
+    3
+   ],
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ]
+  },
+  {
+   "local": "ciclovia-augusto-de-lima",
+   "data": "2026-09-29",
+   "horas": [
+    3,
+    4,
+    0,
+    0,
+    1,
+    6,
+    5,
+    25,
+    36,
+    19,
+    15,
+    12,
+    14,
+    18,
+    18,
+    10,
+    18,
+    34,
+    44,
+    33,
+    21,
+    17,
+    16,
+    11
+   ],
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli",
+    "Marco Túlio"
+   ]
+  }
+ ],
+ "avisos": []
+}

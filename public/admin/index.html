@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Painel do CicloRota BH</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+</head>
+<body>
+  <script src="https://unpkg.com/decap-cms@3.17.3/dist/decap-cms.js" integrity="sha384-RWRzuHfiZSWCt3nEvG7B0v3cMgM1C2UuJmgBSL92GQh4uXmNSkbcthql/mNBqvjr" crossorigin="anonymous"></script>
+  <script>
+    // Prévia com a cara do site
+    window.addEventListener('load', function () {
+      if (window.CMS) {
+        CMS.registerPreviewStyle('/admin/previa.css');
+      }
+    });
+  </script>
+</body>
+</html>

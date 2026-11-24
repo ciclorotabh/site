@@ -1,0 +1,152 @@
+# Painel do CicloRota BH (Decap CMS). Cada publicação vira um commit no GitHub e o site se atualiza sozinho.
+backend:
+  name: github
+  repo: ciclorotabh/site
+  branch: main
+  base_url: https://ciclorotabh.com     # trocado pelo endereço de teste até o domínio ser apontado
+  auth_endpoint: api/auth
+  commit_messages:
+    create: 'Novo em {{collection}}: {{slug}}'
+    update: 'Atualiza {{collection}}: {{slug}}'
+    delete: 'Remove de {{collection}}: {{slug}}'
+    uploadMedia: 'Envia {{path}}'
+    deleteMedia: 'Remove {{path}}'
+
+locale: pt
+publish_mode: editorial_workflow   # rascunho, em revisão e pronto, com prévia antes de publicar
+site_url: https://ciclorotabh.com
+display_url: https://ciclorotabh.com
+logo_url: /favicon.svg
+show_preview_links: true
+
+# Imagens ficam na pasta de cada texto, ao lado do index.md
+media_folder: ''
+public_folder: ''
+
+collections:
+  - name: noticias
+    label: Notícias
+    label_singular: Notícia
+    description: Ações, eventos, contagens novas e vídeos da semana. Texto curto, com data.
+    folder: src/content/noticias
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    create: true
+    slug: '{{slug}}'
+    sortable_fields: [date, title]
+    summary: '{{date | date("DD/MM/YYYY")}} · {{title}}'
+    preview_path: 'noticias/{{slug}}/'
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true }
+      - { label: Tipo, name: tipo, widget: select, options: [Notícia, Evento, Ação, Vídeo, CicloArte], default: Notícia }
+      - { label: Resumo (aparece nas listas), name: description, widget: text }
+      - { label: Data do evento, name: eventDate, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true, required: false }
+      - { label: Local do evento, name: place, widget: string, required: false }
+      - { label: Imagem de capa, name: cover, widget: image, required: false }
+      - { label: Descrição da imagem (para quem não enxerga), name: coverAlt, widget: string, required: false }
+      - { label: Link da publicação original (YouTube, Instagram, Strava), name: externalUrl, widget: string, required: false }
+      - { label: Texto, name: body, widget: markdown }
+
+  - name: artigos
+    label: Artigos
+    label_singular: Artigo
+    description: Análises com dado e fonte. O endereço fica ciclorotabh.com/artigo/nome-do-artigo/.
+    folder: src/content/artigos
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    create: true
+    slug: '{{slug}}'
+    sortable_fields: [date, title]
+    summary: '{{date | date("DD/MM/YYYY")}} · {{title}}'
+    preview_path: 'artigo/{{slug}}/'
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true }
+      - { label: Resumo (aparece nas listas e no Google), name: description, widget: text }
+      - { label: Imagem de capa, name: cover, widget: image, required: false }
+      - { label: Descrição da imagem de capa, name: coverAlt, widget: string, required: false }
+      - { label: Etiquetas, name: tags, widget: list, required: false }
+      - { label: 'Locais do CicloDados ligados ao artigo (nome igual ao da planilha)', name: locais, widget: list, required: false }
+      - { label: Texto, name: body, widget: markdown }
+
+  - name: conquistas
+    label: Conquistas e lutas
+    label_singular: Luta
+    description: Cada luta tem uma lista de pedidos com data e resultado.
+    folder: src/content/conquistas
+    create: true
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    fields:
+      - { label: Nome da luta, name: title, widget: string }
+      - { label: Resumo, name: summary, widget: text }
+      - { label: Ordem na página (1 aparece primeiro), name: order, widget: number, value_type: int, default: 10 }
+      - label: Pedidos e acontecimentos
+        name: items
+        widget: list
+        summary: '{{fields.date}} · {{fields.title}}'
+        fields:
+          - { label: 'Data como aparece (ex.: 18/03/2026 ou Fim de 2024)', name: date, widget: string }
+          - { label: Data para ordenar, name: sortDate, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true }
+          - { label: Título, name: title, widget: string }
+          - { label: Texto curto, name: text, widget: text, required: false }
+          - label: Resultado
+            name: status
+            widget: select
+            options:
+              - { label: Vitória, value: vitoria }
+              - { label: Vitória parcial, value: parcial }
+              - { label: Vitória revertida, value: revertida }
+              - { label: Em andamento, value: andamento }
+              - { label: Sem resposta, value: sem }
+              - { label: Negado, value: negado }
+              - { label: Estudo publicado, value: estudo }
+              - { label: Acontecimento, value: fato }
+          - { label: 'Link (artigo, documento)', name: link, widget: string, required: false }
+
+  - name: campanhas
+    label: Campanhas
+    label_singular: Campanha
+    description: Abaixo-assinados. Com a situação "Aberta", aparece a faixa amarela no topo do site e a aba no menu.
+    folder: src/content/campanhas
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    create: true
+    slug: '{{slug}}'
+    summary: '{{status}} · {{title}}'
+    preview_path: 'campanhas/{{slug}}/'
+    fields:
+      - { label: Título, name: title, widget: string }
+      - label: Situação
+        name: status
+        widget: select
+        default: rascunho
+        options:
+          - { label: Rascunho (não aparece), value: rascunho }
+          - { label: Aberta (recebe assinaturas), value: aberta }
+          - { label: Encerrada, value: encerrada }
+      - { label: Frase da faixa amarela, name: bannerText, widget: string }
+      - { label: Resumo, name: description, widget: text }
+      - { label: 'A quem será entregue (ex.: "à Câmara Municipal de Belo Horizonte")', name: target, widget: string, required: false }
+      - { label: Meta de assinaturas, name: goal, widget: number, value_type: int, required: false }
+      - { label: Abre em, name: opensAt, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true }
+      - { label: Encerra em, name: closesAt, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true, required: false }
+      - { label: Imagem, name: cover, widget: image, required: false }
+      - { label: Descrição da imagem, name: coverAlt, widget: string, required: false }
+      - { label: Texto da campanha, name: body, widget: markdown }
+
+  - name: paginas
+    label: Páginas
+    files:
+      - label: Política de privacidade
+        name: privacidade
+        file: src/content/paginas/privacidade.md
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Resumo, name: description, widget: string }
+          - { label: Atualizada em, name: updated, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true }
+          - { label: Texto, name: body, widget: markdown }

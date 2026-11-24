@@ -1,0 +1,194 @@
+---
+import Base from '../layouts/Base.astro';
+import Newsletter from '../components/Newsletter.astro';
+import StatusPill from '../components/StatusPill.astro';
+import { artigos, noticias, ultimasConquistas } from '../lib/conteudo';
+import { dataCurta, minutosLeitura, numeroBR } from '../lib/site';
+import dados from '../data/contagens.json';
+
+const listaArtigos = (await artigos()).slice(0, 7);
+const listaNoticias = (await noticias()).slice(0, 3);
+const lutas = await ultimasConquistas(3);
+
+// Destaque: a maior contagem de 24 horas
+const maior = dados.locais
+  .filter((l) => l.max24h)
+  .sort((a, b) => (b.max24h?.ciclistas ?? 0) - (a.max24h?.ciclistas ?? 0))[0];
+const ano0 = new Date(dados.primeiraData + 'T12:00:00Z');
+const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+
+// Teaser do CicloDados: locais da Augusto de Lima com média por hora em dois anos
+const pares = dados.locais
+  .map((l) => {
+    const anos = Object.keys(l.mediaHoraPorAno).sort();
+    if (anos.length < 2) return null;
+    const a = anos[0];
+    const b = anos.includes('2024') && a !== '2024' ? '2024' : anos[anos.length - 1];
+    const va = l.mediaHoraPorAno[a as keyof typeof l.mediaHoraPorAno] as number;
+    const vb = l.mediaHoraPorAno[b as keyof typeof l.mediaHoraPorAno] as number;
+    return { nome: l.nome, a, b, va, vb, delta: vb - va };
+  })
+  .filter((x): x is NonNullable<typeof x> => !!x && x.nome.toLowerCase().includes('augusto de lima') && x.a === '2023')
+  .sort((x, y) => y.delta - x.delta)
+  .slice(0, 3);
+const escala = Math.max(...pares.map((p) => Math.max(p.va, p.vb)), 1) * 1.1;
+const pct = (v: number) => ((v / escala) * 100).toFixed(1);
+---
+<Base>
+  <section class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">Mobilidade ativa em Belo Horizonte</p>
+      <h1>Dados de rua para defender quem pedala em BH</h1>
+      <p class="lede">Contagens de ciclistas, artigos com fonte e ações nos órgãos públicos. Tudo documentado, para virar argumento.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-accent" href="/ciclodados/">Ver os dados</a>
+        <a class="btn btn-outline" href="/conquistas/">Ver as lutas</a>
+      </div>
+      <p class="muted tabular">{numeroBR(dados.totalContagens)} contagens · {dados.locais.length} locais · desde {meses[ano0.getUTCMonth()]} de {ano0.getUTCFullYear()}</p>
+    </div>
+    {maior && (
+      <aside class="hero-card">
+        <p class="card-eyebrow">Maior contagem registrada</p>
+        <p class="card-number tabular">{numeroBR(maior.max24h!.ciclistas)}</p>
+        <p class="card-title">ciclistas em 24 horas</p>
+        <p class="card-sub">{maior.nome}, {dataCurta(new Date(maior.max24h!.data + 'T12:00:00Z'))}.</p>
+        <a href="/ciclodados/">Ver no mapa</a>
+      </aside>
+    )}
+  </section>
+
+  {listaNoticias.length > 0 && (
+    <section class="band">
+      <div class="wrap block">
+        <div class="block-head">
+          <h2>Notícias e eventos</h2>
+          <a href="/noticias/">Ver todas</a>
+        </div>
+        <div class="cards">
+          {listaNoticias.map((n) => (
+            <article class="card">
+              <div class="card-meta">
+                <span class="pill tag">{n.data.tipo}</span>
+                <span class="muted">{dataCurta(n.data.date)}</span>
+              </div>
+              <h3><a href={`/noticias/${n.id}/`}>{n.data.title}</a></h3>
+              <p class="muted">{n.data.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="wrap block split">
+    <div class="split-side">
+      <h2>Artigos</h2>
+      <p class="muted">Análises com dado e fonte sobre ciclovias, trânsito e espaço público em BH.</p>
+      <a href="/artigos/">Ver todos os artigos</a>
+    </div>
+    <ol class="article-list">
+      {listaArtigos.map((a) => (
+        <li>
+          <span class="muted tabular when">{dataCurta(a.data.date)}</span>
+          <a href={`/artigo/${a.id}/`}>{a.data.title}</a>
+          <span class="muted read">{minutosLeitura(a.body)} min de leitura</span>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  {pares.length > 0 && (
+    <section class="band">
+      <div class="wrap block split center">
+        <div class="split-side">
+          <p class="eyebrow">CicloDados</p>
+          <h2>Na Augusto de Lima, o número de ciclistas dobrou em um ano</h2>
+          <p class="muted">Média das contagens de 1 hora, das 18h às 19h, em cada ano. A planilha é aberta: qualquer pessoa pode conferir.</p>
+          <a class="btn btn-accent" href="/ciclodados/">Abrir o mapa</a>
+        </div>
+        <div class="teaser">
+          <div class="legend"><span><i style="background:var(--y2023)"></i>2023</span><span><i style="background:var(--y2024)"></i>{pares[0].b}</span><span>ciclistas por hora</span></div>
+          {pares.map((p) => (
+            <div class="row">
+              <div class="row-head"><span class="row-name">{p.nome}</span><span class="muted tabular">{numeroBR(p.va, 1)} para {numeroBR(p.vb, 1)} (+{Math.round((p.vb / p.va - 1) * 100)}%)</span></div>
+              <div class="track" role="img" aria-label={`${p.nome}: ${numeroBR(p.va, 1)} em ${p.a} e ${numeroBR(p.vb, 1)} em ${p.b} ciclistas por hora`}>
+                <div class="seg" style={`left:${pct(p.va)}%;width:${pct(p.vb - p.va)}%`}></div>
+                <div class="dot y1" style={`left:${pct(p.va)}%`}></div>
+                <div class="dot y2" style={`left:${pct(p.vb)}%`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {lutas.length > 0 && (
+    <section class="wrap block">
+      <div class="block-head">
+        <h2>Conquistas e lutas</h2>
+        <a href="/conquistas/">Ver todas as lutas</a>
+      </div>
+      <div class="cards">
+        {lutas.map((w) => (
+          <article class="win">
+            <div class="card-meta"><StatusPill status={w.status} /><span class="muted">{w.date}</span></div>
+            <h3>{w.title}</h3>
+            <p class="muted">{w.text}</p>
+            <a href={`/conquistas/#${w.lutaId}`} class="small">{w.luta}</a>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <Newsletter />
+</Base>
+
+<style>
+  .hero { display: flex; flex-wrap: wrap; gap: 48px; align-items: stretch; padding-block: 64px 56px; }
+  .hero-text { flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px; justify-content: center; }
+  .hero h1 { font-size: clamp(48px, 7vw, 76px); line-height: 0.98; letter-spacing: -0.01em; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-card { flex: 1 1 340px; min-width: 0; background: var(--ink); color: #fff; border-radius: 12px; padding: 36px; display: flex; flex-direction: column; gap: 10px; justify-content: flex-end; }
+  .card-eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 13px; font-weight: 600; color: var(--mint); }
+  .card-number { font-family: var(--font-display); font-weight: 700; font-size: clamp(88px, 12vw, 128px); line-height: 0.9; color: var(--sun); }
+  .card-title { font-size: 22px; font-weight: 600; }
+  .card-sub { font-size: 16px; color: #c9d6d5; }
+  .hero-card a { color: var(--mint); font-weight: 600; margin-top: 8px; }
+  .block { padding-block: 64px; display: flex; flex-direction: column; gap: 28px; }
+  .block-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .block-head h2, .split-side h2 { font-size: clamp(34px, 5vw, 44px); }
+  .block-head a { font-weight: 600; }
+  .cards { display: flex; flex-wrap: wrap; gap: 20px; }
+  .card { flex: 1 1 300px; min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .card h3, .win h3 { font-family: var(--font-body); font-size: 22px; line-height: 1.25; font-weight: 600; }
+  .card h3 a { color: var(--ink); text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); }
+  .card-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 14px; }
+  .tag { background: var(--ink); color: #fff; }
+  .split { flex-direction: row; flex-wrap: wrap; gap: 48px; }
+  .split.center { align-items: center; }
+  .split-side { flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+  .split-side a { font-weight: 600; }
+  .article-list { flex: 999 1 560px; min-width: 0; list-style: none; margin: 0; padding: 0; }
+  .article-list li { border-top: 1px solid var(--line); padding: 18px 0; display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: baseline; }
+  .article-list .when { flex: 0 0 110px; font-size: 16px; }
+  .article-list a { flex: 1 1 360px; min-width: 0; color: var(--ink); text-decoration: none; font-size: 20px; font-weight: 600; line-height: 1.3; }
+  .article-list a:hover { color: var(--accent); }
+  .article-list .read { font-size: 15px; }
+  .teaser { flex: 1 1 520px; min-width: 0; background: var(--paper); border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px; color: var(--ink-2); }
+  .legend span { display: flex; align-items: center; gap: 8px; }
+  .legend i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .row { display: flex; flex-direction: column; gap: 8px; }
+  .row-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: 16px; }
+  .row-name { font-weight: 600; }
+  .track { position: relative; height: 14px; background: var(--band); border-radius: 7px; }
+  .seg { position: absolute; top: 6px; height: 2px; background: #8fa3a2; }
+  .dot { position: absolute; top: 1px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; box-shadow: 0 0 0 2px #fff; }
+  .dot.y1 { background: var(--y2023); }
+  .dot.y2 { background: var(--y2024); }
+  .win { flex: 1 1 300px; min-width: 0; border-top: 4px solid var(--ink); padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .small { font-size: 15px; font-weight: 600; }
+</style>

@@ -1,0 +1,11 @@
+---
+interface Props { size?: number; dark?: boolean }
+const { size = 36, dark = false } = Astro.props;
+const stroke = dark ? '#FFFFFF' : '#10201F';
+---
+<svg width={size} height={size} viewBox="0 0 36 36" fill="none" aria-hidden="true">
+  <circle cx="9" cy="24" r="6.5" stroke={stroke} stroke-width="2.5"></circle>
+  <circle cx="27" cy="24" r="6.5" stroke={stroke} stroke-width="2.5"></circle>
+  <path d="M9 24l6-11h9l3 11M15 13l-2-4h-3M21 13l3-5h3" stroke={stroke} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="18" cy="24" r="2" fill="#44C3C5"></circle>
+</svg>

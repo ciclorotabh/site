@@ -1,0 +1,12 @@
+---
+import { SITUACAO, type Situacao } from '../lib/conteudo';
+interface Props { status: Situacao }
+const s = SITUACAO[Astro.props.status];
+---
+<span class="status" style={`background:${s.fundo};color:${s.cor}`}>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d={s.icone} stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  {s.rotulo}
+</span>
+<style>
+  .status { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+</style>

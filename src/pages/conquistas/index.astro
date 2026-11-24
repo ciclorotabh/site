@@ -1,0 +1,82 @@
+---
+import Base from '../../layouts/Base.astro';
+import StatusPill from '../../components/StatusPill.astro';
+import { conquistas, SITUACAO } from '../../lib/conteudo';
+
+const lutas = await conquistas();
+const filtros = [
+  { id: 'todas', rotulo: 'Todas' },
+  { id: 'vitorias', rotulo: 'Vitórias' },
+  { id: 'andamento', rotulo: 'Em andamento' },
+  { id: 'sem', rotulo: 'Sem resultado' },
+  { id: 'registros', rotulo: 'Estudos e fatos' },
+];
+---
+<Base title="Conquistas e lutas" description="Cada pedido à Prefeitura, à BHTRANS, ao Ministério Público e à Justiça, com data e resultado.">
+  <section class="wrap head">
+    <p class="eyebrow">Conquistas e lutas</p>
+    <h1>O que já foi pedido, e o que aconteceu</h1>
+    <p class="lede">Cada pedido à Prefeitura, à BHTRANS, ao Ministério Público e à Justiça fica registrado aqui, com data e resultado. Inclusive os que ainda não deram em nada.</p>
+    <div class="filters" role="group" aria-label="Filtrar por resultado">
+      {filtros.map((f, i) => <button type="button" data-filtro={f.id} aria-pressed={i === 0 ? 'true' : 'false'}>{f.rotulo}</button>)}
+    </div>
+  </section>
+
+  <section class="wrap grid">
+    {lutas.map((l) => (
+      <div class="luta" id={l.id}>
+        <h2>{l.data.title}</h2>
+        <p class="muted">{l.data.summary}</p>
+        <ol>
+          {[...l.data.items].sort((a, b) => a.sortDate.valueOf() - b.sortDate.valueOf()).map((it) => (
+            <li data-grupo={SITUACAO[it.status].grupo}>
+              <span class="when tabular">{it.date}</span>
+              <div class="what">
+                <StatusPill status={it.status} />
+                <span class="t">{it.title}</span>
+                {it.text && <span class="muted x">{it.text}</span>}
+                {it.link && <a href={it.link} class="more">Ler mais</a>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
+  </section>
+</Base>
+
+<script>
+  const botoes = document.querySelectorAll<HTMLButtonElement>('[data-filtro]');
+  botoes.forEach((b) =>
+    b.addEventListener('click', () => {
+      const f = b.dataset.filtro;
+      botoes.forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      document.querySelectorAll<HTMLElement>('.luta li').forEach((li) => {
+        li.hidden = f !== 'todas' && li.dataset.grupo !== f;
+      });
+      document.querySelectorAll<HTMLElement>('.luta').forEach((l) => {
+        l.hidden = !l.querySelector('li:not([hidden])');
+      });
+    }),
+  );
+</script>
+
+<style>
+  .head { padding-block: 56px 24px; display: flex; flex-direction: column; gap: 14px; }
+  .head h1 { font-size: clamp(40px, 7vw, 64px); }
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .filters button { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font: 600 16px var(--font-body); cursor: pointer; }
+  .filters button[aria-pressed='true'] { background: var(--ink); color: #fff; }
+  .grid { padding-block: 24px 72px; display: flex; flex-wrap: wrap; gap: 48px; }
+  .luta { flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 6px; scroll-margin-top: 16px; }
+  .luta h2 { font-size: 36px; margin-bottom: 6px; }
+  .luta > p { margin-bottom: 10px; font-size: 17px; }
+  .luta ol { list-style: none; margin: 0; padding: 0; }
+  .luta li { display: flex; gap: 18px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .when { flex: 0 0 110px; font-weight: 600; font-size: 16px; }
+  .what { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+  .t { font-weight: 600; font-size: 19px; line-height: 1.3; }
+  .x { font-size: 16px; }
+  .more { font-size: 15px; font-weight: 600; }
+  @media (max-width: 520px) { .luta li { flex-direction: column; gap: 6px; } .when { flex: none; } }
+</style>

@@ -1,0 +1,23 @@
+# Endereços do WordPress antigo (até nov/2026). Os artigos mantêm o mesmo caminho /artigo/<slug>/.
+# Decisão 5 do Cristiano (23/11/2026): CicloArte e vídeos curtos não foram migrados e levam para Artigos.
+/artigo/contagem-de-ciclistas-augusto-de-lima/ /artigo/react-ao-zap-apocrifo-da-ciclovia-afonso-pena/ 301
+/artigo/teste/ /artigo/a-ciclovia-da-afonso-pena-em-bh-e-os-argumentos-de-sempre/ 301
+/ciclo-video/contagem-de-ciclistas-augusto-de-lima/ /artigo/react-ao-zap-apocrifo-da-ciclovia-afonso-pena/ 301
+/ciclo-dados/comparativo-de-rotas-afonso-pena-x-grao-mogol-com-dados-do-strava-metro/ /artigo/comparativo-de-rotas-afonso-pena-x-grao-mogol-com-dados-do-strava-metro/ 301
+/ciclo-dados/em-apenas-um-ano-viagens-de-bicicleta-quase-triplicam-na-ciclovia-da-augusto-de-lima/ /artigo/em-apenas-um-ano-viagens-de-bicicleta-quase-triplicam-na-ciclovia-da-augusto-de-lima/ 301
+/ciclo-dados/simulacao-de-monte-carlo-com-dados-da-augusto-de-lima/ /artigo/simulacao-de-monte-carlo-com-dados-da-augusto-de-lima/ 301
+/ciclo-dados/ /ciclodados/ 301
+/compare/ /ciclodados/ 301
+/home/ / 301
+/videos/ /artigos/ 301
+/category/artigo/* /artigos/ 301
+/category/ciclo-dados/* /ciclodados/ 301
+/category/* /artigos/ 301
+/ciclo-arte/* /artigos/ 301
+/ciclo-video/* /artigos/ 301
+/tipos/* /artigos/ 301
+/tags/* /artigos/ 301
+/tag/* /artigos/ 301
+/author/* / 301
+/feed/* /rss.xml 301
+/ciclodados /ciclodados/ 301
