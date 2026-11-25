@@ -66,6 +66,7 @@ collections:
       - { label: Título, name: title, widget: string }
       - { label: Data, name: date, widget: datetime, date_format: DD/MM/YYYY, time_format: false, format: YYYY-MM-DD, picker_utc: true }
       - { label: Resumo (aparece nas listas e no Google), name: description, widget: text }
+      - { label: Autor, name: author, widget: string, default: Cristiano Scarpelli }
       - { label: Imagem de capa, name: cover, widget: image, required: false }
       - { label: Descrição da imagem de capa, name: coverAlt, widget: string, required: false }
       - { label: Etiquetas, name: tags, widget: list, required: false }

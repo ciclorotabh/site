@@ -8,9 +8,11 @@ export const SITE = {
   instagram: 'https://www.instagram.com/ciclorotabh/',
   youtube: 'https://www.youtube.com/@Cristiano.Scarpelli',
   // Endereço da publicação no Substack (ex.: https://ciclorotabh.substack.com). Vazio = formulário escondido.
-  substack: '',
+  substack: 'https://cristianoscarpelli.substack.com',
   // Chave pública do Cloudflare Turnstile (anti-robô das campanhas). Vazia = formulário sem a verificação.
   turnstileSiteKey: '',
+  // Apoiador mostrado no rodapé. Vazio = sem apoio. (Tirar se o site passar a servir a uma campanha eleitoral.)
+  apoio: { nome: 'Habilicita', url: 'https://habilicita.com.br' },
   // Planilha de contagens (Google Planilhas do Cristiano, compartilhada por link como Leitor).
   // gid = número da aba (aparece no endereço como #gid=...). Três abas: preencher horas e locais.
   planilha: {
@@ -19,10 +21,11 @@ export const SITE = {
   },
 };
 
+// Ordem pedida pelo Cristiano em 23/11/2026. "Grupos de pedal" ficou para depois.
 export const NAV = [
+  { href: '/ciclodados/', label: 'CicloDados' },
   { href: '/noticias/', label: 'Notícias' },
   { href: '/artigos/', label: 'Artigos' },
-  { href: '/ciclodados/', label: 'CicloDados' },
   { href: '/conquistas/', label: 'Conquistas' },
 ];
 

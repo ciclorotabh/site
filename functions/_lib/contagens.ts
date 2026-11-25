@@ -19,6 +19,10 @@ export class ErroDeDado extends Error {}
 export type Local = {
   id: string; nome: string; lat: number; lon: number;
   contagens: number; anos: number[]; mediaHoraPorAno: Record<string, number>;
+  /** Média de ciclistas por janela de contagem (1, 2, 12, 24 h) e por ano. */
+  mediaPorJanelaAno: Record<string, Record<string, number>>;
+  /** Média de todos os anos por janela, com o número de contagens. */
+  mediaPorJanela: Record<string, { media: number; n: number }>;
   ultimoAno: string | null; mediaHora: number | null;
   max24h: { ciclistas: number; data: string } | null;
   periodos: number[]; horaAHora: boolean; ultimaContagem: string;
@@ -216,15 +220,22 @@ export function montar(historico: Tabela, horas?: Tabela, locaisTab?: Tabela, ag
     const cs = porLocal.get(nome) ?? [];
     if (!cs.length) continue;
     const anos = [...new Set(cs.map((x) => Number(x.data.slice(0, 4))))].sort();
-    const mediaHoraPorAno: Record<string, number> = {};
-    for (const a of anos) {
-      const uma = cs.filter((x) => x.periodo === 1 && Number(x.data.slice(0, 4)) === a).map((x) => x.ciclistas);
-      if (uma.length) mediaHoraPorAno[String(a)] = Math.round((uma.reduce((s, v) => s + v, 0) / uma.length) * 10) / 10;
+    const media = (v: number[]) => Math.round((v.reduce((s, x) => s + x, 0) / v.length) * 10) / 10;
+    const mediaPorJanelaAno: Record<string, Record<string, number>> = {};
+    const mediaPorJanela: Record<string, { media: number; n: number }> = {};
+    for (const p of [...new Set(cs.map((x) => x.periodo))].sort((a, b) => a - b)) {
+      const daJanela = cs.filter((x) => x.periodo === p);
+      mediaPorJanela[String(p)] = { media: media(daJanela.map((x) => x.ciclistas)), n: daJanela.length };
+      for (const a of anos) {
+        const v = daJanela.filter((x) => Number(x.data.slice(0, 4)) === a).map((x) => x.ciclistas);
+        if (v.length) (mediaPorJanelaAno[String(p)] ??= {})[String(a)] = media(v);
+      }
     }
+    const mediaHoraPorAno: Record<string, number> = { ...(mediaPorJanelaAno['1'] ?? {}) };
     const ultimoAno = Object.keys(mediaHoraPorAno).sort().at(-1) ?? null;
     const max24 = cs.filter((x) => x.periodo === 24).reduce<Agregada | null>((m, x) => (!m || x.ciclistas > m.ciclistas ? x : m), null);
     saidaLocais.push({
-      ...loc, contagens: cs.length, anos, mediaHoraPorAno, ultimoAno,
+      ...loc, contagens: cs.length, anos, mediaHoraPorAno, mediaPorJanelaAno, mediaPorJanela, ultimoAno,
       mediaHora: ultimoAno ? mediaHoraPorAno[ultimoAno] : null,
       max24h: max24 ? { ciclistas: max24.ciclistas, data: max24.data } : null,
       periodos: [...new Set(cs.map((x) => x.periodo))].sort((a, b) => a - b),

@@ -19,7 +19,7 @@ const ld = {
   headline: entry.data.title,
   datePublished: entry.data.date.toISOString(),
   dateModified: (entry.data.updated ?? entry.data.date).toISOString(),
-  author: { '@type': 'Person', name: 'Cristiano Scarpelli' },
+  author: { '@type': 'Person', name: entry.data.author },
   publisher: { '@type': 'Organization', name: 'CicloRota BH' },
 };
 ---
@@ -30,7 +30,7 @@ const ld = {
       <p class="eyebrow"><a href="/artigos/">Artigos</a></p>
       <h1>{entry.data.title}</h1>
       <p class="meta muted">
-        <span>Cristiano Scarpelli</span>
+        <span>{entry.data.author}</span>
         <span>{dataLonga(entry.data.date)}</span>
         <span>{minutosLeitura(entry.body)} min de leitura</span>
       </p>

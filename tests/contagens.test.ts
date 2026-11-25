@@ -77,6 +77,15 @@ describe('montar', () => {
     expect(out.locais[0].mediaHoraPorAno).toEqual({ 2023: 15, 2024: 33 });
     expect(out.locais[0].mediaHora).toBe(33);
   });
+  it('médias por janela (1, 12, 24 h), por ano e no geral', () => {
+    const d1 = '24/09/2026', d2 = '28/09/2026';
+    const out = montar(tab(...diaInteiro(d1), ...diaInteiro(d2, HORAS_2409.map((v) => v + 1))));
+    const l = out.locais[0];
+    // 24/09: 1h=49, 12h=265, 24h=380; 28/09: cada hora +1 -> 1h=50, 12h=277, 24h=404
+    expect(l.mediaPorJanelaAno['1']).toEqual({ 2026: 49.5 });
+    expect(l.mediaPorJanelaAno['12']).toEqual({ 2026: 271 });
+    expect(l.mediaPorJanela['24']).toEqual({ media: 392, n: 2 });
+  });
   it('formato de três abas (Locais, Hora a hora, Histórico)', () => {
     const locais: Tabela = [['Local', 'Latitude', 'Longitude'], ['Ciclovia Augusto de Lima', LAT, LON]];
     const horas: Tabela = [['Data', 'Hora', 'Local', 'Ciclistas', 'Fonte', 'Tipo'], ...HORAS_2409.map((c, h) => ['24/09/2026', String(h), 'Ciclovia Augusto de Lima', String(c), 'Cristiano Scarpelli', 'Video'])];

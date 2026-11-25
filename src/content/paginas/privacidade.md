@@ -6,7 +6,7 @@ updated: 2026-11-24
 
 O CicloRota BH é um projeto independente de **Cristiano Scarpelli**, que é o responsável (controlador) pelos dados pessoais tratados neste site, nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018, a LGPD).
 
-Contato para assuntos de privacidade: **[E-MAIL DE CONTATO A DEFINIR]**.
+Contato para assuntos de privacidade: **cristiano.scarpelli@gmail.com**.
 
 ## O que coletamos e por quê
 

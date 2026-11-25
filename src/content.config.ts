@@ -19,6 +19,7 @@ const artigos = defineCollection({
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),
       description: z.string().default(''),
+      author: z.string().default('Cristiano Scarpelli'),
       cover: image().optional(),
       coverAlt: z.string().optional(),
       tags: z.array(z.string()).default([]),

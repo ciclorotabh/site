@@ -77,6 +77,7 @@ const atual = (href: string) => path === href || path.startsWith(href);
         <div class="footer-brand">
           <span class="footer-name">CicloRota BH</span>
           <span>Projeto independente de {SITE.owner}.</span>
+          {SITE.apoio.nome && <span class="apoio">Apoio: <a href={SITE.apoio.url} rel="noopener">{SITE.apoio.nome}</a></span>}
         </div>
         <nav aria-label="Rodapé" class="footer-nav">
           <a href="/privacidade/">Política de privacidade</a>
@@ -122,5 +123,6 @@ const atual = (href: string) => path === href || path.startsWith(href);
   .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; padding-block: 40px 56px; font-size: 16px; color: var(--ink-2); }
   .footer-brand { display: flex; flex-direction: column; gap: 6px; }
   .footer-name { font-family: var(--font-display); font-weight: 700; font-size: 24px; color: var(--ink); }
+  .apoio { font-size: 15px; }
   .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; }
 </style>

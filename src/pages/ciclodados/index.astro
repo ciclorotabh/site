@@ -17,15 +17,21 @@ for (const a of await artigos())
   <section class="wrap head">
     <p class="eyebrow">CicloDados</p>
     <h1>Quantos ciclistas passam em cada ponto de BH</h1>
-    <p class="lede" id="cd-lede">{numeroBR(dados.totalContagens)} contagens em {dados.locais.length} locais, de {mesAno(dados.primeiraData)} a {mesAno(dados.ultimaData)}. Contagens presenciais e por vídeo, de 1, 2, 12 e 24 horas. Toque num ponto para ver os números.</p>
+    <p class="lede" id="cd-lede">{numeroBR(dados.totalContagens)} contagens em {dados.locais.length} locais, de {mesAno(dados.primeiraData)} a {mesAno(dados.ultimaData)}. Contagens presenciais e por vídeo de 1 h a 24 h. Toque num ponto para ver os números.</p>
     <p class="status muted" id="cd-status" role="status">Dados da planilha no momento da última publicação do site.</p>
   </section>
 
   <section class="wrap">
     <div class="controls">
+      <label for="f-janela">Contagem</label>
+      <select id="f-janela">
+        <option value="1">1 hora (18h às 19h)</option>
+        <option value="12">12 horas (7h às 19h)</option>
+        <option value="24">24 horas (dia inteiro)</option>
+      </select>
       <label for="f-ano">Ano</label>
       <select id="f-ano"><option value="recente">Mais recente de cada local</option></select>
-      <span class="muted small">Tamanho do ponto: média de ciclistas por hora nas contagens de 1 hora.</span>
+      <span class="muted small" id="f-ajuda">Tamanho do ponto: média de ciclistas na janela escolhida.</span>
     </div>
     <div class="map-row">
       <div id="mapa" class="map" role="region" aria-label="Mapa das contagens"></div>
@@ -46,7 +52,7 @@ for (const a of await artigos())
       <div class="block-head">
         <div>
           <h2 id="cmp-titulo">Comparação entre anos: ciclistas por hora</h2>
-          <p class="muted">Média das contagens de 1 hora nos locais contados nos dois anos.</p>
+          <p class="muted" id="cmp-sub">Média das contagens nos locais contados nos dois anos.</p>
         </div>
         <div class="cmp-controls">
           <label>De <select id="cmp-a"></select></label>
@@ -92,12 +98,13 @@ for (const a of await artigos())
 
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
   const fmt = (n: number, c = 1) => n.toLocaleString('pt-BR', { minimumFractionDigits: c, maximumFractionDigits: c });
+  /** 1 h com uma casa (12,5 por hora); 12 h e 24 h em inteiro (1.324). */
+  const fmtJ = (n: number, j: string) => (j === '1' ? fmt(n) : Math.round(n).toLocaleString('pt-BR'));
   const int = (n: number) => n.toLocaleString('pt-BR');
   const dataBR = (iso: string) => iso.split('-').reverse().join('/');
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
   const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
   const mesAno = (iso: string | null) => (iso ? `${meses[Number(iso.slice(5, 7)) - 1]}/${iso.slice(0, 4)}` : '');
-  const anosDe = (d: Dados) => [...new Set(d.locais.flatMap((l) => Object.keys(l.mediaHoraPorAno)))].sort();
 
   // ---------- mapa ----------
   const mapa = L.map('mapa', { scrollWheelZoom: false }).setView([-19.905, -43.95], 12);
@@ -107,37 +114,61 @@ for (const a of await artigos())
   }).addTo(mapa);
   const camada = L.layerGroup().addTo(mapa);
   let selecionado: string | null = null;
+  const marcadores = new Map<string, L.CircleMarker>();
+  const COR = { normal: '#008C99', escolhido: '#C47F00' };
+  /** Só recolore: redesenhar o mapa a cada toque apagava o balão no celular (relato do Cristiano, 24/11). */
+  function destaca() {
+    marcadores.forEach((m, id) => m.setStyle({ fillColor: id === selecionado ? COR.escolhido : COR.normal }));
+    if (selecionado) marcadores.get(selecionado)?.bringToFront();
+  }
   const selAno = $<HTMLSelectElement>('f-ano');
-
-  const valor = (l: Local, ano: string): [number, string] | null => {
-    const anos = Object.keys(l.mediaHoraPorAno).sort();
-    if (ano === 'recente') return anos.length ? [l.mediaHoraPorAno[anos.at(-1)!], anos.at(-1)!] : null;
-    return ano in l.mediaHoraPorAno ? [l.mediaHoraPorAno[ano], ano] : null;
+  const selJanela = $<HTMLSelectElement>('f-janela');
+  const JANELA: Record<string, { curto: string; unidade: string }> = {
+    '1': { curto: '1 h (18h às 19h)', unidade: 'ciclistas por hora, das 18h às 19h' },
+    '12': { curto: '12 h (7h às 19h)', unidade: 'ciclistas das 7h às 19h' },
+    '24': { curto: '24 h', unidade: 'ciclistas em 24 horas' },
   };
+  const porAno = (l: Local, j: string): Record<string, number> =>
+    l.mediaPorJanelaAno?.[j] ?? (j === '1' ? l.mediaHoraPorAno : {});
+  const valor = (l: Local, ano: string, j = selJanela.value): [number, string] | null => {
+    const m = porAno(l, j);
+    const anos = Object.keys(m).sort();
+    if (ano === 'recente') return anos.length ? [m[anos.at(-1)!], anos.at(-1)!] : null;
+    return ano in m ? [m[ano], ano] : null;
+  };
+  const anosDaJanela = (j: string) => [...new Set(dados.locais.flatMap((l) => Object.keys(porAno(l, j))))].sort();
 
   function mostra(l: Local) {
     selecionado = l.id;
+    const j = selJanela.value;
     const v = valor(l, selAno.value);
     $('p-nome').textContent = l.nome;
-    $('p-num').textContent = v ? fmt(v[0]) : '—';
-    $('p-unid').textContent = v ? `ciclistas por hora, média de ${v[1]}` : 'sem contagem de 1 hora neste ano';
+    $('p-num').textContent = v ? fmtJ(v[0], j) : '—';
+    $('p-unid').textContent = v ? `${JANELA[j].unidade}, média de ${v[1]}` : `sem contagem de ${JANELA[j].curto} ${selAno.value === 'recente' ? 'neste local' : 'neste ano'}`;
     const ul = $('p-lista');
     ul.replaceChildren();
     const item = (t: string) => { const li = document.createElement('li'); li.textContent = t; ul.appendChild(li); };
     item(`${l.contagens} contagens, a última em ${dataBR(l.ultimaContagem)}`);
+    const m12 = l.mediaPorJanela?.['12'], m24 = l.mediaPorJanela?.['24'];
+    if (m12) item(`Média de 12 h (7h às 19h): ${fmtJ(m12.media, '12')} (${m12.n} ${m12.n === 1 ? 'contagem' : 'contagens'})`);
+    if (m24) item(`Média de 24 h: ${fmtJ(m24.media, '24')} (${m24.n} ${m24.n === 1 ? 'contagem' : 'contagens'})`);
     if (l.max24h) item(`Máximo em 24 h: ${int(l.max24h.ciclistas)} ciclistas (${dataBR(l.max24h.data)})`);
-    Object.keys(l.mediaHoraPorAno).sort().forEach((a) => item(`${a}: ${fmt(l.mediaHoraPorAno[a])} por hora`));
+    const pa = porAno(l, j);
+    Object.keys(pa).sort().forEach((a) => item(`${a}, ${JANELA[j].curto}: ${fmtJ(pa[a], j)}`));
     if (l.horaAHora) item('Tem contagem hora a hora (veja a curva do dia abaixo)');
     const arts = $('p-artigos');
     arts.replaceChildren();
     (artigosPorNome[l.nome] ?? []).forEach((a) => { const el = document.createElement('a'); el.href = a.url; el.textContent = a.titulo; arts.appendChild(el); });
-    desenhaMapa();
+    destaca();
   }
 
+  // Toque no celular: o balão (popup) fica aberto até tocar fora; a dica (tooltip) só onde há mouse.
+  const temMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   function desenhaMapa() {
-    const maxGeral = Math.max(...dados.locais.flatMap((l) => Object.values(l.mediaHoraPorAno)), 1);
+    const maxGeral = Math.max(...dados.locais.flatMap((l) => Object.values(porAno(l, selJanela.value))), 1);
     const raio = (v: number) => 5 + 22 * Math.sqrt(v / maxGeral);
     camada.clearLayers();
+    marcadores.clear();
     dados.locais
       .map((l) => ({ l, v: valor(l, selAno.value) }))
       .filter((x): x is { l: Local; v: [number, string] } => !!x.v)
@@ -145,17 +176,23 @@ for (const a of await artigos())
       .forEach(({ l, v }) => {
         const m = L.circleMarker([l.lat, l.lon], {
           radius: raio(v[0]), weight: 2, color: '#FFFFFF', fillOpacity: 0.85,
-          fillColor: l.id === selecionado ? '#C47F00' : '#008C99',
+          fillColor: l.id === selecionado ? COR.escolhido : COR.normal,
         });
-        m.bindTooltip(`${l.nome}: ${fmt(v[0])} por hora (${v[1]})`);
+        const texto = `${l.nome}: ${fmtJ(v[0], selJanela.value)} (${JANELA[selJanela.value].curto}, ${v[1]})`;
+        if (temMouse) m.bindTooltip(texto);
+        m.bindPopup(`<b>${esc(l.nome)}</b><br>${fmtJ(v[0], selJanela.value)} ${JANELA[selJanela.value].unidade}<br><span style="color:#5B6B6A">média de ${v[1]}</span>`, { closeButton: true, autoPan: true });
         m.on('click', () => mostra(l));
         m.addTo(camada);
+        marcadores.set(l.id, m);
       });
   }
-  selAno.addEventListener('change', () => {
+  function trocaFiltro() {
+    desenhaMapa();
     const l = dados.locais.find((x) => x.id === selecionado);
-    if (l) mostra(l); else desenhaMapa();
-  });
+    if (l) mostra(l);
+  }
+  selAno.addEventListener('change', trocaFiltro);
+  selJanela.addEventListener('change', () => { preencheAnos(); trocaFiltro(); compara(); });
 
   // ---------- comparação entre anos ----------
   const selA = $<HTMLSelectElement>('cmp-a');
@@ -164,7 +201,7 @@ for (const a of await artigos())
     let par: [string, string] = [anos[0], anos[1] ?? anos[0]], melhor = -1;
     for (let i = 0; i < anos.length; i++)
       for (let j = i + 1; j < anos.length; j++) {
-        const n = dados.locais.filter((l) => anos[i] in l.mediaHoraPorAno && anos[j] in l.mediaHoraPorAno).length;
+        const n = dados.locais.filter((l) => anos[i] in porAno(l, selJanela.value) && anos[j] in porAno(l, selJanela.value)).length;
         if (n > melhor) { melhor = n; par = [anos[i], anos[j]]; }
       }
     return par;
@@ -175,26 +212,27 @@ for (const a of await artigos())
     sel.value = anos.includes(atual) ? atual : valorPadrao;
   }
   function compara() {
-    const a = selA.value, b = selB.value;
-    $('cmp-titulo').textContent = `De ${a} para ${b}: ciclistas por hora`;
+    const a = selA.value, b = selB.value, j = selJanela.value;
+    $('cmp-titulo').textContent = `De ${a} para ${b}: contagens de ${JANELA[j].curto}`;
+    $('cmp-sub').textContent = `Média das contagens de ${JANELA[j].curto} nos locais contados nos dois anos. Troque a janela no seletor "Contagem" acima.`;
     $('lg-a').textContent = a;
     $('lg-b').textContent = b;
-    const linhas = dados.locais.filter((l) => a in l.mediaHoraPorAno && b in l.mediaHoraPorAno)
-      .sort((x, y) => (y.mediaHoraPorAno[b] - y.mediaHoraPorAno[a]) - (x.mediaHoraPorAno[b] - x.mediaHoraPorAno[a]));
+    const linhas = dados.locais.filter((l) => a in porAno(l, j) && b in porAno(l, j))
+      .sort((x, y) => (porAno(y, j)[b] - porAno(y, j)[a]) - (porAno(x, j)[b] - porAno(x, j)[a]));
     const caixa = $('cmp-linhas');
     caixa.replaceChildren();
     if (!linhas.length || a === b) {
       const p = document.createElement('p'); p.className = 'muted';
-      p.textContent = a === b ? 'Escolha dois anos diferentes.' : 'Nenhum local tem contagem de 1 hora nos dois anos.';
+      p.textContent = a === b ? 'Escolha dois anos diferentes.' : `Nenhum local tem contagem de ${JANELA[j].curto} nos dois anos.`;
       caixa.appendChild(p); return;
     }
-    const escala = Math.max(...linhas.flatMap((l) => [l.mediaHoraPorAno[a], l.mediaHoraPorAno[b]])) * 1.04;
+    const escala = Math.max(...linhas.flatMap((l) => [porAno(l, j)[a], porAno(l, j)[b]])) * 1.04;
     const pct = (v: number) => (v / escala) * 100;
     for (const l of linhas) {
-      const va = l.mediaHoraPorAno[a], vb = l.mediaHoraPorAno[b], dl = vb - va;
+      const va = porAno(l, j)[a], vb = porAno(l, j)[b], dl = vb - va;
       const row = document.createElement('div'); row.className = 'cmp-row';
-      row.innerHTML = `<span class="cmp-nome"><b>${esc(l.nome)}</b><span class="cmp-vals tabular">${fmt(va)} → ${fmt(vb)} (${dl >= 0 ? '+' : ''}${fmt(dl)})</span></span>
-        <div class="cmp-track" role="img" aria-label="${esc(l.nome)}: ${fmt(va)} em ${a} e ${fmt(vb)} em ${b}">
+      row.innerHTML = `<span class="cmp-nome"><b>${esc(l.nome)}</b><span class="cmp-vals tabular">${fmtJ(va, j)} → ${fmtJ(vb, j)} (${dl >= 0 ? '+' : ''}${fmtJ(dl, j)})</span></span>
+        <div class="cmp-track" role="img" aria-label="${esc(l.nome)}: ${fmtJ(va, j)} em ${a} e ${fmtJ(vb, j)} em ${b}">
           <div class="cmp-seg" style="left:${pct(Math.min(va, vb))}%;width:${Math.abs(pct(vb) - pct(va))}%"></div>
           <div class="cmp-dot c-a" style="left:${pct(va)}%"></div><div class="cmp-dot c-b" style="left:${pct(vb)}%"></div>
         </div>`;
@@ -204,45 +242,78 @@ for (const a of await artigos())
   selA.addEventListener('change', compara);
   selB.addEventListener('change', compara);
 
-  // ---------- curva do dia (hora a hora) ----------
+  // ---------- curva do dia (hora a hora), vários locais sobrepostos ----------
+  const CORES = ['#008C99', '#C47F00', '#3D5A99', '#B0413E', '#5B8C2A', '#7A4F9E', '#10201F'];
+  const marcados = new Set<string>();
+  let curvasIniciadas = false;
   function curvas() {
     const porLocal = new Map<string, Dados['perfis']>();
     for (const p of dados.perfis) porLocal.set(p.local, [...(porLocal.get(p.local) ?? []), p]);
-    const W = 720, H = 240, P = { l: 36, r: 8, t: 16, b: 28 };
-    let html = '';
-    for (const [id, dias] of porLocal) {
-      const local = dados.locais.find((l) => l.id === id);
-      if (!local) continue;
-      const media = Array.from({ length: 24 }, (_, h) => {
-        const v = dias.map((x) => x.horas[h]).filter((x): x is number => x !== null);
-        return v.length ? v.reduce((s, x) => s + x, 0) / v.length : 0;
+    const series = [...porLocal.entries()]
+      .map(([id, dias]) => {
+        const local = dados.locais.find((l) => l.id === id);
+        const media = Array.from({ length: 24 }, (_, h) => {
+          const v = dias.map((x) => x.horas[h]).filter((x): x is number => x !== null);
+          return v.length ? v.reduce((s, x) => s + x, 0) / v.length : null;
+        });
+        const validos = media.filter((v): v is number => v !== null);
+        const pico = media.indexOf(Math.max(...validos));
+        return local ? { id, nome: local.nome, dias, media, pico } : null;
+      })
+      .filter((x): x is NonNullable<typeof x> => !!x)
+      .sort((a, b) => b.dias.length - a.dias.length || a.nome.localeCompare(b.nome));
+    const caixa = $('cd-curvas');
+    if (!series.length) { caixa.innerHTML = ''; return; }
+    if (!curvasIniciadas) { series.slice(0, 4).forEach((x) => marcados.add(x.id)); curvasIniciadas = true; }
+    for (const id of [...marcados]) if (!series.some((x) => x.id === id)) marcados.delete(id);
+    const cor = new Map(series.map((x, i) => [x.id, CORES[i % CORES.length]]));
+    const visiveis = series.filter((x) => marcados.has(x.id));
+    const W = 720, H = 260, P = { l: 36, r: 12, t: 16, b: 28 };
+    const max = Math.max(1, ...visiveis.flatMap((x) => x.media.filter((v): v is number => v !== null)));
+    const X = (h: number) => P.l + (h + 0.5) * ((W - P.l - P.r) / 24);
+    const Y = (v: number) => H - P.b - (H - P.t - P.b) * (v / max);
+    let svg = '';
+    for (const f of [0, 0.25, 0.5, 0.75, 1]) {
+      const y = Y(max * f);
+      svg += `<line x1="${P.l}" x2="${W - P.r}" y1="${y}" y2="${y}" class="grid"/><text x="${P.l - 6}" y="${y + 4}" class="axis" text-anchor="end">${Math.round(max * f)}</text>`;
+    }
+    for (let h = 0; h < 24; h += 3) svg += `<text x="${X(h)}" y="${H - 8}" class="axis" text-anchor="middle">${h}h</text>`;
+    for (const x of visiveis) {
+      const c = cor.get(x.id)!;
+      let d = '', caneta = false;
+      x.media.forEach((v, h) => {
+        if (v === null) { caneta = false; return; }
+        d += `${caneta ? 'L' : 'M'}${X(h).toFixed(1)},${Y(v).toFixed(1)} `;
+        caneta = true;
       });
-      const max = Math.max(...media, 1), pico = media.indexOf(Math.max(...media));
-      const totais = dias.map((x) => `${dataBR(x.data)}: ${int(x.horas.reduce<number>((s, v) => s + (v ?? 0), 0))}`).join(' · ');
-      const bw = (W - P.l - P.r) / 24;
-      let svg = '';
-      for (const f of [0, 0.25, 0.5, 0.75, 1]) {
-        const y = P.t + (H - P.t - P.b) * (1 - f);
-        svg += `<line x1="${P.l}" x2="${W - P.r}" y1="${y}" y2="${y}" class="grid"/><text x="${P.l - 6}" y="${y + 4}" class="axis" text-anchor="end">${Math.round(max * f)}</text>`;
-      }
-      media.forEach((v, h) => {
-        const bh = (H - P.t - P.b) * (v / max);
-        svg += `<rect x="${P.l + h * bw + 2}" y="${H - P.b - bh}" width="${bw - 4}" height="${bh}" rx="2" class="${h === pico ? 'bar peak' : 'bar'}"><title>${h}h às ${h + 1}h: ${fmt(v)} ciclistas (média)</title></rect>`;
-        if (h % 3 === 0) svg += `<text x="${P.l + h * bw + bw / 2}" y="${H - 8}" class="axis" text-anchor="middle">${h}h</text>`;
+      svg += `<path d="${d}" fill="none" stroke="${c}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
+      x.media.forEach((v, h) => {
+        if (v === null) return;
+        svg += `<circle cx="${X(h).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="${h === x.pico ? 5 : 2.5}" fill="${c}"><title>${esc(x.nome)}, ${h}h às ${h + 1}h: ${fmt(v)} ciclistas (média)</title></circle>`;
       });
-      html += `<section class="wrap block">
+    }
+    const legenda = series.map((x) => `<label class="lg-item"><input type="checkbox" data-local="${x.id}" ${marcados.has(x.id) ? 'checked' : ''}>
+        <span class="lg-cor" style="background:${cor.get(x.id)}"></span>
+        <span><b>${esc(x.nome)}</b><span class="muted"> · ${x.dias.length} ${x.dias.length === 1 ? 'dia' : 'dias'} · pico às ${x.pico}h</span></span></label>`).join('');
+    const descricao = visiveis.map((x) => `${x.nome}: pico das ${x.pico}h às ${x.pico + 1}h`).join('; ');
+    caixa.innerHTML = `<section class="wrap block">
         <div class="block-head"><div>
           <p class="eyebrow">Hora a hora</p>
-          <h2>A curva do dia na ${esc(local.nome)}</h2>
-          <p class="muted">Média de cada hora em ${dias.length} ${dias.length === 1 ? 'dia' : 'dias'} de contagem de 24 horas. O pico é das ${pico}h às ${pico + 1}h.</p>
+          <h2>A curva do dia</h2>
+          <p class="muted">Média de cada hora nos dias com contagem hora a hora. Marque os locais para comparar.</p>
         </div></div>
+        <div class="legenda">${legenda}</div>
         <figure class="chart">
-          <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Ciclistas por hora ao longo do dia na ${esc(local.nome)}. Pico das ${pico}h às ${pico + 1}h.">${svg}</svg>
-          <figcaption class="muted small">Totais de 24 horas: ${totais}. As janelas de 1, 2 e 12 horas do mapa saem destas horas: 18h às 19h, 17h às 19h e 7h às 19h.</figcaption>
+          ${visiveis.length ? `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Ciclistas por hora ao longo do dia. ${esc(descricao)}">${svg}</svg>` : '<p class="muted">Marque ao menos um local.</p>'}
+          <figcaption class="muted small">As janelas do mapa saem destas horas: 1 h é das 18h às 19h, 12 h é das 7h às 19h e 24 h é o dia inteiro.</figcaption>
         </figure>
       </section>`;
-    }
-    $('cd-curvas').innerHTML = html;
+    caixa.querySelectorAll<HTMLInputElement>('input[data-local]').forEach((cb) =>
+      cb.addEventListener('change', () => {
+        if (cb.checked) marcados.add(cb.dataset.local!); else marcados.delete(cb.dataset.local!);
+        curvas();
+      }),
+    );
   }
 
   // ---------- tabela ----------
@@ -254,21 +325,27 @@ for (const a of await artigos())
     ).join('');
   }
 
-  function desenhaTudo() {
-    $('cd-lede').textContent = `${int(dados.totalContagens)} contagens em ${dados.locais.length} locais, de ${mesAno(dados.primeiraData)} a ${mesAno(dados.ultimaData)}. Contagens presenciais e por vídeo, de 1, 2, 12 e 24 horas. Toque num ponto para ver os números.`;
-    const anos = anosDe(dados);
+  function preencheAnos() {
+    const anos = anosDaJanela(selJanela.value);
     const atualAno = selAno.value;
     selAno.replaceChildren(new Option('Mais recente de cada local', 'recente'), ...[...anos].reverse().map((a) => new Option(a, a)));
     selAno.value = anos.includes(atualAno) ? atualAno : 'recente';
     const [pa, pb] = parPadrao(anos);
     opcoes(selA, anos, pa);
     opcoes(selB, anos, pb);
+  }
+
+  function desenhaTudo() {
+    $('cd-lede').textContent = `${int(dados.totalContagens)} contagens em ${dados.locais.length} locais, de ${mesAno(dados.primeiraData)} a ${mesAno(dados.ultimaData)}. Contagens presenciais e por vídeo de 1 h a 24 h. Toque num ponto para ver os números.`;
+    preencheAnos();
     compara();
     curvas();
     tabela();
     const l = dados.locais.find((x) => x.id === selecionado)
       ?? [...dados.locais].sort((a, b) => (b.max24h?.ciclistas ?? 0) - (a.max24h?.ciclistas ?? 0))[0];
-    if (l) mostra(l); else desenhaMapa();
+    if (l) selecionado = l.id;
+    desenhaMapa();
+    if (l) mostra(l);
   }
   desenhaTudo();
 
@@ -332,8 +409,10 @@ for (const a of await artigos())
   :global(#cd-curvas .chart svg) { width: 100%; min-width: 560px; height: auto; }
   :global(#cd-curvas .grid) { stroke: var(--line); stroke-width: 1; }
   :global(#cd-curvas .axis) { font: 500 12px var(--font-body); fill: var(--ink-3); }
-  :global(#cd-curvas .bar) { fill: #008C99; }
-  :global(#cd-curvas .bar.peak) { fill: #C47F00; }
+  :global(#cd-curvas .legenda) { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  :global(#cd-curvas .lg-item) { display: flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; min-height: 44px; }
+  :global(#cd-curvas .lg-item input) { width: 20px; height: 20px; accent-color: var(--accent); }
+  :global(#cd-curvas .lg-cor) { width: 18px; height: 4px; border-radius: 2px; flex: 0 0 18px; }
   :global(#cd-curvas .eyebrow) { text-transform: uppercase; letter-spacing: 0.1em; font-size: 14px; font-weight: 600; color: var(--ink-2); }
   .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
   table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 16px; }

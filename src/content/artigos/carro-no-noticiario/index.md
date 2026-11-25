@@ -2,6 +2,7 @@
 title: "Carro no noticiário"
 date: 2025-02-25
 updated: 2026-03-05
+author: "Marcelo Dias"
 description: "A coisa mais curiosa da cultura sobre rodas brasileira é que tudo — absolutamente tudo — que se relacione aos carros pode virar notícia! Do mais banal ao…"
 cover: ./capa.jpg
 coverAlt: "Carro no noticiário"

@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-11-24T00:26:12+00:00",
+ "geradoEm": "2026-11-25T01:37:02+00:00",
  "janelas": {
   "1": [
    18,
@@ -32,10 +32,21 @@
     2023
    ],
    "mediaHoraPorAno": {
-    "2023": 18.0
+    "2023": 18
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 18
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 18,
+     "n": 9
+    }
    },
    "ultimoAno": "2023",
-   "mediaHora": 18.0,
+   "mediaHora": 18,
    "max24h": null,
    "periodos": [
     1
@@ -54,6 +65,38 @@
    ],
    "mediaHoraPorAno": {
     "2024": 15.7
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 15.7
+    },
+    "2": {
+     "2024": 34.3
+    },
+    "12": {
+     "2024": 132.3
+    },
+    "24": {
+     "2024": 197
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 15.7,
+     "n": 3
+    },
+    "2": {
+     "media": 34.3,
+     "n": 3
+    },
+    "12": {
+     "media": 132.3,
+     "n": 3
+    },
+    "24": {
+     "media": 197,
+     "n": 3
+    }
    },
    "ultimoAno": "2024",
    "mediaHora": 15.7,
@@ -82,6 +125,17 @@
    "mediaHoraPorAno": {
     "2023": 11.3
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 11.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 11.3,
+     "n": 7
+    }
+   },
    "ultimoAno": "2023",
    "mediaHora": 11.3,
    "max24h": null,
@@ -101,10 +155,42 @@
     2024
    ],
    "mediaHoraPorAno": {
-    "2024": 7.0
+    "2024": 7
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 7
+    },
+    "2": {
+     "2024": 13
+    },
+    "12": {
+     "2024": 47.5
+    },
+    "24": {
+     "2024": 130.5
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 7,
+     "n": 2
+    },
+    "2": {
+     "media": 13,
+     "n": 2
+    },
+    "12": {
+     "media": 47.5,
+     "n": 2
+    },
+    "24": {
+     "media": 130.5,
+     "n": 2
+    }
    },
    "ultimoAno": "2024",
-   "mediaHora": 7.0,
+   "mediaHora": 7,
    "max24h": {
     "ciclistas": 134,
     "data": "2024-02-27"
@@ -132,10 +218,30 @@
    "mediaHoraPorAno": {
     "2023": 17.4,
     "2024": 34.2,
-    "2025": 32.0
+    "2025": 32
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 17.4,
+     "2024": 34.2,
+     "2025": 32
+    },
+    "2": {
+     "2023": 20
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 27.3,
+     "n": 35
+    },
+    "2": {
+     "media": 20,
+     "n": 1
+    }
    },
    "ultimoAno": "2025",
-   "mediaHora": 32.0,
+   "mediaHora": 32,
    "max24h": null,
    "periodos": [
     1,
@@ -155,8 +261,44 @@
     2024
    ],
    "mediaHoraPorAno": {
-    "2023": 18.0,
+    "2023": 18,
     "2024": 39.7
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 18,
+     "2024": 39.7
+    },
+    "2": {
+     "2023": 30.7,
+     "2024": 62.3
+    },
+    "12": {
+     "2023": 120,
+     "2024": 247
+    },
+    "24": {
+     "2023": 261,
+     "2024": 332.7
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 28.8,
+     "n": 6
+    },
+    "2": {
+     "media": 46.5,
+     "n": 6
+    },
+    "12": {
+     "media": 183.5,
+     "n": 6
+    },
+    "24": {
+     "media": 296.8,
+     "n": 6
+    }
    },
    "ultimoAno": "2024",
    "mediaHora": 39.7,
@@ -185,6 +327,17 @@
    "mediaHoraPorAno": {
     "2023": 11.3
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 11.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 11.3,
+     "n": 3
+    }
+   },
    "ultimoAno": "2023",
    "mediaHora": 11.3,
    "max24h": null,
@@ -206,6 +359,17 @@
    "mediaHoraPorAno": {
     "2023": 9.7
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 9.7
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 9.7,
+     "n": 3
+    }
+   },
    "ultimoAno": "2023",
    "mediaHora": 9.7,
    "max24h": null,
@@ -225,10 +389,42 @@
     2024
    ],
    "mediaHoraPorAno": {
-    "2024": 10.0
+    "2024": 10
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 10
+    },
+    "2": {
+     "2024": 19.7
+    },
+    "12": {
+     "2024": 63.3
+    },
+    "24": {
+     "2024": 97.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 10,
+     "n": 4
+    },
+    "2": {
+     "media": 19.7,
+     "n": 3
+    },
+    "12": {
+     "media": 63.3,
+     "n": 3
+    },
+    "24": {
+     "media": 97.3,
+     "n": 3
+    }
    },
    "ultimoAno": "2024",
-   "mediaHora": 10.0,
+   "mediaHora": 10,
    "max24h": {
     "ciclistas": 105,
     "data": "2024-04-25"
@@ -254,6 +450,17 @@
    "mediaHoraPorAno": {
     "2023": 5.3
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 5.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 5.3,
+     "n": 3
+    }
+   },
    "ultimoAno": "2023",
    "mediaHora": 5.3,
    "max24h": null,
@@ -274,6 +481,38 @@
    ],
    "mediaHoraPorAno": {
     "2024": 97.5
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 97.5
+    },
+    "2": {
+     "2024": 193
+    },
+    "12": {
+     "2024": 716.5
+    },
+    "24": {
+     "2024": 1324
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 97.5,
+     "n": 2
+    },
+    "2": {
+     "media": 193,
+     "n": 2
+    },
+    "12": {
+     "media": 716.5,
+     "n": 2
+    },
+    "24": {
+     "media": 1324,
+     "n": 2
+    }
    },
    "ultimoAno": "2024",
    "mediaHora": 97.5,
@@ -302,6 +541,38 @@
    "mediaHoraPorAno": {
     "2024": 94.7
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 94.7
+    },
+    "2": {
+     "2024": 178.3
+    },
+    "12": {
+     "2024": 571.7
+    },
+    "24": {
+     "2024": 882.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 94.7,
+     "n": 3
+    },
+    "2": {
+     "media": 178.3,
+     "n": 3
+    },
+    "12": {
+     "media": 571.7,
+     "n": 3
+    },
+    "24": {
+     "media": 882.3,
+     "n": 3
+    }
+   },
    "ultimoAno": "2024",
    "mediaHora": 94.7,
    "max24h": {
@@ -329,12 +600,52 @@
     2026
    ],
    "mediaHoraPorAno": {
-    "2023": 8.0,
+    "2023": 8,
     "2024": 32.4,
-    "2026": 46.0
+    "2026": 46
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 8,
+     "2024": 32.4,
+     "2026": 46
+    },
+    "2": {
+     "2023": 15.7,
+     "2024": 48.5,
+     "2026": 74.7
+    },
+    "12": {
+     "2023": 67,
+     "2024": 178,
+     "2026": 248
+    },
+    "24": {
+     "2023": 92.3,
+     "2024": 263,
+     "2026": 365.7
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 29.5,
+     "n": 11
+    },
+    "2": {
+     "media": 46.5,
+     "n": 10
+    },
+    "12": {
+     "media": 165.7,
+     "n": 10
+    },
+    "24": {
+     "media": 242.6,
+     "n": 10
+    }
    },
    "ultimoAno": "2026",
-   "mediaHora": 46.0,
+   "mediaHora": 46,
    "max24h": {
     "ciclistas": 380,
     "data": "2026-09-24"
@@ -359,8 +670,44 @@
     2025
    ],
    "mediaHoraPorAno": {
-    "2024": 5.0,
+    "2024": 5,
     "2025": 5.3
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 5,
+     "2025": 5.3
+    },
+    "2": {
+     "2024": 9,
+     "2025": 9.2
+    },
+    "12": {
+     "2024": 45,
+     "2025": 37
+    },
+    "24": {
+     "2024": 72,
+     "2025": 61.7
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 5.3,
+     "n": 7
+    },
+    "2": {
+     "media": 9.1,
+     "n": 7
+    },
+    "12": {
+     "media": 38.1,
+     "n": 7
+    },
+    "24": {
+     "media": 63.1,
+     "n": 7
+    }
    },
    "ultimoAno": "2025",
    "mediaHora": 5.3,
@@ -387,10 +734,21 @@
     2023
    ],
    "mediaHoraPorAno": {
-    "2023": 13.2
+    "2023": 13.3
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 13.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 13.3,
+     "n": 4
+    }
    },
    "ultimoAno": "2023",
-   "mediaHora": 13.2,
+   "mediaHora": 13.3,
    "max24h": null,
    "periodos": [
     1
@@ -408,10 +766,21 @@
     2023
    ],
    "mediaHoraPorAno": {
-    "2023": 13.0
+    "2023": 13
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 13
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 13,
+     "n": 2
+    }
    },
    "ultimoAno": "2023",
-   "mediaHora": 13.0,
+   "mediaHora": 13,
    "max24h": null,
    "periodos": [
     1
@@ -430,6 +799,17 @@
    ],
    "mediaHoraPorAno": {
     "2023": 3.3
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 3.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 3.3,
+     "n": 3
+    }
    },
    "ultimoAno": "2023",
    "mediaHora": 3.3,
@@ -452,6 +832,17 @@
    "mediaHoraPorAno": {
     "2023": 6.3
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 6.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 6.3,
+     "n": 3
+    }
+   },
    "ultimoAno": "2023",
    "mediaHora": 6.3,
    "max24h": null,
@@ -473,10 +864,46 @@
    ],
    "mediaHoraPorAno": {
     "2023": 6.2,
-    "2024": 7.0
+    "2024": 7
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 6.2,
+     "2024": 7
+    },
+    "2": {
+     "2023": 14,
+     "2024": 12
+    },
+    "12": {
+     "2023": 56.8,
+     "2024": 43
+    },
+    "24": {
+     "2023": 77,
+     "2024": 61
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 6.3,
+     "n": 7
+    },
+    "2": {
+     "media": 13.5,
+     "n": 4
+    },
+    "12": {
+     "media": 54,
+     "n": 5
+    },
+    "24": {
+     "media": 71.7,
+     "n": 3
+    }
    },
    "ultimoAno": "2024",
-   "mediaHora": 7.0,
+   "mediaHora": 7,
    "max24h": {
     "ciclistas": 88,
     "data": "2023-11-07"
@@ -501,6 +928,38 @@
    ],
    "mediaHoraPorAno": {
     "2023": 20.5
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 20.5
+    },
+    "2": {
+     "2023": 38
+    },
+    "12": {
+     "2023": 104
+    },
+    "24": {
+     "2023": 177.5
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 20.5,
+     "n": 2
+    },
+    "2": {
+     "media": 38,
+     "n": 2
+    },
+    "12": {
+     "media": 104,
+     "n": 2
+    },
+    "24": {
+     "media": 177.5,
+     "n": 2
+    }
    },
    "ultimoAno": "2023",
    "mediaHora": 20.5,
@@ -529,6 +988,38 @@
    "mediaHoraPorAno": {
     "2023": 22.5
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 22.5
+    },
+    "2": {
+     "2023": 45.5
+    },
+    "12": {
+     "2023": 112
+    },
+    "24": {
+     "2023": 170.5
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 22.5,
+     "n": 2
+    },
+    "2": {
+     "media": 45.5,
+     "n": 2
+    },
+    "12": {
+     "media": 112,
+     "n": 2
+    },
+    "24": {
+     "media": 170.5,
+     "n": 2
+    }
+   },
    "ultimoAno": "2023",
    "mediaHora": 22.5,
    "max24h": {
@@ -554,10 +1045,21 @@
     2023
    ],
    "mediaHoraPorAno": {
-    "2023": 0.0
+    "2023": 0
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 0
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 0,
+     "n": 2
+    }
    },
    "ultimoAno": "2023",
-   "mediaHora": 0.0,
+   "mediaHora": 0,
    "max24h": null,
    "periodos": [
     1
@@ -576,6 +1078,38 @@
    ],
    "mediaHoraPorAno": {
     "2024": 5.5
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 5.5
+    },
+    "2": {
+     "2024": 9
+    },
+    "12": {
+     "2024": 23.5
+    },
+    "24": {
+     "2024": 42
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 5.5,
+     "n": 2
+    },
+    "2": {
+     "media": 9,
+     "n": 2
+    },
+    "12": {
+     "media": 23.5,
+     "n": 2
+    },
+    "24": {
+     "media": 42,
+     "n": 2
+    }
    },
    "ultimoAno": "2024",
    "mediaHora": 5.5,
@@ -602,10 +1136,21 @@
     2023
    ],
    "mediaHoraPorAno": {
-    "2023": 7.0
+    "2023": 7
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 7
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 7,
+     "n": 3
+    }
    },
    "ultimoAno": "2023",
-   "mediaHora": 7.0,
+   "mediaHora": 7,
    "max24h": null,
    "periodos": [
     1
@@ -626,6 +1171,42 @@
    "mediaHoraPorAno": {
     "2023": 1.4,
     "2024": 1.7
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 1.4,
+     "2024": 1.7
+    },
+    "2": {
+     "2023": 5,
+     "2024": 6
+    },
+    "12": {
+     "2023": 30.5,
+     "2024": 27
+    },
+    "24": {
+     "2023": 40,
+     "2024": 38
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 1.4,
+     "n": 16
+    },
+    "2": {
+     "media": 5.4,
+     "n": 5
+    },
+    "12": {
+     "media": 28.8,
+     "n": 4
+    },
+    "24": {
+     "media": 39,
+     "n": 4
+    }
    },
    "ultimoAno": "2024",
    "mediaHora": 1.7,
@@ -654,6 +1235,17 @@
    "mediaHoraPorAno": {
     "2023": 2.3
    },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2023": 2.3
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 2.3,
+     "n": 3
+    }
+   },
    "ultimoAno": "2023",
    "mediaHora": 2.3,
    "max24h": null,
@@ -673,10 +1265,42 @@
     2024
    ],
    "mediaHoraPorAno": {
-    "2024": 3.0
+    "2024": 3
+   },
+   "mediaPorJanelaAno": {
+    "1": {
+     "2024": 3
+    },
+    "2": {
+     "2024": 9
+    },
+    "12": {
+     "2024": 29
+    },
+    "24": {
+     "2024": 40
+    }
+   },
+   "mediaPorJanela": {
+    "1": {
+     "media": 3,
+     "n": 1
+    },
+    "2": {
+     "media": 9,
+     "n": 1
+    },
+    "12": {
+     "media": 29,
+     "n": 1
+    },
+    "24": {
+     "media": 40,
+     "n": 1
+    }
    },
    "ultimoAno": "2024",
-   "mediaHora": 3.0,
+   "mediaHora": 3,
    "max24h": {
     "ciclistas": 40,
     "data": "2024-04-24"
@@ -693,6 +1317,7 @@
  ],
  "contagens": [
   {
+   "data": "2023-04-27",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 14,
@@ -700,10 +1325,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-04-27",
    "derivada": false
   },
   {
+   "data": "2023-04-27",
    "periodo": 2,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 20,
@@ -711,10 +1336,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-04-27",
    "derivada": false
   },
   {
+   "data": "2023-05-16",
    "periodo": 1,
    "local": "av-afonso-pena-1991",
    "ciclistas": 18,
@@ -722,10 +1347,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-05-16",
    "derivada": false
   },
   {
+   "data": "2023-05-16",
    "periodo": 1,
    "local": "av-brasil-1357",
    "ciclistas": 13,
@@ -733,10 +1358,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-05-16",
    "derivada": false
   },
   {
+   "data": "2023-05-17",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 23,
@@ -744,10 +1369,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-05-17",
    "derivada": false
   },
   {
+   "data": "2023-05-18",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 17,
@@ -755,10 +1380,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-05-18",
    "derivada": false
   },
   {
+   "data": "2023-05-22",
    "periodo": 1,
    "local": "av-afonso-pena-1991",
    "ciclistas": 14,
@@ -766,10 +1391,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-05-22",
    "derivada": false
   },
   {
+   "data": "2023-05-30",
    "periodo": 1,
    "local": "av-afonso-pena-1991",
    "ciclistas": 11,
@@ -777,10 +1402,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-05-30",
    "derivada": false
   },
   {
+   "data": "2023-05-31",
    "periodo": 1,
    "local": "fernandes-tourinho-471",
    "ciclistas": 11,
@@ -788,10 +1413,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-05-31",
    "derivada": false
   },
   {
+   "data": "2023-06-01",
    "periodo": 1,
    "local": "fernandes-tourinho-471",
    "ciclistas": 16,
@@ -799,10 +1424,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-01",
    "derivada": false
   },
   {
+   "data": "2023-06-05",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 16,
@@ -810,10 +1435,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-05",
    "derivada": false
   },
   {
+   "data": "2023-06-06",
    "periodo": 1,
    "local": "fernandes-tourinho-471",
    "ciclistas": 17,
@@ -822,10 +1447,10 @@
     "Cristiano Scarpelli",
     "Vandré Guardieiro"
    ],
-   "data": "2023-06-06",
    "derivada": false
   },
   {
+   "data": "2023-06-12",
    "periodo": 1,
    "local": "av-afonso-pena-1991",
    "ciclistas": 7,
@@ -833,10 +1458,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-12",
    "derivada": false
   },
   {
+   "data": "2023-06-13",
    "periodo": 1,
    "local": "av-afonso-pena-1991",
    "ciclistas": 12,
@@ -844,10 +1469,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-13",
    "derivada": false
   },
   {
+   "data": "2023-06-13",
    "periodo": 1,
    "local": "av-brasil-1357",
    "ciclistas": 10,
@@ -855,10 +1480,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-13",
    "derivada": false
   },
   {
+   "data": "2023-06-14",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 17,
@@ -866,10 +1491,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-14",
    "derivada": false
   },
   {
+   "data": "2023-06-15",
    "periodo": 1,
    "local": "av-joao-pinheiro-617",
    "ciclistas": 6,
@@ -877,10 +1502,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-15",
    "derivada": false
   },
   {
+   "data": "2023-06-19",
    "periodo": 1,
    "local": "av-joao-pinheiro-617",
    "ciclistas": 4,
@@ -888,10 +1513,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-19",
    "derivada": false
   },
   {
+   "data": "2023-06-20",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 15,
@@ -899,10 +1524,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-20",
    "derivada": false
   },
   {
+   "data": "2023-06-22",
    "periodo": 1,
    "local": "fernandes-tourinho-471",
    "ciclistas": 9,
@@ -910,10 +1535,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-22",
    "derivada": false
   },
   {
+   "data": "2023-06-27",
    "periodo": 1,
    "local": "av-joao-pinheiro-617",
    "ciclistas": 6,
@@ -921,10 +1546,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-27",
    "derivada": false
   },
   {
+   "data": "2023-06-28",
    "periodo": 1,
    "local": "av-contorno-6282",
    "ciclistas": 7,
@@ -932,10 +1557,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-06-28",
    "derivada": false
   },
   {
+   "data": "2023-07-04",
    "periodo": 1,
    "local": "goncalves-dias-928",
    "ciclistas": 5,
@@ -943,10 +1568,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-07-04",
    "derivada": false
   },
   {
+   "data": "2023-07-04",
    "periodo": 1,
    "local": "pernambuco-554",
    "ciclistas": 6,
@@ -954,10 +1579,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-07-04",
    "derivada": false
   },
   {
+   "data": "2023-07-06",
    "periodo": 1,
    "local": "av-afonso-pena-1991",
    "ciclistas": 11,
@@ -965,10 +1590,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-07-06",
    "derivada": false
   },
   {
+   "data": "2023-07-10",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 22,
@@ -976,10 +1601,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-07-10",
    "derivada": false
   },
   {
+   "data": "2023-07-11",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 20,
@@ -987,10 +1612,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-07-11",
    "derivada": false
   },
   {
+   "data": "2023-07-13",
    "periodo": 1,
    "local": "av-afonso-pena-1991",
    "ciclistas": 6,
@@ -998,10 +1623,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-07-13",
    "derivada": false
   },
   {
+   "data": "2023-07-13",
    "periodo": 1,
    "local": "av-brasil-1357",
    "ciclistas": 11,
@@ -1009,10 +1634,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-07-13",
    "derivada": false
   },
   {
+   "data": "2023-08-01",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 20,
@@ -1020,10 +1645,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-01",
    "derivada": false
   },
   {
+   "data": "2023-08-02",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 16,
@@ -1031,10 +1656,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-02",
    "derivada": false
   },
   {
+   "data": "2023-08-02",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 0,
@@ -1042,10 +1667,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-02",
    "derivada": false
   },
   {
+   "data": "2023-08-03",
    "periodo": 1,
    "local": "goncalves-dias-928",
    "ciclistas": 2,
@@ -1053,10 +1678,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-03",
    "derivada": false
   },
   {
+   "data": "2023-08-03",
    "periodo": 1,
    "local": "pernambuco-554",
    "ciclistas": 9,
@@ -1064,10 +1689,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-03",
    "derivada": false
   },
   {
+   "data": "2023-08-03",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 2,
@@ -1075,10 +1700,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-03",
    "derivada": false
   },
   {
+   "data": "2023-08-07",
    "periodo": 1,
    "local": "getulio-vargas-1300",
    "ciclistas": 12,
@@ -1086,10 +1711,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-07",
    "derivada": false
   },
   {
+   "data": "2023-08-07",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 2,
@@ -1097,10 +1722,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-07",
    "derivada": false
   },
   {
+   "data": "2023-08-08",
    "periodo": 1,
    "local": "av-contorno-6282",
    "ciclistas": 4,
@@ -1108,10 +1733,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-08",
    "derivada": false
   },
   {
+   "data": "2023-08-08",
    "periodo": 1,
    "local": "getulio-vargas-1300",
    "ciclistas": 14,
@@ -1119,10 +1744,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-08",
    "derivada": false
   },
   {
+   "data": "2023-08-08",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 3,
@@ -1130,10 +1755,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-08",
    "derivada": false
   },
   {
+   "data": "2023-08-08",
    "periodo": 2,
    "local": "rua-sergipe-837",
    "ciclistas": 6,
@@ -1141,10 +1766,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-08",
    "derivada": false
   },
   {
+   "data": "2023-08-09",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 11,
@@ -1152,10 +1777,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-09",
    "derivada": false
   },
   {
+   "data": "2023-08-09",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 1,
@@ -1163,10 +1788,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-09",
    "derivada": false
   },
   {
+   "data": "2023-08-10",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 11,
@@ -1174,10 +1799,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-10",
    "derivada": false
   },
   {
+   "data": "2023-08-10",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 2,
@@ -1185,10 +1810,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-10",
    "derivada": false
   },
   {
+   "data": "2023-08-16",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 1,
@@ -1196,10 +1821,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-16",
    "derivada": false
   },
   {
+   "data": "2023-08-17",
    "periodo": 1,
    "local": "rua-rio-de-janeiro-2195",
    "ciclistas": 5,
@@ -1209,10 +1834,10 @@
     "Gil Sotero",
     "Wilson"
    ],
-   "data": "2023-08-17",
    "derivada": false
   },
   {
+   "data": "2023-08-17",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 0,
@@ -1220,10 +1845,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-17",
    "derivada": false
   },
   {
+   "data": "2023-08-17",
    "periodo": 2,
    "local": "rua-sergipe-837",
    "ciclistas": 2,
@@ -1231,10 +1856,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-17",
    "derivada": false
   },
   {
+   "data": "2023-08-17",
    "periodo": 12,
    "local": "rua-sergipe-837",
    "ciclistas": 32,
@@ -1242,10 +1867,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-17",
    "derivada": false
   },
   {
+   "data": "2023-08-17",
    "periodo": 24,
    "local": "rua-sergipe-837",
    "ciclistas": 42,
@@ -1253,10 +1878,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-17",
    "derivada": false
   },
   {
+   "data": "2023-08-21",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 14,
@@ -1264,10 +1889,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-21",
    "derivada": false
   },
   {
+   "data": "2023-08-22",
    "periodo": 1,
    "local": "goncalves-dias-928",
    "ciclistas": 3,
@@ -1275,10 +1900,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-22",
    "derivada": false
   },
   {
+   "data": "2023-08-22",
    "periodo": 1,
    "local": "pernambuco-554",
    "ciclistas": 4,
@@ -1286,10 +1911,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-22",
    "derivada": false
   },
   {
+   "data": "2023-08-22",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 1,
@@ -1297,10 +1922,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-22",
    "derivada": false
   },
   {
+   "data": "2023-08-23",
    "periodo": 1,
    "local": "rua-espirito-santo-1682",
    "ciclistas": 0,
@@ -1308,10 +1933,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-23",
    "derivada": false
   },
   {
+   "data": "2023-08-23",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 0,
@@ -1319,10 +1944,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-23",
    "derivada": false
   },
   {
+   "data": "2023-08-23",
    "periodo": 1,
    "local": "rua-da-bahia-1816",
    "ciclistas": 1,
@@ -1330,10 +1955,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-23",
    "derivada": false
   },
   {
+   "data": "2023-08-24",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 18,
@@ -1341,10 +1966,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-24",
    "derivada": false
   },
   {
+   "data": "2023-08-24",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 3,
@@ -1352,10 +1977,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-24",
    "derivada": false
   },
   {
+   "data": "2023-08-25",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 16,
@@ -1363,10 +1988,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-25",
    "derivada": false
   },
   {
+   "data": "2023-08-30",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 1,
@@ -1374,10 +1999,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-08-30",
    "derivada": false
   },
   {
+   "data": "2023-09-04",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 2,
@@ -1385,10 +2010,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-04",
    "derivada": false
   },
   {
+   "data": "2023-09-04",
    "periodo": 2,
    "local": "rua-sergipe-837",
    "ciclistas": 7,
@@ -1396,10 +2021,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-04",
    "derivada": false
   },
   {
+   "data": "2023-09-04",
    "periodo": 12,
    "local": "rua-sergipe-837",
    "ciclistas": 29,
@@ -1407,10 +2032,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-04",
    "derivada": false
   },
   {
+   "data": "2023-09-04",
    "periodo": 24,
    "local": "rua-sergipe-837",
    "ciclistas": 38,
@@ -1418,10 +2043,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-04",
    "derivada": false
   },
   {
+   "data": "2023-09-05",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 14,
@@ -1429,10 +2054,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-05",
    "derivada": false
   },
   {
+   "data": "2023-09-11",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 26,
@@ -1440,10 +2065,10 @@
    "fonte": [
     "Túlio Jansen"
    ],
-   "data": "2023-09-11",
    "derivada": false
   },
   {
+   "data": "2023-09-11",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 13,
@@ -1451,10 +2076,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-11",
    "derivada": false
   },
   {
+   "data": "2023-09-13",
    "periodo": 1,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 24,
@@ -1463,10 +2088,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-13",
    "derivada": false
   },
   {
+   "data": "2023-09-13",
    "periodo": 2,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 42,
@@ -1475,10 +2100,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-13",
    "derivada": false
   },
   {
+   "data": "2023-09-13",
    "periodo": 12,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 112,
@@ -1487,10 +2112,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-13",
    "derivada": false
   },
   {
+   "data": "2023-09-13",
    "periodo": 24,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 173,
@@ -1499,10 +2124,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-13",
    "derivada": false
   },
   {
+   "data": "2023-09-14",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 19,
@@ -1510,10 +2135,10 @@
    "fonte": [
     "Túlio Jansen"
    ],
-   "data": "2023-09-14",
    "derivada": false
   },
   {
+   "data": "2023-09-14",
    "periodo": 1,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 21,
@@ -1522,10 +2147,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-14",
    "derivada": false
   },
   {
+   "data": "2023-09-14",
    "periodo": 2,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 49,
@@ -1534,10 +2159,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-14",
    "derivada": false
   },
   {
+   "data": "2023-09-14",
    "periodo": 12,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 112,
@@ -1546,10 +2171,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-14",
    "derivada": false
   },
   {
+   "data": "2023-09-14",
    "periodo": 24,
    "local": "rua-conceicao-do-para-930",
    "ciclistas": 168,
@@ -1558,10 +2183,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-14",
    "derivada": false
   },
   {
+   "data": "2023-09-18",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 18,
@@ -1569,10 +2194,10 @@
    "fonte": [
     "Túlio Jansen"
    ],
-   "data": "2023-09-18",
    "derivada": false
   },
   {
+   "data": "2023-09-19",
    "periodo": 1,
    "local": "av-afonso-pena-1420",
    "ciclistas": 15,
@@ -1580,10 +2205,10 @@
    "fonte": [
     "Túlio Jansen"
    ],
-   "data": "2023-09-19",
    "derivada": false
   },
   {
+   "data": "2023-09-20",
    "periodo": 1,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 23,
@@ -1592,10 +2217,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-20",
    "derivada": false
   },
   {
+   "data": "2023-09-20",
    "periodo": 2,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 40,
@@ -1604,10 +2229,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-20",
    "derivada": false
   },
   {
+   "data": "2023-09-20",
    "periodo": 12,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 109,
@@ -1616,10 +2241,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-20",
    "derivada": false
   },
   {
+   "data": "2023-09-20",
    "periodo": 24,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 194,
@@ -1628,10 +2253,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-20",
    "derivada": false
   },
   {
+   "data": "2023-09-21",
    "periodo": 1,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 18,
@@ -1640,10 +2265,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-21",
    "derivada": false
   },
   {
+   "data": "2023-09-21",
    "periodo": 2,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 36,
@@ -1652,10 +2277,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-21",
    "derivada": false
   },
   {
+   "data": "2023-09-21",
    "periodo": 12,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 99,
@@ -1664,10 +2289,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-21",
    "derivada": false
   },
   {
+   "data": "2023-09-21",
    "periodo": 24,
    "local": "rua-conceiao-do-para-930",
    "ciclistas": 161,
@@ -1676,10 +2301,10 @@
     "Cristiano Scarpelli",
     "Júlia Pedrosa"
    ],
-   "data": "2023-09-21",
    "derivada": false
   },
   {
+   "data": "2023-09-25",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 25,
@@ -1689,10 +2314,10 @@
     "Túlio Macedo",
     "Júlio Lana"
    ],
-   "data": "2023-09-25",
    "derivada": false
   },
   {
+   "data": "2023-09-28",
    "periodo": 1,
    "local": "rua-alagoas-750",
    "ciclistas": 6,
@@ -1700,10 +2325,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-28",
    "derivada": false
   },
   {
+   "data": "2023-09-28",
    "periodo": 1,
    "local": "rua-rio-de-janeiro-2195",
    "ciclistas": 5,
@@ -1711,10 +2336,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-09-28",
    "derivada": false
   },
   {
+   "data": "2023-10-02",
    "periodo": 1,
    "local": "rua-alagoas-750",
    "ciclistas": 5,
@@ -1722,10 +2347,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-10-02",
    "derivada": false
   },
   {
+   "data": "2023-10-03",
    "periodo": 1,
    "local": "rua-alagoas-750",
    "ciclistas": 8,
@@ -1733,10 +2358,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-10-03",
    "derivada": false
   },
   {
+   "data": "2023-10-04",
    "periodo": 1,
    "local": "rua-espirito-santo-1682",
    "ciclistas": 0,
@@ -1744,10 +2369,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-10-04",
    "derivada": false
   },
   {
+   "data": "2023-10-04",
    "periodo": 1,
    "local": "rua-da-bahia-1816",
    "ciclistas": 2,
@@ -1755,10 +2380,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-10-04",
    "derivada": false
   },
   {
+   "data": "2023-10-05",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 26,
@@ -1767,10 +2392,10 @@
     "Cristiano Scarpelli",
     "Hélio Filho"
    ],
-   "data": "2023-10-05",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 1,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 21,
@@ -1779,10 +2404,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 2,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 32,
@@ -1791,10 +2416,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 12,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 128,
@@ -1803,10 +2428,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 24,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 299,
@@ -1815,10 +2440,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 1,
    "local": "av-contorno-6282",
    "ciclistas": 18,
@@ -1826,10 +2451,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 9,
@@ -1838,10 +2463,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 17,
@@ -1850,10 +2475,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 77,
@@ -1862,10 +2487,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-16",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 105,
@@ -1874,10 +2499,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-16",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 1,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 17,
@@ -1886,10 +2511,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 2,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 30,
@@ -1898,10 +2523,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 12,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 111,
@@ -1910,10 +2535,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 24,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 249,
@@ -1922,10 +2547,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 8,
@@ -1934,10 +2559,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 16,
@@ -1946,10 +2571,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 62,
@@ -1958,10 +2583,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 98,
@@ -1970,10 +2595,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-17",
    "periodo": 1,
    "local": "rua-rio-de-janeiro-2195",
    "ciclistas": 11,
@@ -1981,10 +2606,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-10-17",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 1,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 16,
@@ -1993,10 +2618,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 2,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 30,
@@ -2005,10 +2630,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 12,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 121,
@@ -2017,10 +2642,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 24,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 235,
@@ -2029,10 +2654,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 7,
@@ -2041,10 +2666,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 14,
@@ -2053,10 +2678,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 62,
@@ -2065,10 +2690,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 74,
@@ -2077,10 +2702,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-10-19",
    "periodo": 12,
    "local": "rua-alagoas-750",
    "ciclistas": 62,
@@ -2088,10 +2713,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-10-19",
    "derivada": false
   },
   {
+   "data": "2023-11-06",
    "periodo": 1,
    "local": "rua-alagoas-750",
    "ciclistas": 9,
@@ -2099,10 +2724,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-06",
    "derivada": false
   },
   {
+   "data": "2023-11-06",
    "periodo": 2,
    "local": "rua-alagoas-750",
    "ciclistas": 16,
@@ -2110,10 +2735,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-06",
    "derivada": false
   },
   {
+   "data": "2023-11-06",
    "periodo": 12,
    "local": "rua-alagoas-750",
    "ciclistas": 44,
@@ -2121,10 +2746,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-06",
    "derivada": false
   },
   {
+   "data": "2023-11-07",
    "periodo": 1,
    "local": "rua-alagoas-750",
    "ciclistas": 3,
@@ -2132,10 +2757,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-07",
    "derivada": false
   },
   {
+   "data": "2023-11-07",
    "periodo": 2,
    "local": "rua-alagoas-750",
    "ciclistas": 13,
@@ -2143,10 +2768,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-07",
    "derivada": false
   },
   {
+   "data": "2023-11-07",
    "periodo": 12,
    "local": "rua-alagoas-750",
    "ciclistas": 71,
@@ -2154,10 +2779,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-07",
    "derivada": false
   },
   {
+   "data": "2023-11-07",
    "periodo": 24,
    "local": "rua-alagoas-750",
    "ciclistas": 88,
@@ -2165,10 +2790,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-07",
    "derivada": false
   },
   {
+   "data": "2023-11-08",
    "periodo": 1,
    "local": "rua-alagoas-750",
    "ciclistas": 6,
@@ -2176,10 +2801,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-08",
    "derivada": false
   },
   {
+   "data": "2023-11-08",
    "periodo": 2,
    "local": "rua-alagoas-750",
    "ciclistas": 13,
@@ -2187,10 +2812,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-08",
    "derivada": false
   },
   {
+   "data": "2023-11-08",
    "periodo": 12,
    "local": "rua-alagoas-750",
    "ciclistas": 50,
@@ -2198,10 +2823,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-08",
    "derivada": false
   },
   {
+   "data": "2023-11-08",
    "periodo": 24,
    "local": "rua-alagoas-750",
    "ciclistas": 66,
@@ -2209,10 +2834,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-08",
    "derivada": false
   },
   {
+   "data": "2023-11-08",
    "periodo": 1,
    "local": "rua-da-bahia-1816",
    "ciclistas": 4,
@@ -2220,10 +2845,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2023-11-08",
    "derivada": false
   },
   {
+   "data": "2024-02-05",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 3,
@@ -2231,10 +2856,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-05",
    "derivada": false
   },
   {
+   "data": "2024-02-27",
    "periodo": 1,
    "local": "av-afonso-pena-4040",
    "ciclistas": 6,
@@ -2242,10 +2867,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-27",
    "derivada": false
   },
   {
+   "data": "2024-02-27",
    "periodo": 2,
    "local": "av-afonso-pena-4040",
    "ciclistas": 11,
@@ -2253,10 +2878,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-27",
    "derivada": false
   },
   {
+   "data": "2024-02-27",
    "periodo": 12,
    "local": "av-afonso-pena-4040",
    "ciclistas": 45,
@@ -2264,10 +2889,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-27",
    "derivada": false
   },
   {
+   "data": "2024-02-27",
    "periodo": 24,
    "local": "av-afonso-pena-4040",
    "ciclistas": 134,
@@ -2275,10 +2900,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-27",
    "derivada": false
   },
   {
+   "data": "2024-02-28",
    "periodo": 1,
    "local": "av-afonso-pena-4040",
    "ciclistas": 8,
@@ -2286,10 +2911,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-28",
    "derivada": false
   },
   {
+   "data": "2024-02-28",
    "periodo": 2,
    "local": "av-afonso-pena-4040",
    "ciclistas": 15,
@@ -2297,10 +2922,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-28",
    "derivada": false
   },
   {
+   "data": "2024-02-28",
    "periodo": 12,
    "local": "av-afonso-pena-4040",
    "ciclistas": 50,
@@ -2308,10 +2933,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-28",
    "derivada": false
   },
   {
+   "data": "2024-02-28",
    "periodo": 24,
    "local": "av-afonso-pena-4040",
    "ciclistas": 127,
@@ -2319,10 +2944,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-02-28",
    "derivada": false
   },
   {
+   "data": "2024-03-14",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 19,
@@ -2330,10 +2955,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-14",
    "derivada": false
   },
   {
+   "data": "2024-03-14",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 2,
@@ -2341,10 +2966,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-14",
    "derivada": false
   },
   {
+   "data": "2024-03-14",
    "periodo": 2,
    "local": "rua-sergipe-837",
    "ciclistas": 9,
@@ -2352,10 +2977,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-14",
    "derivada": false
   },
   {
+   "data": "2024-03-14",
    "periodo": 12,
    "local": "rua-sergipe-837",
    "ciclistas": 31,
@@ -2363,10 +2988,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-14",
    "derivada": false
   },
   {
+   "data": "2024-03-14",
    "periodo": 24,
    "local": "rua-sergipe-837",
    "ciclistas": 44,
@@ -2374,10 +2999,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-14",
    "derivada": false
   },
   {
+   "data": "2024-03-27",
    "periodo": 1,
    "local": "rua-alagoas-750",
    "ciclistas": 7,
@@ -2385,10 +3010,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-27",
    "derivada": false
   },
   {
+   "data": "2024-03-27",
    "periodo": 2,
    "local": "rua-alagoas-750",
    "ciclistas": 12,
@@ -2396,10 +3021,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-27",
    "derivada": false
   },
   {
+   "data": "2024-03-27",
    "periodo": 12,
    "local": "rua-alagoas-750",
    "ciclistas": 43,
@@ -2407,10 +3032,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-27",
    "derivada": false
   },
   {
+   "data": "2024-03-27",
    "periodo": 24,
    "local": "rua-alagoas-750",
    "ciclistas": 61,
@@ -2418,10 +3043,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-03-27",
    "derivada": false
   },
   {
+   "data": "2024-04-03",
    "periodo": 1,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 22,
@@ -2430,10 +3055,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-03",
    "derivada": false
   },
   {
+   "data": "2024-04-03",
    "periodo": 2,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 37,
@@ -2442,10 +3067,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-03",
    "derivada": false
   },
   {
+   "data": "2024-04-03",
    "periodo": 12,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 123,
@@ -2454,10 +3079,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-03",
    "derivada": false
   },
   {
+   "data": "2024-04-03",
    "periodo": 24,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 186,
@@ -2466,10 +3091,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-03",
    "derivada": false
   },
   {
+   "data": "2024-04-08",
    "periodo": 1,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 11,
@@ -2478,10 +3103,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-08",
    "derivada": false
   },
   {
+   "data": "2024-04-08",
    "periodo": 2,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 33,
@@ -2490,10 +3115,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-08",
    "derivada": false
   },
   {
+   "data": "2024-04-08",
    "periodo": 12,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 127,
@@ -2502,10 +3127,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-08",
    "derivada": false
   },
   {
+   "data": "2024-04-08",
    "periodo": 24,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 193,
@@ -2514,10 +3139,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-08",
    "derivada": false
   },
   {
+   "data": "2024-04-08",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 28,
@@ -2526,10 +3151,10 @@
     "Cristiano Scarpelli",
     "Túlio Macedo"
    ],
-   "data": "2024-04-08",
    "derivada": false
   },
   {
+   "data": "2024-04-09",
    "periodo": 1,
    "local": "rua-sergipe-837",
    "ciclistas": 0,
@@ -2537,10 +3162,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-09",
    "derivada": false
   },
   {
+   "data": "2024-04-09",
    "periodo": 2,
    "local": "rua-sergipe-837",
    "ciclistas": 3,
@@ -2548,10 +3173,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-09",
    "derivada": false
   },
   {
+   "data": "2024-04-09",
    "periodo": 12,
    "local": "rua-sergipe-837",
    "ciclistas": 23,
@@ -2559,10 +3184,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-09",
    "derivada": false
   },
   {
+   "data": "2024-04-09",
    "periodo": 24,
    "local": "rua-sergipe-837",
    "ciclistas": 32,
@@ -2570,10 +3195,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-09",
    "derivada": false
   },
   {
+   "data": "2024-04-10",
    "periodo": 1,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 14,
@@ -2582,10 +3207,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-10",
    "derivada": false
   },
   {
+   "data": "2024-04-10",
    "periodo": 2,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 33,
@@ -2594,10 +3219,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-10",
    "derivada": false
   },
   {
+   "data": "2024-04-10",
    "periodo": 12,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 147,
@@ -2606,10 +3231,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-10",
    "derivada": false
   },
   {
+   "data": "2024-04-10",
    "periodo": 24,
    "local": "av-afonso-pena-1537-somente-um-lado-da-pista",
    "ciclistas": 212,
@@ -2618,10 +3243,10 @@
     "Cristiano Scarpelli",
     "Adelina"
    ],
-   "data": "2024-04-10",
    "derivada": false
   },
   {
+   "data": "2024-04-11",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 21,
@@ -2629,10 +3254,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-11",
    "derivada": false
   },
   {
+   "data": "2024-04-22",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 23,
@@ -2642,10 +3267,10 @@
     "Túlio Macedo",
     "Alexandre"
    ],
-   "data": "2024-04-22",
    "derivada": false
   },
   {
+   "data": "2024-04-22",
    "periodo": 1,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 9,
@@ -2653,10 +3278,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-22",
    "derivada": false
   },
   {
+   "data": "2024-04-23",
    "periodo": 1,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 10,
@@ -2665,10 +3290,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-23",
    "derivada": false
   },
   {
+   "data": "2024-04-23",
    "periodo": 2,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 18,
@@ -2677,10 +3302,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-23",
    "derivada": false
   },
   {
+   "data": "2024-04-23",
    "periodo": 12,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 52,
@@ -2689,10 +3314,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-23",
    "derivada": false
   },
   {
+   "data": "2024-04-23",
    "periodo": 24,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 85,
@@ -2701,10 +3326,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-23",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 1,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 14,
@@ -2713,10 +3338,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 2,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 26,
@@ -2725,10 +3350,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 12,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 73,
@@ -2737,10 +3362,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 24,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 102,
@@ -2749,10 +3374,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 1,
    "local": "rua-dos-guajajaras-201",
    "ciclistas": 3,
@@ -2760,10 +3385,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 2,
    "local": "rua-dos-guajajaras-201",
    "ciclistas": 9,
@@ -2771,10 +3396,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 12,
    "local": "rua-dos-guajajaras-201",
    "ciclistas": 29,
@@ -2782,10 +3407,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-24",
    "periodo": 24,
    "local": "rua-dos-guajajaras-201",
    "ciclistas": 40,
@@ -2793,10 +3418,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-04-24",
    "derivada": false
   },
   {
+   "data": "2024-04-25",
    "periodo": 1,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 7,
@@ -2805,10 +3430,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-25",
    "derivada": false
   },
   {
+   "data": "2024-04-25",
    "periodo": 2,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 15,
@@ -2817,10 +3442,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-25",
    "derivada": false
   },
   {
+   "data": "2024-04-25",
    "periodo": 12,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 65,
@@ -2829,10 +3454,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-25",
    "derivada": false
   },
   {
+   "data": "2024-04-25",
    "periodo": 24,
    "local": "av-joao-pinheiro-100",
    "ciclistas": 105,
@@ -2841,10 +3466,10 @@
     "Cristiano Scarpelli",
     "Sinjus"
    ],
-   "data": "2024-04-25",
    "derivada": false
   },
   {
+   "data": "2024-05-06",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 25,
@@ -2854,10 +3479,10 @@
     "Túlio Macedo",
     "Alexandre"
    ],
-   "data": "2024-05-06",
    "derivada": false
   },
   {
+   "data": "2024-06-03",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 35,
@@ -2867,10 +3492,10 @@
     "Túlio Macedo",
     "Alexandre"
    ],
-   "data": "2024-06-03",
    "derivada": false
   },
   {
+   "data": "2024-06-10",
    "periodo": 1,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 5,
@@ -2878,10 +3503,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-06-10",
    "derivada": false
   },
   {
+   "data": "2024-06-10",
    "periodo": 2,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 9,
@@ -2889,10 +3514,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-06-10",
    "derivada": false
   },
   {
+   "data": "2024-06-10",
    "periodo": 12,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 45,
@@ -2900,10 +3525,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-06-10",
    "derivada": false
   },
   {
+   "data": "2024-06-10",
    "periodo": 24,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 72,
@@ -2911,10 +3536,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-06-10",
    "derivada": false
   },
   {
+   "data": "2024-06-17",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 34,
@@ -2923,10 +3548,10 @@
     "Cristiano Scarpelli",
     "Túlio Macedo"
    ],
-   "data": "2024-06-17",
    "derivada": false
   },
   {
+   "data": "2024-07-01",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 31,
@@ -2936,10 +3561,10 @@
     "Túlio Macedo",
     "Alexandre"
    ],
-   "data": "2024-07-01",
    "derivada": false
   },
   {
+   "data": "2024-08-05",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 30,
@@ -2948,10 +3573,10 @@
     "Cristiano Scarpelli",
     "Alexandre"
    ],
-   "data": "2024-08-05",
    "derivada": false
   },
   {
+   "data": "2024-08-08",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 34,
@@ -2959,10 +3584,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-08-08",
    "derivada": false
   },
   {
+   "data": "2024-08-12",
    "periodo": 1,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 108,
@@ -2971,10 +3596,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-12",
    "derivada": false
   },
   {
+   "data": "2024-08-12",
    "periodo": 2,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 203,
@@ -2983,10 +3608,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-12",
    "derivada": false
   },
   {
+   "data": "2024-08-12",
    "periodo": 12,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 703,
@@ -2995,10 +3620,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-12",
    "derivada": false
   },
   {
+   "data": "2024-08-12",
    "periodo": 24,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 1344,
@@ -3007,10 +3632,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-12",
    "derivada": false
   },
   {
+   "data": "2024-08-13",
    "periodo": 1,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 87,
@@ -3019,10 +3644,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-13",
    "derivada": false
   },
   {
+   "data": "2024-08-13",
    "periodo": 2,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 183,
@@ -3031,10 +3656,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-13",
    "derivada": false
   },
   {
+   "data": "2024-08-13",
    "periodo": 12,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 730,
@@ -3043,10 +3668,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-13",
    "derivada": false
   },
   {
+   "data": "2024-08-13",
    "periodo": 24,
    "local": "av-otacilio-negrao-de-lima-14370",
    "ciclistas": 1304,
@@ -3055,10 +3680,10 @@
     "Cristiano Scarpelli",
     "Bike Mania"
    ],
-   "data": "2024-08-13",
    "derivada": false
   },
   {
+   "data": "2024-08-20",
    "periodo": 1,
    "local": "rua-pernambuco-453",
    "ciclistas": 3,
@@ -3067,10 +3692,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-20",
    "derivada": false
   },
   {
+   "data": "2024-08-20",
    "periodo": 2,
    "local": "rua-pernambuco-453",
    "ciclistas": 6,
@@ -3079,10 +3704,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-20",
    "derivada": false
   },
   {
+   "data": "2024-08-20",
    "periodo": 12,
    "local": "rua-pernambuco-453",
    "ciclistas": 22,
@@ -3091,10 +3716,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-20",
    "derivada": false
   },
   {
+   "data": "2024-08-20",
    "periodo": 24,
    "local": "rua-pernambuco-453",
    "ciclistas": 37,
@@ -3103,10 +3728,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-20",
    "derivada": false
   },
   {
+   "data": "2024-08-21",
    "periodo": 1,
    "local": "rua-pernambuco-453",
    "ciclistas": 8,
@@ -3115,10 +3740,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-21",
    "derivada": false
   },
   {
+   "data": "2024-08-21",
    "periodo": 2,
    "local": "rua-pernambuco-453",
    "ciclistas": 12,
@@ -3127,10 +3752,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-21",
    "derivada": false
   },
   {
+   "data": "2024-08-21",
    "periodo": 12,
    "local": "rua-pernambuco-453",
    "ciclistas": 25,
@@ -3139,10 +3764,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-21",
    "derivada": false
   },
   {
+   "data": "2024-08-21",
    "periodo": 24,
    "local": "rua-pernambuco-453",
    "ciclistas": 47,
@@ -3151,10 +3776,10 @@
     "Cristiano Scarpelli",
     "Mateus Proença"
    ],
-   "data": "2024-08-21",
    "derivada": false
   },
   {
+   "data": "2024-09-02",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 47,
@@ -3163,10 +3788,10 @@
     "Cristiano Scarpelli",
     "Túlio Macedo"
    ],
-   "data": "2024-09-02",
    "derivada": false
   },
   {
+   "data": "2024-09-04",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 40,
@@ -3174,10 +3799,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-09-04",
    "derivada": false
   },
   {
+   "data": "2024-09-10",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 43,
@@ -3186,10 +3811,10 @@
     "Cristiano Scarpelli",
     "Túlio Macedo"
    ],
-   "data": "2024-09-10",
    "derivada": false
   },
   {
+   "data": "2024-09-10",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 34,
@@ -3198,10 +3823,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-10",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 1,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 43,
@@ -3210,10 +3835,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 2,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 70,
@@ -3222,10 +3847,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 12,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 268,
@@ -3234,10 +3859,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 24,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 369,
@@ -3246,10 +3871,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 31,
@@ -3258,10 +3883,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 52,
@@ -3270,10 +3895,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 178,
@@ -3282,10 +3907,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-11",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 268,
@@ -3294,10 +3919,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-11",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 1,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 33,
@@ -3306,10 +3931,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 2,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 55,
@@ -3318,10 +3943,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 12,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 227,
@@ -3330,10 +3955,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 24,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 314,
@@ -3342,10 +3967,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 27,
@@ -3354,10 +3979,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 43,
@@ -3366,10 +3991,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 187,
@@ -3378,10 +4003,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
+   "data": "2024-09-12",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 248,
@@ -3390,21 +4015,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-12",
    "derivada": false
   },
   {
-   "periodo": 1,
-   "local": "av-augusto-de-lima-1075",
-   "ciclistas": 48,
-   "tipo": "Vídeo",
-   "fonte": [
-    "Cristiano Scarpelli"
-   ],
    "data": "2024-09-13",
-   "derivada": false
-  },
-  {
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 48,
@@ -3412,10 +4026,21 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
+   "periodo": 1,
+   "local": "av-augusto-de-lima-1075",
+   "ciclistas": 48,
+   "tipo": "Vídeo",
+   "fonte": [
+    "Cristiano Scarpelli"
+   ],
+   "derivada": false
+  },
+  {
+   "data": "2024-09-16",
    "periodo": 1,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 43,
@@ -3424,10 +4049,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
    "periodo": 2,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 62,
@@ -3436,10 +4061,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
    "periodo": 12,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 246,
@@ -3448,10 +4073,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
    "periodo": 24,
    "local": "av-augusto-de-lima-1674",
    "ciclistas": 315,
@@ -3460,10 +4085,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 33,
@@ -3472,10 +4097,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 48,
@@ -3484,10 +4109,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 185,
@@ -3496,10 +4121,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-16",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 246,
@@ -3508,10 +4133,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-16",
    "derivada": false
   },
   {
+   "data": "2024-09-17",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 37,
@@ -3520,10 +4145,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-17",
    "derivada": false
   },
   {
+   "data": "2024-09-17",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 51,
@@ -3532,10 +4157,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-17",
    "derivada": false
   },
   {
+   "data": "2024-09-17",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 162,
@@ -3544,10 +4169,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-17",
    "derivada": false
   },
   {
+   "data": "2024-09-17",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 290,
@@ -3556,10 +4181,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "data": "2024-09-17",
    "derivada": false
   },
   {
+   "data": "2024-09-23",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 34,
@@ -3568,10 +4193,10 @@
     "Cristiano Scarpelli",
     "Túlio Macedo"
    ],
-   "data": "2024-09-23",
    "derivada": false
   },
   {
+   "data": "2024-09-25",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 39,
@@ -3579,10 +4204,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-09-25",
    "derivada": false
   },
   {
+   "data": "2024-09-30",
    "periodo": 1,
    "local": "avenida-dos-andradas",
    "ciclistas": 95,
@@ -3591,10 +4216,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-09-30",
    "derivada": false
   },
   {
+   "data": "2024-09-30",
    "periodo": 2,
    "local": "avenida-dos-andradas",
    "ciclistas": 181,
@@ -3603,10 +4228,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-09-30",
    "derivada": false
   },
   {
+   "data": "2024-09-30",
    "periodo": 12,
    "local": "avenida-dos-andradas",
    "ciclistas": 553,
@@ -3615,10 +4240,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-09-30",
    "derivada": false
   },
   {
+   "data": "2024-09-30",
    "periodo": 24,
    "local": "avenida-dos-andradas",
    "ciclistas": 853,
@@ -3627,10 +4252,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-09-30",
    "derivada": false
   },
   {
+   "data": "2024-10-01",
    "periodo": 1,
    "local": "avenida-dos-andradas",
    "ciclistas": 104,
@@ -3639,10 +4264,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-01",
    "derivada": false
   },
   {
+   "data": "2024-10-01",
    "periodo": 2,
    "local": "avenida-dos-andradas",
    "ciclistas": 205,
@@ -3651,10 +4276,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-01",
    "derivada": false
   },
   {
+   "data": "2024-10-01",
    "periodo": 12,
    "local": "avenida-dos-andradas",
    "ciclistas": 603,
@@ -3663,10 +4288,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-01",
    "derivada": false
   },
   {
+   "data": "2024-10-01",
    "periodo": 24,
    "local": "avenida-dos-andradas",
    "ciclistas": 966,
@@ -3675,10 +4300,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-01",
    "derivada": false
   },
   {
+   "data": "2024-10-02",
    "periodo": 1,
    "local": "avenida-dos-andradas",
    "ciclistas": 85,
@@ -3687,10 +4312,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-02",
    "derivada": false
   },
   {
+   "data": "2024-10-02",
    "periodo": 2,
    "local": "avenida-dos-andradas",
    "ciclistas": 149,
@@ -3699,10 +4324,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-02",
    "derivada": false
   },
   {
+   "data": "2024-10-02",
    "periodo": 12,
    "local": "avenida-dos-andradas",
    "ciclistas": 559,
@@ -3711,10 +4336,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-02",
    "derivada": false
   },
   {
+   "data": "2024-10-02",
    "periodo": 24,
    "local": "avenida-dos-andradas",
    "ciclistas": 828,
@@ -3723,10 +4348,10 @@
     "Cristiano Scarpelli",
     "Patty Nogueira"
    ],
-   "data": "2024-10-02",
    "derivada": false
   },
   {
+   "data": "2024-11-27",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 36,
@@ -3734,10 +4359,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2024-11-27",
    "derivada": false
   },
   {
+   "data": "2025-02-06",
    "periodo": 1,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 6,
@@ -3745,10 +4370,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-06",
    "derivada": false
   },
   {
+   "data": "2025-02-06",
    "periodo": 2,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 8,
@@ -3756,10 +4381,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-06",
    "derivada": false
   },
   {
+   "data": "2025-02-06",
    "periodo": 12,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 36,
@@ -3767,10 +4392,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-06",
    "derivada": false
   },
   {
+   "data": "2025-02-06",
    "periodo": 24,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 52,
@@ -3778,10 +4403,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-06",
    "derivada": false
   },
   {
+   "data": "2025-02-11",
    "periodo": 1,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 6,
@@ -3789,10 +4414,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-11",
    "derivada": false
   },
   {
+   "data": "2025-02-11",
    "periodo": 2,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 8,
@@ -3800,10 +4425,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-11",
    "derivada": false
   },
   {
+   "data": "2025-02-11",
    "periodo": 12,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 44,
@@ -3811,10 +4436,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-11",
    "derivada": false
   },
   {
+   "data": "2025-02-11",
    "periodo": 24,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 82,
@@ -3822,10 +4447,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-11",
    "derivada": false
   },
   {
+   "data": "2025-02-12",
    "periodo": 1,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 6,
@@ -3833,10 +4458,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-12",
    "derivada": false
   },
   {
+   "data": "2025-02-12",
    "periodo": 2,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 13,
@@ -3844,10 +4469,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-12",
    "derivada": false
   },
   {
+   "data": "2025-02-12",
    "periodo": 12,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 42,
@@ -3855,10 +4480,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-12",
    "derivada": false
   },
   {
+   "data": "2025-02-12",
    "periodo": 24,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 78,
@@ -3866,10 +4491,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-12",
    "derivada": false
   },
   {
+   "data": "2025-02-13",
    "periodo": 1,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 7,
@@ -3877,10 +4502,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-13",
    "derivada": false
   },
   {
+   "data": "2025-02-13",
    "periodo": 2,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 11,
@@ -3888,10 +4513,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-13",
    "derivada": false
   },
   {
+   "data": "2025-02-13",
    "periodo": 12,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 45,
@@ -3899,10 +4524,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-13",
    "derivada": false
   },
   {
+   "data": "2025-02-13",
    "periodo": 24,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 79,
@@ -3910,10 +4535,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-02-13",
    "derivada": false
   },
   {
+   "data": "2025-04-07",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 27,
@@ -3921,10 +4546,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-04-07",
    "derivada": false
   },
   {
+   "data": "2025-06-02",
    "periodo": 1,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 3,
@@ -3932,10 +4557,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-02",
    "derivada": false
   },
   {
+   "data": "2025-06-02",
    "periodo": 2,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 9,
@@ -3943,10 +4568,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-02",
    "derivada": false
   },
   {
+   "data": "2025-06-02",
    "periodo": 12,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 25,
@@ -3954,10 +4579,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-02",
    "derivada": false
   },
   {
+   "data": "2025-06-02",
    "periodo": 24,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 34,
@@ -3965,10 +4590,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-02",
    "derivada": false
   },
   {
+   "data": "2025-06-04",
    "periodo": 1,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 4,
@@ -3976,10 +4601,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-04",
    "derivada": false
   },
   {
+   "data": "2025-06-04",
    "periodo": 2,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 6,
@@ -3987,10 +4612,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-04",
    "derivada": false
   },
   {
+   "data": "2025-06-04",
    "periodo": 12,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 30,
@@ -3998,10 +4623,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-04",
    "derivada": false
   },
   {
+   "data": "2025-06-04",
    "periodo": 24,
    "local": "ciclovia-alto-da-afonso-pena",
    "ciclistas": 45,
@@ -4009,10 +4634,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-06-04",
    "derivada": false
   },
   {
+   "data": "2025-08-18",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 31,
@@ -4020,10 +4645,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-08-18",
    "derivada": false
   },
   {
+   "data": "2025-10-15",
    "periodo": 1,
    "local": "av-augusto-de-lima-1075",
    "ciclistas": 38,
@@ -4031,10 +4656,10 @@
    "fonte": [
     "Cristiano Scarpelli"
    ],
-   "data": "2025-10-15",
    "derivada": false
   },
   {
+   "data": "2026-09-24",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 49,
@@ -4043,10 +4668,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-24"
+   "derivada": true
   },
   {
+   "data": "2026-09-24",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 81,
@@ -4055,10 +4680,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-24"
+   "derivada": true
   },
   {
+   "data": "2026-09-24",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 265,
@@ -4067,10 +4692,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-24"
+   "derivada": true
   },
   {
+   "data": "2026-09-24",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 380,
@@ -4079,10 +4704,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-24"
+   "derivada": true
   },
   {
+   "data": "2026-09-28",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 45,
@@ -4091,10 +4716,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-28"
+   "derivada": true
   },
   {
+   "data": "2026-09-28",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 65,
@@ -4103,10 +4728,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-28"
+   "derivada": true
   },
   {
+   "data": "2026-09-28",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 216,
@@ -4115,10 +4740,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-28"
+   "derivada": true
   },
   {
+   "data": "2026-09-28",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 337,
@@ -4127,10 +4752,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-28"
+   "derivada": true
   },
   {
+   "data": "2026-09-29",
    "periodo": 1,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 44,
@@ -4139,10 +4764,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-29"
+   "derivada": true
   },
   {
+   "data": "2026-09-29",
    "periodo": 2,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 78,
@@ -4151,10 +4776,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-29"
+   "derivada": true
   },
   {
+   "data": "2026-09-29",
    "periodo": 12,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 263,
@@ -4163,10 +4788,10 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-29"
+   "derivada": true
   },
   {
+   "data": "2026-09-29",
    "periodo": 24,
    "local": "ciclovia-augusto-de-lima",
    "ciclistas": 380,
@@ -4175,8 +4800,7 @@
     "Cristiano Scarpelli",
     "Marco Túlio"
    ],
-   "derivada": true,
-   "data": "2026-09-29"
+   "derivada": true
   }
  ],
  "perfis": [
