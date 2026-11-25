@@ -11,8 +11,9 @@ export const SITE = {
   substack: 'https://cristianoscarpelli.substack.com',
   // Chave pública do Cloudflare Turnstile (anti-robô das campanhas). Vazia = formulário sem a verificação.
   turnstileSiteKey: '',
-  // Apoiador mostrado no rodapé. Vazio = sem apoio. (Tirar se o site passar a servir a uma campanha eleitoral.)
-  apoio: { nome: 'Habilicita', url: 'https://habilicita.com.br' },
+  // Apoio mostrado no rodapé. Só pessoa física: o Cristiano é servidor público e pode ser candidato, então
+  // empresa, sindicato ou entidade de classe não entram como apoiadores (decisão de 25/11/2026).
+  apoio: { nome: 'Fabrício Ceolin', url: '' },
   // Planilha de contagens (Google Planilhas do Cristiano, compartilhada por link como Leitor).
   // gid = número da aba (aparece no endereço como #gid=...). Três abas: preencher horas e locais.
   planilha: {
