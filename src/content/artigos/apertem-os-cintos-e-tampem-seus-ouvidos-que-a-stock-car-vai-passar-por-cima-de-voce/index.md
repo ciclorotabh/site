@@ -1,11 +1,16 @@
 ---
-title: "Apertem os cintos e tampem seus ouvidos, que a Stock Car vai passar… por cima de você!"
+legacyUrl: /artigo/apertem-os-cintos-e-tampem-seus-ouvidos-que-a-stock-car-vai-passar-por-cima-de-voce/
+title: Apertem os cintos e tampem seus ouvidos, que a Stock Car vai passar… por
+  cima de você!
 date: 2024-01-06
-updated: 2024-10-27
-description: "O ano era 1972, Belo Horizonte, uma cidade em crescimento, vivia a efervescência dos anos de petróleo barato e do progresso sob rodas. Camada a camada,…"
+description: O ano era 1972, Belo Horizonte, uma cidade em crescimento, vivia a
+  efervescência dos anos de petróleo barato e do progresso sob rodas. Camada a
+  camada,…
+author: Marcelo Dias
 cover: ./capa.jpg
-coverAlt: "Apertem os cintos e tampem seus ouvidos, que a Stock Car vai passar… por cima de você!"
-legacyUrl: "/artigo/apertem-os-cintos-e-tampem-seus-ouvidos-que-a-stock-car-vai-passar-por-cima-de-voce/"
+coverAlt: Apertem os cintos e tampem seus ouvidos, que a Stock Car vai passar…
+  por cima de você!
+updated: 2024-10-27
 ---
 
 O ano era 1972, Belo Horizonte, uma cidade em crescimento, vivia a efervescência dos anos de petróleo barato e do progresso sob rodas. Camada a camada, áreas verdes eram trocadas por jardins de asfalto que prometiam trazer o futuro, ao custo da perda de algumas árvores, porém, havia tantas! 
